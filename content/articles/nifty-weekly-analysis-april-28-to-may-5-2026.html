@@ -30,11 +30,21 @@
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    html {
+      background: #0e1117 !important;
+    }
+
     body {
       font-family: 'DM Sans', sans-serif;
-      background: var(--bg);
+      background: #0e1117 !important;
       color: var(--text);
       line-height: 1.7;
+    }
+
+    .page-wrapper {
+      background: #0e1117 !important;
+      min-height: 100vh;
+      width: 100%;
     }
 
     /* ── HERO ── */
@@ -753,6 +763,7 @@
   </style>
 </head>
 <body>
+<div class="page-wrapper">
 
   <!-- HERO -->
   <div class="hero">
@@ -1265,5 +1276,6 @@
   }
   </script>
 
+</div><!-- end page-wrapper -->
 </body>
 </html>
