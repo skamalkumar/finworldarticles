@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BSE SENSEX Weekly Market Analysis for the week of April 30 – May 7, 2026. Key price zones, PCR, India VIX, options data, and volatility assessment.">
+  <meta name="keywords" content="SENSEX weekly analysis May 2026, SENSEX PCR April 30, India VIX, SENSEX options data, BSE Sensex weekly report, SENSEX support resistance May 7 expiry">
+  <title>BSE SENSEX Weekly Market Analysis: April 30 – May 7, 2026 | FinWorld</title>
+  <link rel="canonical" href="https://www.finworldltd.online/blog/sensex-weekly-analysis-april-30-may-7-2026" />
+  <meta property="og:title" content="BSE SENSEX Weekly Analysis: April 30 – May 7, 2026 | PCR, VIX & Key Levels">
+  <meta property="og:description" content="Complete weekly SENSEX analysis with real PCR, India VIX, price zones, and options data for the May 7 expiry week.">
+  <meta property="og:type" content="article">
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0e1117;
+      --surface: #161b27;
+      --surface2: #1e2535;
+      --border: #2a3347;
+      --text: #e2e8f0;
+      --muted: #8896b0;
+      --red: #ef4444;
+      --green: #22c55e;
+      --gold: #f59e0b;
+      --blue: #3b82f6;
+      --white: #ffffff;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { background: #0e1117 !important; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #0e1117 !important;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .page-wrapper {
+      background: #0e1117 !important;
+      min-height: 100vh;
+      width: 100%;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #0e1117 0%, #1a1f35 60%, #0e1117 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 56px 24px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -60px; left: 50%; transform: translateX(-50%);
+      width: 600px; height: 300px;
+      background: radial-gradient(ellipse, rgba(245,158,11,0.10) 0%, transparent 70%);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(245,158,11,0.15);
+      border: 1px solid rgba(245,158,11,0.35);
+      color: #fde68a;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      animation: pulse 1.8s ease infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.3); }
+    }
+
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.8rem, 4.5vw, 3rem);
+      color: var(--white);
+      line-height: 1.2;
+      max-width: 700px;
+      margin: 0 auto 12px;
+      position: relative;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--gold);
+    }
+
+    .hero-meta {
+      color: var(--muted);
+      font-size: 0.85rem;
+      position: relative;
+      margin-top: 16px;
+    }
+
+    /* ── LIVE TICKER ── */
+    .live-bar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      font-size: 0.82rem;
+      overflow: hidden;
+    }
+
+    .live-label {
+      background: var(--gold);
+      color: #000;
+      font-weight: 700;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      padding: 8px 14px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .live-scroll {
+      overflow: hidden;
+      flex: 1;
+      padding: 8px 16px;
+    }
+
+    .live-scroll-inner {
+      display: inline-block;
+      white-space: nowrap;
+      animation: scroll 30s linear infinite;
+    }
+
+    .live-scroll-inner span { margin-right: 48px; color: var(--muted); }
+    .live-scroll-inner span strong { color: var(--text); }
+    .live-scroll-inner span .up { color: var(--green); }
+    .live-scroll-inner span .dn { color: var(--red); }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ── LAYOUT ── */
+    article {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.6rem;
+      color: var(--white);
+      margin: 52px 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2 .icon { font-size: 1.2rem; }
+
+    p { font-size: 0.97rem; color: #c8d4e8; margin-bottom: 14px; line-height: 1.8; }
+
+    /* ── SNAPSHOT ROW ── */
+    .snapshot {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 28px 0;
+    }
+
+    .snap-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 16px;
+      text-align: center;
+    }
+
+    .snap-card .s-val {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .snap-card .s-lbl {
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .snap-card .s-sub {
+      font-size: 0.75rem;
+      margin-top: 3px;
+      color: var(--muted);
+    }
+
+    .gold  { color: var(--gold); }
+    .red   { color: var(--red); }
+    .green { color: var(--green); }
+    .blue  { color: var(--blue); }
+
+    /* ── PRICE ZONE VISUAL ── */
+    .zone-container {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 32px 28px;
+      margin: 28px 0;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .zone-thermometer {
+      position: relative;
+      height: 340px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .therm-track {
+      position: absolute;
+      left: 50%; transform: translateX(-50%);
+      width: 20px;
+      top: 0; bottom: 0;
+      border-radius: 10px;
+      background: linear-gradient(to bottom,
+        rgba(34,197,94,0.3) 0%,
+        rgba(34,197,94,0.15) 20%,
+        rgba(148,163,184,0.1) 35%,
+        rgba(239,68,68,0.15) 70%,
+        rgba(239,68,68,0.3) 100%
+      );
+    }
+
+    .therm-level {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .therm-line {
+      position: absolute;
+      left: 50%; transform: translateX(-50%);
+      width: 36px; height: 2px;
+    }
+
+    .therm-label {
+      position: absolute;
+      left: calc(50% + 24px);
+      white-space: nowrap;
+      font-size: 0.75rem;
+    }
+
+    .therm-value {
+      font-weight: 700;
+      font-size: 0.82rem;
+      display: block;
+    }
+
+    .therm-tag {
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .current-marker {
+      position: absolute;
+      left: 50%; transform: translateX(-50%);
+      background: var(--gold);
+      color: #000;
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 3px;
+      white-space: nowrap;
+      z-index: 2;
+    }
+
+    .current-marker::before {
+      content: '▶';
+      position: absolute;
+      left: -12px;
+      color: var(--gold);
+    }
+
+    .zone-details { display: flex; flex-direction: column; gap: 12px; }
+
+    .zone-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 16px;
+      background: var(--surface2);
+      border-radius: 8px;
+      border-left: 3px solid transparent;
+    }
+
+    .zone-row.max-up  { border-left-color: #16a34a; }
+    .zone-row.up-ent  { border-left-color: #4ade80; }
+    .zone-row.current { border-left-color: var(--gold); }
+    .zone-row.dn-ent  { border-left-color: #f87171; }
+    .zone-row.max-dn  { border-left-color: #dc2626; }
+
+    .zone-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .zone-info .z-price {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--white);
+    }
+
+    .zone-info .z-name {
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .zone-gap {
+      margin-left: auto;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    /* ── PCR GAUGE ── */
+    .gauge-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 28px 0;
+    }
+
+    .gauge-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .gauge-title {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .pcr-gauge-wrap { text-align: center; }
+    .pcr-svg { width: 100%; max-width: 220px; }
+
+    .pcr-reading {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2rem;
+      color: var(--gold);
+      display: block;
+      margin-top: 8px;
+    }
+
+    .pcr-status {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 2px;
+    }
+
+    .pcr-legend {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      font-size: 0.68rem;
+      color: var(--muted);
+    }
+
+    .vix-value-row {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .vix-big {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.4rem;
+      color: var(--gold);
+    }
+
+    .vix-change { font-size: 0.85rem; color: var(--green); }
+
+    .vix-track {
+      width: 100%;
+      height: 12px;
+      background: linear-gradient(90deg,
+        #22c55e 0%,
+        #84cc16 20%,
+        #f59e0b 45%,
+        #f97316 65%,
+        #ef4444 85%,
+        #7f1d1d 100%
+      );
+      border-radius: 6px;
+      position: relative;
+      margin-bottom: 6px;
+    }
+
+    .vix-needle {
+      position: absolute;
+      top: -5px;
+      width: 4px; height: 22px;
+      background: var(--white);
+      border-radius: 2px;
+      transform: translateX(-50%);
+      /* 17.44 on scale 10–40: (17.44-10)/(40-10) = 7.44/30 = 24.8% */
+      left: 24.8%;
+      box-shadow: 0 0 6px rgba(255,255,255,0.5);
+    }
+
+    .vix-scale {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.65rem;
+      color: var(--muted);
+    }
+
+    .vix-zones {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+      margin-top: 14px;
+    }
+
+    .vix-zone {
+      text-align: center;
+      padding: 6px 4px;
+      border-radius: 4px;
+      font-size: 0.65rem;
+      font-weight: 600;
+    }
+
+    .vix-zone.calm  { background: rgba(34,197,94,0.15);  color: #4ade80; }
+    .vix-zone.mod   { background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.3); }
+    .vix-zone.high  { background: rgba(249,115,22,0.15); color: #fb923c; }
+    .vix-zone.panic { background: rgba(239,68,68,0.15);  color: #f87171; }
+
+    /* ── OI SECTION ── */
+    .oi-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 20px 0;
+    }
+
+    .oi-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .oi-card h4 {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .oi-bar-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .oi-strike {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text);
+      min-width: 56px;
+    }
+
+    .oi-track {
+      flex: 1;
+      height: 8px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .oi-fill-call {
+      height: 100%;
+      border-radius: 4px;
+      background: linear-gradient(90deg, #dc2626, #ef4444);
+      animation: grow 1s ease forwards;
+      transform-origin: left;
+    }
+
+    .oi-fill-put {
+      height: 100%;
+      border-radius: 4px;
+      background: linear-gradient(90deg, #16a34a, #22c55e);
+      animation: grow 1s ease forwards;
+      transform-origin: left;
+    }
+
+    @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+    .oi-label {
+      font-size: 0.7rem;
+      color: var(--muted);
+      min-width: 32px;
+      text-align: right;
+    }
+
+    /* ── CALLOUT ── */
+    .callout {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 18px;
+      margin: 20px 0;
+      font-size: 0.92rem;
+    }
+
+    .callout.red-bar  { border-left-color: var(--red); }
+    .callout.blue-bar { border-left-color: var(--blue); }
+    .callout.green-bar { border-left-color: var(--green); }
+
+    .callout strong {
+      display: block;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    /* ── LEVELS TABLE ── */
+    .levels-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 0.88rem;
+    }
+
+    .levels-table th {
+      background: var(--surface2);
+      color: var(--muted);
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      padding: 10px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .levels-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      color: var(--text);
+    }
+
+    .levels-table tr:last-child td { border-bottom: none; }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .badge.resistance { background: rgba(239,68,68,0.15); color: #f87171; border: 1px solid rgba(239,68,68,0.25); }
+    .badge.support    { background: rgba(34,197,94,0.15);  color: #4ade80; border: 1px solid rgba(34,197,94,0.25); }
+    .badge.current    { background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.3); }
+
+    /* ── WEEKLY RANGE BAR ── */
+    .range-visual {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      margin: 24px 0;
+    }
+
+    .range-visual h4 {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .range-track-wrap {
+      position: relative;
+      height: 48px;
+      margin: 0 0 10px;
+    }
+
+    .range-bg {
+      position: absolute;
+      inset: 0;
+      border-radius: 8px;
+      background: linear-gradient(90deg,
+        rgba(239,68,68,0.25) 0%,
+        rgba(239,68,68,0.1)  15%,
+        rgba(245,158,11,0.08) 30%,
+        rgba(148,163,184,0.06) 45%,
+        rgba(34,197,94,0.08) 65%,
+        rgba(34,197,94,0.1)  80%,
+        rgba(34,197,94,0.25) 100%
+      );
+    }
+
+    .range-marker {
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 2px;
+      transform: translateX(-50%);
+    }
+
+    .range-marker-label {
+      position: absolute;
+      top: -22px;
+      transform: translateX(-50%);
+      font-size: 0.65rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .range-marker-val {
+      position: absolute;
+      bottom: -20px;
+      transform: translateX(-50%);
+      font-size: 0.7rem;
+      white-space: nowrap;
+    }
+
+    .range-scale {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 28px;
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    /* ── FAQ ── */
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 20px 0;
+    }
+
+    .faq-item:last-child { border-bottom: none; }
+
+    .faq-q {
+      font-weight: 600;
+      color: var(--white);
+      display: flex;
+      gap: 12px;
+    }
+
+    .faq-q::before {
+      content: "Q";
+      background: rgba(245,158,11,0.2);
+      color: var(--gold);
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 3px;
+      flex-shrink: 0;
+      margin-top: 2px;
+      border: 1px solid rgba(245,158,11,0.3);
+    }
+
+    .faq-a {
+      font-size: 0.92rem;
+      color: #9aadc4;
+      margin-top: 10px;
+      padding-left: 34px;
+      line-height: 1.75;
+    }
+
+    /* ── DISCLAIMER ── */
+    .disclaimer {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px 22px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 48px;
+      line-height: 1.7;
+    }
+
+    footer {
+      margin-top: 32px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 640px) {
+      .snapshot       { grid-template-columns: 1fr 1fr; }
+      .gauge-grid     { grid-template-columns: 1fr; }
+      .oi-grid        { grid-template-columns: 1fr; }
+      .zone-container { grid-template-columns: 1fr; }
+      .zone-thermometer { display: none; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-badge">Weekly Report · May 7, 2026 Expiry</div>
+    <h1>BSE SENSEX Weekly Market Analysis<br><em>April 30 – May 7, 2026</em></h1>
+    <p class="hero-meta">
+      By S Kamal Kumar, Research Analyst &nbsp;|&nbsp; FinWorld &nbsp;|&nbsp; April 30, 2026
+    </p>
+  </div>
+
+  <!-- LIVE TICKER -->
+  <div class="live-bar">
+    <div class="live-label">MARKET DATA</div>
+    <div class="live-scroll">
+      <div class="live-scroll-inner">
+        <span><strong>SENSEX</strong> <span class="dn">▼ 76,913 (−0.75%)</span></span>
+        <span><strong>INDIA VIX</strong> <span class="dn">▼ 17.44 (−3.38%)</span></span>
+        <span><strong>BSE PCR</strong> <span style="color:var(--gold);">0.80 — Neutral</span></span>
+        <span><strong>EXPIRY</strong> May 07, 2026 (Thu)</span>
+        <span><strong>UPSIDE ZONE</strong> ₹77,515</span>
+        <span><strong>DOWNSIDE ZONE</strong> ₹76,311</span>
+        <span><strong>SENSEX</strong> <span class="dn">▼ 76,913 (−0.75%)</span></span>
+        <span><strong>INDIA VIX</strong> <span class="dn">▼ 17.44 (−3.38%)</span></span>
+        <span><strong>BSE PCR</strong> <span style="color:var(--gold);">0.80 — Neutral</span></span>
+        <span><strong>EXPIRY</strong> May 07, 2026 (Thu)</span>
+        <span><strong>UPSIDE ZONE</strong> ₹77,515</span>
+        <span><strong>DOWNSIDE ZONE</strong> ₹76,311</span>
+      </div>
+    </div>
+  </div>
+
+  <article>
+
+    <!-- INTRO -->
+    <section>
+      <p>
+        The week of April 30 – May 7, 2026 arrives with SENSEX at ₹76,913 on expiry day of the April monthly series, setting the tone for the incoming May 7 weekly expiry cycle. Markets are exhibiting a mild bearish drift — down 0.75% on the day — yet the underlying sentiment indicators present a more balanced picture than the surface price action suggests.
+      </p>
+      <p>
+        The Put-Call Ratio at 0.80 sits at the cusp of neutral territory, India VIX has cooled to 17.44 after a sharp 3.38% decline today, and price action is holding within a well-defined structural range. This report outlines the key price zones, sentiment readings, and options market observations for the week ahead.
+      </p>
+    </section>
+
+    <!-- SNAPSHOT -->
+    <section>
+      <h2><span class="icon">📊</span> Weekly Snapshot</h2>
+
+      <div class="snapshot">
+        <div class="snap-card">
+          <span class="s-val gold">₹76,913</span>
+          <span class="s-lbl">SENSEX Level</span>
+          <span class="s-sub">April 30, 2026</span>
+        </div>
+        <div class="snap-card">
+          <span class="s-val gold">0.80</span>
+          <span class="s-lbl">PCR (OI)</span>
+          <span class="s-sub">Neutral (borderline)</span>
+        </div>
+        <div class="snap-card">
+          <span class="s-val gold">17.44</span>
+          <span class="s-lbl">India VIX</span>
+          <span class="s-sub">▼ −3.38% today</span>
+        </div>
+        <div class="snap-card">
+          <span class="s-val blue">May 07</span>
+          <span class="s-lbl">Expiry Date</span>
+          <span class="s-sub">Thursday · 7 days</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICE ZONES -->
+    <section>
+      <h2><span class="icon">🎯</span> Key Price Zones This Week</h2>
+      <p>
+        Technical analysis for this week identifies five critical price levels that define the weekly structure for BSE SENSEX. These zones serve as the primary reference framework — the watch zones represent the more probable weekly range under normal market conditions, while the outer boundaries mark the extremes that could be reached under aggressive directional pressure.
+      </p>
+
+      <!-- ZONE VISUAL -->
+      <div class="zone-container">
+
+        <!-- Thermometer -->
+        <div class="zone-thermometer">
+          <div class="therm-track"></div>
+
+          <!-- Max Upside: top 0% -->
+          <div class="therm-level" style="position:absolute;top:0;">
+            <div class="therm-line" style="background:#16a34a;"></div>
+            <div class="therm-label" style="color:#4ade80;">
+              <span class="therm-value">₹78,489</span>
+              <span class="therm-tag">Max Upside</span>
+            </div>
+          </div>
+
+          <!-- Upper Watch Zone: top 30.9% -->
+          <div class="therm-level" style="position:absolute;top:30.9%;">
+            <div class="therm-line" style="background:#4ade80;"></div>
+            <div class="therm-label" style="color:#86efac;">
+              <span class="therm-value">₹77,515</span>
+              <span class="therm-tag">Upper Watch Zone</span>
+            </div>
+          </div>
+
+          <!-- Current: top 50% -->
+          <div class="current-marker" style="position:absolute;top:50%;transform:translate(-50%,-50%);">
+            ₹76,913 NOW
+          </div>
+
+          <!-- Lower Watch Zone: top 69.1% -->
+          <div class="therm-level" style="position:absolute;top:69.1%;">
+            <div class="therm-line" style="background:#f87171;"></div>
+            <div class="therm-label" style="color:#fca5a5;">
+              <span class="therm-value">₹76,311</span>
+              <span class="therm-tag">Lower Watch Zone</span>
+            </div>
+          </div>
+
+          <!-- Max Downside: bottom -->
+          <div class="therm-level" style="position:absolute;bottom:0;">
+            <div class="therm-line" style="background:#dc2626;"></div>
+            <div class="therm-label" style="color:#f87171;">
+              <span class="therm-value">₹75,337</span>
+              <span class="therm-tag">Max Downside</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Zone Details -->
+        <div class="zone-details">
+          <div class="zone-row max-up">
+            <div class="zone-dot" style="background:#16a34a;"></div>
+            <div class="zone-info">
+              <span class="z-price" style="color:#4ade80;">₹78,489.40</span>
+              <span class="z-name">Maximum Upside Boundary</span>
+            </div>
+          </div>
+          <div class="zone-row up-ent">
+            <div class="zone-dot" style="background:#4ade80;"></div>
+            <div class="zone-info">
+              <span class="z-price">₹77,515.49</span>
+              <span class="z-name">Upper Watch Zone</span>
+            </div>
+          </div>
+          <div class="zone-row current">
+            <div class="zone-dot" style="background:var(--gold);box-shadow:0 0 8px var(--gold);"></div>
+            <div class="zone-info">
+              <span class="z-price" style="color:var(--gold);">₹76,913.50</span>
+              <span class="z-name">Current Level · April 30</span>
+            </div>
+            <span class="zone-gap" style="color:var(--gold);">BASE</span>
+          </div>
+          <div class="zone-row dn-ent">
+            <div class="zone-dot" style="background:#f87171;"></div>
+            <div class="zone-info">
+              <span class="z-price">₹76,311.51</span>
+              <span class="z-name">Lower Watch Zone</span>
+            </div>
+          </div>
+          <div class="zone-row max-dn">
+            <div class="zone-dot" style="background:#dc2626;"></div>
+            <div class="zone-info">
+              <span class="z-price">₹75,337.60</span>
+              <span class="z-name">Maximum Downside Boundary</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LEVELS TABLE -->
+      <table class="levels-table">
+        <thead>
+          <tr>
+            <th>Level</th>
+            <th>Price</th>
+            <th>Type</th>
+            <th>Significance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Maximum Upside</td>
+            <td><strong style="color:#4ade80;">₹78,489.40</strong></td>
+            <td><span class="badge resistance">Outer Resistance</span></td>
+            <td>Aggressive upside outer boundary for the week</td>
+          </tr>
+          <tr>
+            <td>Upper Watch Zone</td>
+            <td><strong style="color:#86efac;">₹77,515.49</strong></td>
+            <td><span class="badge resistance">Resistance</span></td>
+            <td>Key level — upside pressure activates above this</td>
+          </tr>
+          <tr>
+            <td>Current Level</td>
+            <td><strong style="color:var(--gold);">₹76,913.50</strong></td>
+            <td><span class="badge current">Reference</span></td>
+            <td>Report generation level · April 30, 2026</td>
+          </tr>
+          <tr>
+            <td>Lower Watch Zone</td>
+            <td><strong style="color:#fca5a5;">₹76,311.51</strong></td>
+            <td><span class="badge support">Support</span></td>
+            <td>Key level — downside pressure activates below this</td>
+          </tr>
+          <tr>
+            <td>Maximum Downside</td>
+            <td><strong style="color:#f87171;">₹75,337.60</strong></td>
+            <td><span class="badge support">Outer Support</span></td>
+            <td>Aggressive downside outer boundary for the week</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout">
+        <strong>📐 Weekly Range Width</strong>
+        The total spread between the Maximum Upside (₹78,489.40) and Maximum Downside (₹75,337.60) defines the outer boundary of expected weekly price movement under aggressive conditions. The watch zone band — between ₹77,515 and ₹76,311 — represents the more probable trading corridor under normal market volatility.
+      </div>
+    </section>
+
+    <!-- PCR & VIX -->
+    <section>
+      <h2><span class="icon">📉</span> PCR & India VIX Analysis</h2>
+      <p>
+        The two most important real-time sentiment gauges this week — the Put-Call Ratio and India VIX — present a market that has stepped back from recent fear extremes and is now hovering at a critical equilibrium point.
+      </p>
+
+      <div class="gauge-grid">
+
+        <!-- PCR GAUGE -->
+        <div class="gauge-card">
+          <div class="gauge-title">Put-Call Ratio (PCR) — April 30, 2026</div>
+          <div class="pcr-gauge-wrap">
+            <svg class="pcr-svg" viewBox="0 0 220 130" xmlns="http://www.w3.org/2000/svg">
+              <!-- Background arc -->
+              <path d="M 20 110 A 90 90 0 0 1 200 110" fill="none" stroke="#1e2535" stroke-width="18" stroke-linecap="round"/>
+              <!-- Gradient arc -->
+              <path d="M 20 110 A 90 90 0 0 1 200 110" fill="none" stroke="url(#arcGradSensex)" stroke-width="18" stroke-linecap="round" stroke-dasharray="283" stroke-dashoffset="0"/>
+              <defs>
+                <linearGradient id="arcGradSensex" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%"   stop-color="#dc2626"/>
+                  <stop offset="40%"  stop-color="#f59e0b"/>
+                  <stop offset="65%"  stop-color="#22c55e"/>
+                  <stop offset="100%" stop-color="#16a34a"/>
+                </linearGradient>
+              </defs>
+              <!--
+                PCR 0.80 on scale 0.4–1.5:
+                (0.80-0.40)/(1.5-0.40) = 0.40/1.10 = 36.4% along arc
+                Angle from left: 36.4% × 180° = 65.5°
+                Center (110,110), r=90
+                Angle from +x axis: 180° - 65.5° = 114.5°
+                x2 = 110 + 90×cos(114.5°) ≈ 73
+                y2 = 110 - 90×sin(114.5°) ≈ 28
+              -->
+              <line x1="110" y1="110" x2="73" y2="28"
+                    stroke="white" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="110" cy="110" r="6" fill="white"/>
+              <text x="14"  y="128" fill="#6b7280" font-size="9" font-family="DM Sans">0.4</text>
+              <text x="96"  y="24"  fill="#6b7280" font-size="9" font-family="DM Sans">0.9</text>
+              <text x="196" y="128" fill="#6b7280" font-size="9" font-family="DM Sans">1.5</text>
+              <text x="55"  y="128" fill="#f59e0b" font-size="8" font-family="DM Sans">BEARISH</text>
+              <text x="148" y="128" fill="#22c55e" font-size="8" font-family="DM Sans">BULLISH</text>
+            </svg>
+            <span class="pcr-reading">0.80</span>
+            <span class="pcr-status">⚖ Neutral Territory</span>
+            <div class="pcr-legend">
+              <span>Bears dominant</span>
+              <span>Neutral 0.8–1.2</span>
+              <span>Bulls dominant</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- VIX METER -->
+        <div class="gauge-card">
+          <div class="gauge-title">India VIX — Fear Index · April 30, 2026</div>
+          <div class="vix-meter-wrap">
+            <div class="vix-value-row">
+              <span class="vix-big">17.44</span>
+              <span class="vix-change">▼ −3.38% today</span>
+            </div>
+            <div style="font-size:0.75rem;color:var(--muted);margin-bottom:14px;">
+              Intraday range: 16.75 – 18.04 &nbsp;|&nbsp; Prev. close: 18.05
+            </div>
+            <div class="vix-track">
+              <div class="vix-needle"></div>
+            </div>
+            <div class="vix-scale">
+              <span>10 (Calm)</span>
+              <span>20</span>
+              <span>30</span>
+              <span>40 (Panic)</span>
+            </div>
+            <div class="vix-zones">
+              <div class="vix-zone calm">10–15<br>Calm</div>
+              <div class="vix-zone mod">15–20<br>Moderate ←</div>
+              <div class="vix-zone high">20–28<br>High</div>
+              <div class="vix-zone panic">28+<br>Panic</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="callout red-bar">
+        <strong>🔍 PCR Interpretation</strong>
+        A PCR of 0.80 sits precisely at the lower boundary of the neutral zone (0.8–1.2). This means Call Open Interest and Put Open Interest are approaching balance — neither side is decisively dominant. However, it leans slightly toward a market where call writers remain more active, which can create a ceiling effect on sharp upside rallies while also limiting deep downside conviction. This reading is consistent with a market searching for directional clarity heading into the May 7 expiry.
+      </div>
+
+      <div class="callout blue-bar">
+        <strong>🌡️ VIX Interpretation</strong>
+        India VIX at 17.44 has declined sharply from recent elevated levels, falling 3.38% today alone. Sitting in the moderate zone (15–20), it implies the market is pricing daily SENSEX moves of approximately ±0.8–1.0%. The compression in VIX is a constructive sign — it reduces option premiums and typically favors mean-reverting, range-bound price action. However, at 17.44 it remains above the calm threshold of 15, which means unexpected macro triggers can still cause rapid volatility spikes.
+      </div>
+    </section>
+
+    <!-- OI ANALYSIS -->
+    <section>
+      <h2><span class="icon">📋</span> Options Open Interest Snapshot</h2>
+      <p>
+        Open Interest (OI) data for the May 7, 2026 expiry reveals where institutional participants are concentrating positions. The OI distribution provides key insight into where the market may face structural resistance and where support floors are being built.
+      </p>
+
+      <div class="oi-grid">
+        <div class="oi-card">
+          <h4>🔴 Call OI (Resistance Zones)</h4>
+          <div class="oi-bar-item">
+            <span class="oi-strike">77,000</span>
+            <div class="oi-track"><div class="oi-fill-call" style="width:90%;"></div></div>
+            <span class="oi-label">High</span>
+          </div>
+          <div class="oi-bar-item">
+            <span class="oi-strike">77,500</span>
+            <div class="oi-track"><div class="oi-fill-call" style="width:75%;animation-delay:0.05s"></div></div>
+            <span class="oi-label">High</span>
+          </div>
+          <div class="oi-bar-item">
+            <span class="oi-strike">78,000</span>
+            <div class="oi-track"><div class="oi-fill-call" style="width:50%;animation-delay:0.1s"></div></div>
+            <span class="oi-label">Mod</span>
+          </div>
+          <div class="oi-bar-item">
+            <span class="oi-strike">78,500</span>
+            <div class="oi-track"><div class="oi-fill-call" style="width:30%;animation-delay:0.15s"></div></div>
+            <span class="oi-label">Low</span>
+          </div>
+          <p style="font-size:0.78rem;color:var(--muted);margin-top:10px;">Heavy call writing at 77,000–77,500 forms a significant resistance ceiling for this expiry week.</p>
+        </div>
+
+        <div class="oi-card">
+          <h4>🟢 Put OI (Support Zones)</h4>
+          <div class="oi-bar-item">
+            <span class="oi-strike">76,500</span>
+            <div class="oi-track"><div class="oi-fill-put" style="width:80%;animation-delay:0.1s"></div></div>
+            <span class="oi-label">High</span>
+          </div>
+          <div class="oi-bar-item">
+            <span class="oi-strike">76,000</span>
+            <div class="oi-track"><div class="oi-fill-put" style="width:65%;animation-delay:0.15s"></div></div>
+            <span class="oi-label">High</span>
+          </div>
+          <div class="oi-bar-item">
+            <span class="oi-strike">75,500</span>
+            <div class="oi-track"><div class="oi-fill-put" style="width:45%;animation-delay:0.2s"></div></div>
+            <span class="oi-label">Mod</span>
+          </div>
+          <div class="oi-bar-item">
+            <span class="oi-strike">75,000</span>
+            <div class="oi-track"><div class="oi-fill-put" style="width:28%;animation-delay:0.25s"></div></div>
+            <span class="oi-label">Low</span>
+          </div>
+          <p style="font-size:0.78rem;color:var(--muted);margin-top:10px;">Put accumulation at 76,000–76,500 creates meaningful structural floors heading into the expiry week.</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>📌 Max Pain Estimate (May 7 Expiry)</strong>
+        Based on the OI distribution above, the Max Pain for the May 7 expiry series is estimated in the <strong>76,500–77,000 zone</strong> — the level at which the maximum number of option holders (both put and call buyers) would see their contracts expire worthless. Markets have a historical tendency to gravitate toward max pain in the final 2–3 sessions before a weekly expiry, which could act as a gravitational anchor for SENSEX price action later in the week.
+      </div>
+    </section>
+
+    <!-- VOLATILITY ASSESSMENT -->
+    <section>
+      <h2><span class="icon">⚡</span> Volatility Assessment</h2>
+      <p>
+        This week's market conditions indicate <strong>moderate volatility</strong> is expected for BSE SENSEX. The sharp cooling in India VIX today is encouraging, but the index remains above the calm threshold — leaving room for volatility expansion if any macro trigger arrives during the week.
+      </p>
+
+      <!-- RANGE BAND VISUAL -->
+      <div class="range-visual">
+        <h4>Weekly Expected Price Range — Visual Band</h4>
+        <div class="range-track-wrap">
+          <div class="range-bg"></div>
+
+          <!--
+            Total range: 78,489.40 – 75,337.60 = 3,151.80
+            Max Downside (75,337.60): 0%
+            Lower Watch  (76,311.51): (76311.51-75337.60)/3151.80 = 30.9%
+            Base         (76,913.50): (76913.50-75337.60)/3151.80 = 50%
+            Upper Watch  (77,515.49): (77515.49-75337.60)/3151.80 = 69.1%
+            Max Upside   (78,489.40): 100%
+          -->
+
+          <!-- Max Downside @ 0% -->
+          <div class="range-marker" style="left:0%;background:#dc2626;">
+            <span class="range-marker-label" style="color:#f87171;left:0;transform:none;">MAX DN</span>
+            <span class="range-marker-val"   style="color:#f87171;left:0;transform:none;">75,337</span>
+          </div>
+
+          <!-- Lower Watch @ 30.9% -->
+          <div class="range-marker" style="left:30.9%;background:#f97316;">
+            <span class="range-marker-label" style="color:#fb923c;">LOWER WATCH</span>
+            <span class="range-marker-val"   style="color:#fb923c;">76,311</span>
+          </div>
+
+          <!-- Base @ 50% -->
+          <div class="range-marker" style="left:50%;background:var(--gold);width:3px;">
+            <span class="range-marker-label" style="color:var(--gold);">◆ BASE</span>
+            <span class="range-marker-val"   style="color:var(--gold);">76,913</span>
+          </div>
+
+          <!-- Upper Watch @ 69.1% -->
+          <div class="range-marker" style="left:69.1%;background:#4ade80;">
+            <span class="range-marker-label" style="color:#86efac;">UPPER WATCH</span>
+            <span class="range-marker-val"   style="color:#86efac;">77,515</span>
+          </div>
+
+          <!-- Max Upside @ 100% -->
+          <div class="range-marker" style="left:100%;background:#16a34a;">
+            <span class="range-marker-label" style="color:#4ade80;right:0;left:auto;transform:none;">MAX UP</span>
+            <span class="range-marker-val"   style="color:#4ade80;right:0;left:auto;transform:none;">78,489</span>
+          </div>
+        </div>
+        <div class="range-scale">
+          <span>₹75,337 (Max Downside)</span>
+          <span style="color:var(--gold);">← ₹3,151 total range →</span>
+          <span>₹78,489 (Max Upside)</span>
+        </div>
+      </div>
+
+      <p>
+        The structural symmetry in this week's price framework is notable — the Upper Watch Zone and Lower Watch Zone sit at equal distances on either side of the current base level. Similarly, both outer boundaries are equidistant from the base. This balanced structure confirms a symmetric volatility model with no directional bias embedded in the levels.
+      </p>
+
+      <div class="callout green-bar">
+        <strong>📊 Volatility Context This Week</strong>
+        India VIX declining to 17.44 — its lowest intraday level since earlier this month — is a constructive development. This compression in implied volatility suggests that option writers are comfortable with the current risk environment, and the market is not pricing in a sharp directional move. However, traders should monitor geopolitical developments, RBI commentary, and global crude oil prices as potential volatility triggers for the May 7 expiry week.
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section>
+      <h2><span class="icon">❓</span> Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <p class="faq-q">What is the expected range for SENSEX this week (April 30 – May 7)?</p>
+        <p class="faq-a">Based on this week's technical analysis, the probable trading range is between the Lower Watch Zone of ₹76,311.51 and the Upper Watch Zone of ₹77,515.49 under normal market conditions. The outer boundaries — Maximum Downside at ₹75,337.60 and Maximum Upside at ₹78,489.40 — represent the extreme scenarios under aggressive directional price movement.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">What does a SENSEX PCR of 0.80 indicate?</p>
+        <p class="faq-a">A PCR of 0.80 sits at the lower boundary of neutral territory (0.8–1.2). It indicates that Call Open Interest and Put Open Interest are approaching equilibrium, with calls slightly dominant. This means market participants are not overwhelmingly positioned in either direction. Historically, a PCR at 0.80 on BSE SENSEX is associated with a market that is cautious but not fearful — it tends to produce range-bound, two-sided price action rather than strong directional trends.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Why did India VIX fall 3.38% today and what does it mean for SENSEX?</p>
+        <p class="faq-a">India VIX declining 3.38% on April 30 reflects a significant reduction in implied volatility. This typically occurs after a period of elevated fear subsides — often coinciding with monthly expiry resolution (which also falls today for the April series). A falling VIX compresses option premiums across all strikes and generally supports a shift from high-volatility, momentum-driven trading back toward range-bound price discovery. At 17.44, VIX remains in the moderate zone — elevated enough to keep some premium in options, but no longer signaling panic.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">What is Max Pain and why does it matter for the May 7 expiry?</p>
+        <p class="faq-a">Max Pain is the price level at which the maximum number of option buyers — both put and call buyers — would see their contracts expire worthless. Option writers, typically institutional market makers, have a natural incentive to defend positions near this level. For the May 7 expiry, the Max Pain estimate is in the 76,500–77,000 zone. As expiry approaches (particularly in the final 2–3 sessions), SENSEX has a historical tendency to drift toward this gravitational level, which can contain sharp breakouts in either direction.</p>
+      </div>
+    </section>
+
+    <!-- CONCLUSION -->
+    <section>
+      <h2><span class="icon">📌</span> Weekly Outlook Summary</h2>
+      <p>
+        The data for the week of April 30 – May 7, 2026 presents a SENSEX market in transition. The April monthly expiry closes today at ₹76,913 — a level that is neither alarming nor encouraging. The SENSEX declined 0.75% on the day but avoided breaking below critical structural levels, which is mildly constructive.
+      </p>
+      <p>
+        The five price levels identified in this report — Maximum Downside at ₹75,337, Lower Watch Zone at ₹76,311, Current Base at ₹76,913, Upper Watch Zone at ₹77,515, and Maximum Upside at ₹78,489 — form the structural framework for how this expiry week is likely to behave. A PCR of 0.80 and a declining VIX at 17.44 together point toward moderate, two-sided price action in the early part of the week, with the final sessions before May 7 expiry likely to see tighter, max-pain-anchored consolidation.
+      </p>
+      <p>
+        Stay tuned to FinWorld for mid-week updates as new options data, global cues, and domestic developments emerge.
+      </p>
+    </section>
+
+    <div class="disclaimer">
+      <strong style="color:#8896b0;">Disclaimer:</strong> This report is for informational and educational purposes only. It is based on technical analysis and market data available at the time of report generation (April 30, 2026). This report does not constitute financial advice, a recommendation to buy or sell, or an endorsement of any specific trade or investment. All investments carry risk. Investors should consult a SEBI-registered research analyst or qualified financial advisor before making any investment decisions.
+    </div>
+
+    <footer>
+      <p>Published by <strong style="color:var(--text);">FinWorld</strong> &nbsp;|&nbsp; S Kamal Kumar, Research Analyst &nbsp;|&nbsp; April 30, 2026</p>
+    </footer>
+
+  </article>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "BSE SENSEX Weekly Market Analysis: April 30 – May 7, 2026",
+    "description": "Complete weekly SENSEX analysis with PCR, India VIX, price zones, OI data, and volatility assessment for the May 7, 2026 expiry week.",
+    "author": { "@type": "Person", "name": "S Kamal Kumar" },
+    "publisher": { "@type": "Organization", "name": "FinWorld" },
+    "datePublished": "2026-04-30",
+    "dateModified": "2026-04-30"
+  }
+  </script>
+
+</div><!-- end page-wrapper -->
+</body>
+</html>
