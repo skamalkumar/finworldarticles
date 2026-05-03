@@ -584,11 +584,113 @@
       .snapshot  { grid-template-columns: 1fr 1fr; }
       .loan-grid { grid-template-columns: 1fr; }
       .emi-grid  { grid-template-columns: 1fr; }
+      .toc-list    { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
     }
+
+    /* ── TABLE OF CONTENTS ── */
+    .toc-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 12px 12px 0;
+      padding: 24px 28px;
+      margin: 32px 0 40px;
+    }
+    .toc-box h3 {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      margin: 0 0 16px;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .toc-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 32px; }
+    .toc-list li a {
+      color: #9aadc4;
+      text-decoration: none;
+      font-size: 0.88rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.2s;
+    }
+    .toc-list li a:hover { color: var(--gold); }
+    .toc-list li a::before {
+      content: '';
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      opacity: 0.5;
+      flex-shrink: 0;
+    }
+    .toc-list li a:hover::before { opacity: 1; }
+
+    /* ── CROSS-PAGE LINK CARD ── */
+    .link-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 16px 0;
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .link-card:hover { border-color: rgba(245,158,11,0.4); background: rgba(245,158,11,0.04); }
+    .link-card-icon { font-size: 1.6rem; flex-shrink: 0; }
+    .link-card-body .lc-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+    .link-card-body .lc-title { font-size: 0.9rem; font-weight: 600; color: var(--white); line-height: 1.3; }
+    .link-card-body .lc-desc  { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+    .link-card-arrow { margin-left: auto; color: var(--muted); font-size: 1rem; flex-shrink: 0; }
+
+    /* ── RELATED ARTICLES ── */
+    .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
+    .related-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px;
+      text-decoration: none;
+      display: block;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .related-card:hover { border-color: rgba(245,158,11,0.35); background: rgba(245,158,11,0.04); }
+    .related-card .rc-tag {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .related-card .rc-title { font-size: 0.88rem; font-weight: 600; color: var(--white); line-height: 1.4; margin-bottom: 6px; }
+    .related-card .rc-desc  { font-size: 0.75rem; color: var(--muted); line-height: 1.5; }
+    .back-to-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--muted);
+      font-size: 0.78rem;
+      text-decoration: none;
+      margin-top: 12px;
+      transition: color 0.2s;
+    }
+    .back-to-top:hover { color: var(--gold); }
   </style>
 </head>
 <body>
-<div class="page-wrapper">
+<div class="page-wrapper" id="top">
 
   <!-- HERO -->
   <div class="hero">
@@ -623,7 +725,7 @@
   <article>
 
     <!-- INTRO -->
-    <section>
+    <section id="intro">
       <p>
         Buying a home is likely the single largest financial decision of your life. And the home loan you choose will sit alongside that decision for the next 20 to 30 years — silently shaping your monthly cash flow, your tax outgo, and your overall financial health for decades.
       </p>
@@ -632,8 +734,25 @@
       </p>
     </section>
 
+    <!-- TABLE OF CONTENTS -->
+    <div class="toc-box">
+      <h3>📑 In This Article</h3>
+      <ul class="toc-list">
+        <li><a href="#snapshot">Home Loan at a Glance</a></li>
+        <li><a href="#types">Types of Home Loans</a></li>
+        <li><a href="#rates">Interest Rate Comparison</a></li>
+        <li><a href="#emi">EMI Comparison by Tenure</a></li>
+        <li><a href="#eligibility">Eligibility Criteria</a></li>
+        <li><a href="#charges">Hidden Charges</a></li>
+        <li><a href="#apply">How to Apply</a></li>
+        <li><a href="#tax">Tax Benefits</a></li>
+        <li><a href="#faq">Frequently Asked Questions</a></li>
+        <li><a href="#checklist">Final Checklist</a></li>
+      </ul>
+    </div>
+
     <!-- QUICK SNAPSHOT -->
-    <section>
+    <section id="snapshot">
       <h2><span class="icon">📊</span> Home Loan at a Glance — India 2026</h2>
 
       <div class="snapshot">
@@ -661,7 +780,7 @@
     </section>
 
     <!-- TYPES OF HOME LOANS -->
-    <section>
+    <section id="types">
       <h2><span class="icon">🏠</span> Types of Home Loans in India</h2>
       <p>
         Before comparing lenders, you need to understand what kind of loan suits your situation. Most borrowers default to a standard home purchase loan — but depending on your need, a different product may serve you better.
@@ -713,10 +832,20 @@
         <strong>💡 Which Type Should You Choose?</strong>
         In a falling interest rate environment — like when the RBI is in a rate-cutting cycle — a <strong>floating rate loan</strong> is almost always the better choice. In a rising rate cycle or if you want complete EMI predictability, a <strong>fixed rate</strong> gives peace of mind. For most Indian borrowers in 2026, floating rate linked to EBLR is the dominant and recommended choice.
       </div>
+
+      <a href="https://www.finworldltd.online/blog/sensex-weekly-analysis-april-30-to-may-7-2026" class="link-card">
+        <span class="link-card-icon">📈</span>
+        <div class="link-card-body">
+          <div class="lc-label">FinWorld Market Analysis</div>
+          <div class="lc-title">SENSEX Weekly Analysis: April 30 – May 7, 2026</div>
+          <div class="lc-desc">Track RBI-linked market movements that directly impact your home loan floating rate</div>
+        </div>
+        <span class="link-card-arrow">→</span>
+      </a>
     </section>
 
     <!-- INTEREST RATES COMPARISON -->
-    <section>
+    <section id="rates">
       <h2><span class="icon">💰</span> Home Loan Interest Rates — Top Lenders 2026</h2>
       <p>
         Interest rates vary significantly across lenders and are influenced by your credit score, income profile, loan amount, and the property type. The rates below represent the best available starting rates for salaried applicants with a CIBIL score above 750.
@@ -776,7 +905,7 @@
     </section>
 
     <!-- EMI COMPARISON -->
-    <section>
+    <section id="emi">
       <h2><span class="icon">📐</span> EMI Comparison by Tenure</h2>
       <p>
         One of the most common mistakes borrowers make is choosing tenure based only on EMI affordability — without looking at what they will pay in total interest over the loan's life. The table below shows EMI and total interest for a ₹50 lakh loan at 8.75% across three tenure options.
@@ -810,10 +939,20 @@
         <strong>🔍 The 30-Year Trap</strong>
         A 30-year tenure reduces your EMI by ₹23,235 vs a 10-year tenure — but costs you an additional <strong>₹66.59 lakh in interest</strong>. If you can afford a higher EMI, always choose a shorter tenure. Alternatively, make partial prepayments annually to reduce the principal faster without increasing the monthly burden.
       </div>
+
+      <a href="https://www.finworldltd.online/articles/how-to-choose-right-home-loan#checklist" class="link-card">
+        <span class="link-card-icon">✅</span>
+        <div class="link-card-body">
+          <div class="lc-label">Jump Ahead</div>
+          <div class="lc-title">Pre-Signing Checklist — 9 Questions Before You Sign</div>
+          <div class="lc-desc">Includes tenure and prepayment verification — the two most overlooked items</div>
+        </div>
+        <span class="link-card-arrow">↓</span>
+      </a>
     </section>
 
     <!-- ELIGIBILITY -->
-    <section>
+    <section id="eligibility">
       <h2><span class="icon">✅</span> Home Loan Eligibility — What Lenders Look At</h2>
       <p>
         Your eligibility determines not just whether you get the loan, but how much you get and at what rate. Lenders evaluate multiple parameters simultaneously — improving even one or two of these can significantly improve your loan offer.
@@ -876,7 +1015,7 @@
     </section>
 
     <!-- HIDDEN CHARGES -->
-    <section>
+    <section id="charges">
       <h2><span class="icon">⚠️</span> Hidden Charges Nobody Tells You About</h2>
       <p>
         The advertised interest rate is rarely the true cost of your home loan. Lenders layer multiple fees and charges that can add ₹50,000 to ₹2 lakh or more to your total outgo. Always ask for a complete fee schedule before signing.
@@ -917,7 +1056,7 @@
     </section>
 
     <!-- HOW TO APPLY -->
-    <section>
+    <section id="apply">
       <h2><span class="icon">📋</span> Step-by-Step: How to Apply for a Home Loan</h2>
 
       <div class="steps">
@@ -974,7 +1113,7 @@
     </section>
 
     <!-- TAX BENEFITS -->
-    <section>
+    <section id="tax">
       <h2><span class="icon">🧾</span> Tax Benefits on Home Loans</h2>
       <p>
         A home loan is one of the most tax-efficient financial products available to Indian taxpayers under the old tax regime. These deductions can reduce your annual tax outgo by ₹1 lakh to ₹2.5 lakh depending on your income slab.
@@ -1021,10 +1160,20 @@
         <strong>💰 Maximum Annual Tax Saving Possible</strong>
         If you qualify for Section 24(b) + 80C + 80EEA, the combined deduction can be up to <strong>₹5,00,000 per year</strong>. For someone in the 30% tax bracket, that translates to a tax saving of approximately <strong>₹1,50,000 per year</strong>. These benefits are available only under the old tax regime — if you have opted for the new regime, these deductions are not applicable.
       </div>
+
+      <a href="https://youtu.be/wrKyzvwj0O8" class="link-card" target="_blank" rel="noopener">
+        <span class="link-card-icon">🎬</span>
+        <div class="link-card-body">
+          <div class="lc-label">FinWorld YouTube · Market Education</div>
+          <div class="lc-title">Sell in May and Go Away — Fact or Fiction?</div>
+          <div class="lc-desc">Understand seasonal market myths before timing your investments around your home loan EMI cycle</div>
+        </div>
+        <span class="link-card-arrow">↗</span>
+      </a>
     </section>
 
     <!-- FAQ -->
-    <section>
+    <section id="faq">
       <h2><span class="icon">❓</span> Frequently Asked Questions</h2>
 
       <div class="faq-item">
@@ -1054,7 +1203,7 @@
     </section>
 
     <!-- CONCLUSION -->
-    <section>
+    <section id="checklist">
       <h2><span class="icon">📌</span> Final Checklist Before You Sign</h2>
       <p>
         Before you put your signature on a home loan agreement, run through this final checklist. These are the questions that can save you lakhs over the life of your loan.
@@ -1079,6 +1228,40 @@
       <p>
         FinWorld is committed to helping you make every major financial decision with data, clarity, and confidence.
       </p>
+    </section>
+
+    <!-- RELATED ARTICLES -->
+    <section style="margin-top:52px;">
+      <h2><span class="icon">🔗</span> More From FinWorld</h2>
+      <p>Explore related articles and market analysis to make smarter financial decisions.</p>
+
+      <div class="related-grid">
+        <a href="https://www.finworldltd.online/blog/sensex-weekly-analysis-april-30-to-may-7-2026" class="related-card">
+          <span class="rc-tag">📊 Market Analysis · Weekly</span>
+          <div class="rc-title">SENSEX Weekly Analysis: April 30 – May 7, 2026</div>
+          <div class="rc-desc">Key price zones, India VIX at 17.44, PCR 0.80 — complete outlook for the May 7 expiry week.</div>
+        </a>
+
+        <a href="https://youtu.be/wrKyzvwj0O8" class="related-card" target="_blank" rel="noopener">
+          <span class="rc-tag">🎬 Video · Market Education</span>
+          <div class="rc-title">Sell in May and Go Away — Fact or Fiction?</div>
+          <div class="rc-desc">Debunking the 300-year-old market myth with US and Indian data. 6-minute explainer.</div>
+        </a>
+
+        <a href="https://www.finworldltd.online/articles" class="related-card">
+          <span class="rc-tag">📚 FinWorld Articles</span>
+          <div class="rc-title">Personal Finance & Investment Articles</div>
+          <div class="rc-desc">Explore all FinWorld guides covering mutual funds, tax planning, and market education.</div>
+        </a>
+
+        <a href="https://www.finworldltd.online" class="related-card">
+          <span class="rc-tag">🏠 FinWorld Home</span>
+          <div class="rc-title">FinWorldLtd.online — Research & Education</div>
+          <div class="rc-desc">Weekly market reports, financial education, and data-driven insights for Indian investors.</div>
+        </a>
+      </div>
+
+      <a href="#top" class="back-to-top">↑ Back to top</a>
     </section>
 
     <div class="disclaimer">
