@@ -1,87 +1,1109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Learn how to choose the right home loan with factors like interest rates, tenure, EMI planning, and lender comparison." />
-    <meta name="keywords" content="home loan, mortgage, EMI, interest rates, housing loan, financial planning" />
-    <meta name="author" content="Kamal Kumar" />
-    <title>How to Choose the Right Home Loan for Your Dream House</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A complete guide to choosing the right home loan in India 2026. Compare interest rates, types, eligibility, tenure, and avoid common mistakes before you sign.">
+  <meta name="keywords" content="home loan India 2026, how to choose home loan, SBI home loan, HDFC home loan, home loan interest rates, home loan eligibility, fixed vs floating rate, home loan EMI calculator India">
+  <title>How to Choose the Right Home Loan for Your Dream House | FinWorld</title>
+  <link rel="canonical" href="https://www.finworldltd.online/articles/how-to-choose-right-home-loan" />
+  <meta property="og:title" content="How to Choose the Right Home Loan for Your Dream House | FinWorld">
+  <meta property="og:description" content="Everything you need to know before taking a home loan in India — interest rates, types, eligibility, hidden charges, and expert tips.">
+  <meta property="og:type" content="article">
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0e1117;
+      --surface: #161b27;
+      --surface2: #1e2535;
+      --border: #2a3347;
+      --text: #e2e8f0;
+      --muted: #8896b0;
+      --red: #ef4444;
+      --green: #22c55e;
+      --gold: #f59e0b;
+      --blue: #3b82f6;
+      --white: #ffffff;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { background: #0e1117 !important; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #0e1117 !important;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .page-wrapper { background: #0e1117 !important; min-height: 100vh; width: 100%; }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #0e1117 0%, #1a1f35 60%, #0e1117 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 56px 24px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -60px; left: 50%; transform: translateX(-50%);
+      width: 600px; height: 300px;
+      background: radial-gradient(ellipse, rgba(245,158,11,0.10) 0%, transparent 70%);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(245,158,11,0.15);
+      border: 1px solid rgba(245,158,11,0.35);
+      color: #fde68a;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      animation: pulse 1.8s ease infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.3); }
+    }
+
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.8rem, 4.5vw, 3rem);
+      color: var(--white);
+      line-height: 1.2;
+      max-width: 760px;
+      margin: 0 auto 12px;
+      position: relative;
+    }
+
+    .hero h1 em { font-style: normal; color: var(--gold); }
+
+    .hero-meta {
+      color: var(--muted);
+      font-size: 0.85rem;
+      position: relative;
+      margin-top: 16px;
+    }
+
+    /* ── INFO TICKER ── */
+    .live-bar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      font-size: 0.82rem;
+      overflow: hidden;
+    }
+
+    .live-label {
+      background: var(--gold);
+      color: #000;
+      font-weight: 700;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      padding: 8px 14px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .live-scroll { overflow: hidden; flex: 1; padding: 8px 16px; }
+
+    .live-scroll-inner {
+      display: inline-block;
+      white-space: nowrap;
+      animation: scroll 35s linear infinite;
+    }
+
+    .live-scroll-inner span { margin-right: 48px; color: var(--muted); }
+    .live-scroll-inner span strong { color: var(--text); }
+    .live-scroll-inner span .up { color: var(--green); }
+    .live-scroll-inner span .dn { color: var(--red); }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ── LAYOUT ── */
+    article { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.6rem;
+      color: var(--white);
+      margin: 52px 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2 .icon { font-size: 1.2rem; }
+
+    h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin: 28px 0 10px;
+    }
+
+    p { font-size: 0.97rem; color: #c8d4e8; margin-bottom: 14px; line-height: 1.8; }
+
+    /* ── SNAPSHOT CARDS ── */
+    .snapshot {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 28px 0;
+    }
+
+    .snap-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 16px;
+      text-align: center;
+    }
+
+    .snap-card .s-val {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .snap-card .s-lbl {
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .snap-card .s-sub { font-size: 0.75rem; margin-top: 3px; color: var(--muted); }
+
+    .gold { color: var(--gold); }
+    .red  { color: var(--red); }
+    .green { color: var(--green); }
+    .blue { color: var(--blue); }
+
+    /* ── CALLOUT ── */
+    .callout {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 18px;
+      margin: 20px 0;
+      font-size: 0.92rem;
+    }
+
+    .callout.red-bar   { border-left-color: var(--red); }
+    .callout.blue-bar  { border-left-color: var(--blue); }
+    .callout.green-bar { border-left-color: var(--green); }
+
+    .callout strong {
+      display: block;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    /* ── COMPARISON TABLE ── */
+    .comp-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 0.88rem;
+    }
+
+    .comp-table th {
+      background: var(--surface2);
+      color: var(--muted);
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      padding: 10px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .comp-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      color: var(--text);
+      vertical-align: top;
+    }
+
+    .comp-table tr:last-child td { border-bottom: none; }
+
+    .comp-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .badge.good    { background: rgba(34,197,94,0.15);  color: #4ade80; border: 1px solid rgba(34,197,94,0.25); }
+    .badge.caution { background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.3); }
+    .badge.risk    { background: rgba(239,68,68,0.15);  color: #f87171; border: 1px solid rgba(239,68,68,0.25); }
+
+    /* ── LOAN TYPE CARDS ── */
+    .loan-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .loan-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .loan-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 3px;
+    }
+
+    .loan-card.fixed::before  { background: var(--gold); }
+    .loan-card.floating::before { background: var(--blue); }
+    .loan-card.hybrid::before { background: var(--green); }
+    .loan-card.special::before { background: var(--red); }
+
+    .loan-card-icon {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .loan-card h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .loan-card p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+
+    .loan-card .pro { color: var(--green); font-size: 0.78rem; margin-bottom: 3px; }
+    .loan-card .con { color: var(--red);   font-size: 0.78rem; margin-bottom: 3px; }
+
+    /* ── LENDER RATE BARS ── */
+    .lender-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    .lender-card h4 {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .lender-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .lender-name {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text);
+      min-width: 100px;
+    }
+
+    .lender-track {
+      flex: 1;
+      height: 8px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .lender-fill {
+      height: 100%;
+      border-radius: 4px;
+      background: linear-gradient(90deg, #f59e0b, #fbbf24);
+      animation: grow 1s ease forwards;
+      transform-origin: left;
+    }
+
+    @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+    .lender-rate {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--gold);
+      min-width: 80px;
+      text-align: right;
+    }
+
+    /* ── CHECKLIST ── */
+    .checklist {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 20px 0;
+    }
+
+    .checklist h4 {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    .check-item:last-child { border-bottom: none; }
+
+    .check-icon {
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .check-icon.ok    { background: rgba(34,197,94,0.2);  color: var(--green); }
+    .check-icon.warn  { background: rgba(245,158,11,0.2); color: var(--gold); }
+    .check-icon.alert { background: rgba(239,68,68,0.2);  color: var(--red); }
+
+    /* ── EMI VISUAL ── */
+    .emi-visual {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      margin: 24px 0;
+    }
+
+    .emi-visual h4 {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .emi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .emi-cell {
+      text-align: center;
+      padding: 16px;
+      background: var(--surface2);
+      border-radius: 8px;
+    }
+
+    .emi-cell .e-tenure {
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    .emi-cell .e-amount {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.4rem;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .emi-cell .e-total {
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+
+    .emi-cell .e-interest {
+      font-size: 0.75rem;
+      color: var(--red);
+      margin-top: 4px;
+    }
+
+    /* ── STEP PROCESS ── */
+    .steps {
+      margin: 24px 0;
+      position: relative;
+    }
+
+    .step-item {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .step-num {
+      width: 36px; height: 36px;
+      background: rgba(245,158,11,0.15);
+      border: 1px solid rgba(245,158,11,0.35);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--gold);
+      font-size: 0.85rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .step-content h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+
+    .step-content p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* ── FAQ ── */
+    .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+    .faq-item:last-child { border-bottom: none; }
+
+    .faq-q {
+      font-weight: 600;
+      color: var(--white);
+      display: flex;
+      gap: 12px;
+    }
+
+    .faq-q::before {
+      content: "Q";
+      background: rgba(245,158,11,0.2);
+      color: var(--gold);
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 3px;
+      flex-shrink: 0;
+      margin-top: 2px;
+      border: 1px solid rgba(245,158,11,0.3);
+    }
+
+    .faq-a {
+      font-size: 0.92rem;
+      color: #9aadc4;
+      margin-top: 10px;
+      padding-left: 34px;
+      line-height: 1.75;
+    }
+
+    /* ── DISCLAIMER ── */
+    .disclaimer {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px 22px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 48px;
+      line-height: 1.7;
+    }
+
+    footer {
+      margin-top: 32px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 640px) {
+      .snapshot  { grid-template-columns: 1fr 1fr; }
+      .loan-grid { grid-template-columns: 1fr; }
+      .emi-grid  { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
-
 <body>
-    <article>
-        <header>
-            <h1>How to Choose the Right Home Loan for Your Dream House</h1>
-            <p><strong>Date:</strong> March 20, 2025</p>
-            <p><strong>Author:</strong> Kamal Kumar</p>
-        </header>
+<div class="page-wrapper">
 
-        <section>
-            <h2>Introduction</h2>
-            <p>Owning a home is a major financial milestone. However, with rising property prices, most individuals rely on home loans to achieve this goal. Choosing the right home loan is essential to ensure long-term financial stability and avoid unnecessary financial stress.</p>
-        </section>
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-badge">Personal Finance · Home Loans India 2026</div>
+    <h1>How to Choose the Right<br><em>Home Loan</em> for Your Dream House</h1>
+    <p class="hero-meta">
+      By S Kamal Kumar, Research Analyst &nbsp;|&nbsp; FinWorld &nbsp;|&nbsp; May 2026
+    </p>
+  </div>
 
-        <section>
-            <h2>1. Understand Your Financial Position</h2>
+  <!-- TICKER -->
+  <div class="live-bar">
+    <div class="live-label">QUICK FACTS</div>
+    <div class="live-scroll">
+      <div class="live-scroll-inner">
+        <span><strong>SBI Home Loan</strong> <span class="up">From 8.50% p.a.</span></span>
+        <span><strong>HDFC Bank</strong> <span class="up">From 8.75% p.a.</span></span>
+        <span><strong>Max Tenure</strong> 30 Years</span>
+        <span><strong>LTV Ratio</strong> Up to 90% (loans below ₹30L)</span>
+        <span><strong>Tax Benefit</strong> ₹2L (Sec 24b) + ₹1.5L (Sec 80C)</span>
+        <span><strong>Processing Fee</strong> 0.25%–1% of loan amount</span>
+        <span><strong>SBI Home Loan</strong> <span class="up">From 8.50% p.a.</span></span>
+        <span><strong>HDFC Bank</strong> <span class="up">From 8.75% p.a.</span></span>
+        <span><strong>Max Tenure</strong> 30 Years</span>
+        <span><strong>LTV Ratio</strong> Up to 90% (loans below ₹30L)</span>
+        <span><strong>Tax Benefit</strong> ₹2L (Sec 24b) + ₹1.5L (Sec 80C)</span>
+        <span><strong>Processing Fee</strong> 0.25%–1% of loan amount</span>
+      </div>
+    </div>
+  </div>
 
-            <h3>a) Calculate Your Budget</h3>
-            <p>Before applying for a loan, evaluate your income, expenses, and existing liabilities. A home loan should fit comfortably within your financial plan without affecting your lifestyle.</p>
+  <article>
 
-            <h3>b) Check Your Credit Score</h3>
-            <p>A strong credit score improves your chances of securing lower interest rates. Maintaining a disciplined repayment history is crucial.</p>
+    <!-- INTRO -->
+    <section>
+      <p>
+        Buying a home is likely the single largest financial decision of your life. And the home loan you choose will sit alongside that decision for the next 20 to 30 years — silently shaping your monthly cash flow, your tax outgo, and your overall financial health for decades.
+      </p>
+      <p>
+        Yet most first-time buyers walk into a bank, accept the first offer they receive, and sign a document they barely understand. This guide is written to change that. We break down every dimension of a home loan — types, interest rates, lenders, eligibility, hidden charges, and what to watch out for — so you walk into that bank with clarity and confidence.
+      </p>
+    </section>
 
-            <h3>c) Debt-to-Income Ratio</h3>
-            <p>Your total monthly obligations should ideally remain within manageable limits to ensure smooth repayment.</p>
-        </section>
+    <!-- QUICK SNAPSHOT -->
+    <section>
+      <h2><span class="icon">📊</span> Home Loan at a Glance — India 2026</h2>
 
-        <section>
-            <h2>2. Types of Home Loans</h2>
+      <div class="snapshot">
+        <div class="snap-card">
+          <span class="s-val gold">8.50%</span>
+          <span class="s-lbl">Lowest Rate</span>
+          <span class="s-sub">SBI · May 2026</span>
+        </div>
+        <div class="snap-card">
+          <span class="s-val gold">30 Yrs</span>
+          <span class="s-lbl">Max Tenure</span>
+          <span class="s-sub">Most lenders</span>
+        </div>
+        <div class="snap-card">
+          <span class="s-val green">90%</span>
+          <span class="s-lbl">Max LTV</span>
+          <span class="s-sub">Loans below ₹30L</span>
+        </div>
+        <div class="snap-card">
+          <span class="s-val blue">₹3.5L</span>
+          <span class="s-lbl">Annual Tax Saving</span>
+          <span class="s-sub">Sec 24b + 80C</span>
+        </div>
+      </div>
+    </section>
 
-            <h3>a) Fixed-Rate Loan</h3>
-            <p>Provides stability with constant EMIs throughout the tenure.</p>
+    <!-- TYPES OF HOME LOANS -->
+    <section>
+      <h2><span class="icon">🏠</span> Types of Home Loans in India</h2>
+      <p>
+        Before comparing lenders, you need to understand what kind of loan suits your situation. Most borrowers default to a standard home purchase loan — but depending on your need, a different product may serve you better.
+      </p>
 
-            <h3>b) Floating-Rate Loan</h3>
-            <p>Interest rates change based on market conditions, which may benefit borrowers in a declining rate environment.</p>
+      <div class="loan-grid">
+        <div class="loan-card fixed">
+          <span class="loan-card-icon">🔒</span>
+          <h4>Fixed Rate Home Loan</h4>
+          <p>Your interest rate stays the same throughout the loan tenure, regardless of RBI repo rate changes.</p>
+          <div class="pro">✔ EMI never changes — easy to budget</div>
+          <div class="pro">✔ Protected from rate hikes</div>
+          <div class="con">✘ Higher rate than floating at entry</div>
+          <div class="con">✘ No benefit when rates fall</div>
+        </div>
 
-            <h3>c) Government Schemes</h3>
-            <p>Government-backed programs may provide benefits depending on eligibility criteria.</p>
+        <div class="loan-card floating">
+          <span class="loan-card-icon">📈</span>
+          <h4>Floating Rate Home Loan</h4>
+          <p>Rate is linked to RBI repo rate via EBLR. EMI moves up or down with market conditions.</p>
+          <div class="pro">✔ Lower starting rate vs fixed</div>
+          <div class="pro">✔ Benefits when RBI cuts rates</div>
+          <div class="con">✘ EMI uncertainty during rate hike cycles</div>
+          <div class="con">✘ Long-term budgeting is harder</div>
+        </div>
 
-            <h3>d) Hybrid Loans</h3>
-            <p>Combination of fixed and floating rates, suitable for those seeking flexibility.</p>
-        </section>
+        <div class="loan-card hybrid">
+          <span class="loan-card-icon">🔄</span>
+          <h4>Hybrid / Semi-Fixed Loan</h4>
+          <p>Fixed rate for an initial period (2–5 years), then switches to floating. Combines stability and flexibility.</p>
+          <div class="pro">✔ EMI stability in early years</div>
+          <div class="pro">✔ Floating benefit in later tenure</div>
+          <div class="con">✘ Rate at switch may not be favourable</div>
+          <div class="con">✘ Less common — fewer lenders offer this</div>
+        </div>
 
-        <section>
-            <h2>3. Compare Interest Rates and Costs</h2>
-            <p>Interest rate is one of the most important factors in selecting a loan, but borrowers should also consider the overall cost, including processing fees and other charges.</p>
-            <p>Comparing multiple lenders can help identify competitive options.</p>
-        </section>
+        <div class="loan-card special">
+          <span class="loan-card-icon">🏗️</span>
+          <h4>Home Construction Loan</h4>
+          <p>Disbursed in stages linked to construction milestones. Interest is charged only on the disbursed amount.</p>
+          <div class="pro">✔ Interest only on amount used</div>
+          <div class="pro">✔ Suited for plot + construction</div>
+          <div class="con">✘ More documentation required</div>
+          <div class="con">✘ Disbursement tied to builder milestones</div>
+        </div>
+      </div>
 
-        <section>
-            <h2>4. Evaluate Loan Tenure and EMI</h2>
+      <div class="callout blue-bar">
+        <strong>💡 Which Type Should You Choose?</strong>
+        In a falling interest rate environment — like when the RBI is in a rate-cutting cycle — a <strong>floating rate loan</strong> is almost always the better choice. In a rising rate cycle or if you want complete EMI predictability, a <strong>fixed rate</strong> gives peace of mind. For most Indian borrowers in 2026, floating rate linked to EBLR is the dominant and recommended choice.
+      </div>
+    </section>
 
-            <h3>a) Short vs Long Tenure</h3>
-            <p>Short tenures reduce total interest but increase EMI burden, while longer tenures reduce EMI but increase overall cost.</p>
+    <!-- INTEREST RATES COMPARISON -->
+    <section>
+      <h2><span class="icon">💰</span> Home Loan Interest Rates — Top Lenders 2026</h2>
+      <p>
+        Interest rates vary significantly across lenders and are influenced by your credit score, income profile, loan amount, and the property type. The rates below represent the best available starting rates for salaried applicants with a CIBIL score above 750.
+      </p>
 
-            <h3>b) EMI Planning</h3>
-            <p>Choosing an EMI that aligns with your cash flow is critical. From experience, borrowers often underestimate the impact of long-term commitments.</p>
-        </section>
+      <div class="lender-card">
+        <h4>Interest Rate Comparison — Major Lenders (Floating, May 2026)</h4>
 
-        <section>
-            <h2>5. Choosing the Right Lender</h2>
-            <p>Beyond interest rates, factors such as transparency, customer service, and flexibility play a key role in selecting a lender.</p>
-        </section>
+        <div class="lender-row">
+          <span class="lender-name">SBI</span>
+          <div class="lender-track"><div class="lender-fill" style="width:75%;"></div></div>
+          <span class="lender-rate">8.50% p.a.</span>
+        </div>
+        <div class="lender-row">
+          <span class="lender-name">Bank of Baroda</span>
+          <div class="lender-track"><div class="lender-fill" style="width:77%;animation-delay:0.05s"></div></div>
+          <span class="lender-rate">8.60% p.a.</span>
+        </div>
+        <div class="lender-row">
+          <span class="lender-name">Union Bank</span>
+          <div class="lender-track"><div class="lender-fill" style="width:79%;animation-delay:0.08s"></div></div>
+          <span class="lender-rate">8.70% p.a.</span>
+        </div>
+        <div class="lender-row">
+          <span class="lender-name">HDFC Bank</span>
+          <div class="lender-track"><div class="lender-fill" style="width:82%;animation-delay:0.1s"></div></div>
+          <span class="lender-rate">8.75% p.a.</span>
+        </div>
+        <div class="lender-row">
+          <span class="lender-name">ICICI Bank</span>
+          <div class="lender-track"><div class="lender-fill" style="width:83%;animation-delay:0.12s"></div></div>
+          <span class="lender-rate">8.85% p.a.</span>
+        </div>
+        <div class="lender-row">
+          <span class="lender-name">Axis Bank</span>
+          <div class="lender-track"><div class="lender-fill" style="width:85%;animation-delay:0.14s"></div></div>
+          <span class="lender-rate">8.90% p.a.</span>
+        </div>
+        <div class="lender-row">
+          <span class="lender-name">Kotak Mahindra</span>
+          <div class="lender-track"><div class="lender-fill" style="width:87%;animation-delay:0.16s"></div></div>
+          <span class="lender-rate">8.99% p.a.</span>
+        </div>
+        <div class="lender-row">
+          <span class="lender-name">Bajaj Housing</span>
+          <div class="lender-track"><div class="lender-fill" style="width:90%;animation-delay:0.18s"></div></div>
+          <span class="lender-rate">9.10% p.a.</span>
+        </div>
 
-        <section>
-            <h2>Conclusion</h2>
-            <p>Choosing the right home loan requires careful evaluation of financial capacity, loan features, and long-term affordability. A well-planned decision can significantly reduce financial stress and help achieve homeownership smoothly.</p>
-        </section>
+        <p style="font-size:0.75rem;color:var(--muted);margin-top:14px;margin-bottom:0;">* Rates are indicative for salaried borrowers with CIBIL 750+. Actual rates may vary based on individual profile. Always verify with the lender before applying.</p>
+      </div>
 
-        <section>
-            <h2>Disclaimer</h2>
-            <p>This article is for educational purposes only and should not be considered financial advice. Home loan terms vary across lenders, and individuals should evaluate their financial situation carefully before making decisions.</p>
-        </section>
+      <div class="callout">
+        <strong>⚠️ 0.25% Difference = Lakhs Over 20 Years</strong>
+        On a ₹50 lakh loan for 20 years, a difference of just 0.25% in interest rate changes your total interest outgo by approximately <strong>₹1.8 to ₹2.2 lakh</strong>. This is why rate negotiation and comparison is not optional — it's essential.
+      </div>
+    </section>
 
-    </article>
+    <!-- EMI COMPARISON -->
+    <section>
+      <h2><span class="icon">📐</span> EMI Comparison by Tenure</h2>
+      <p>
+        One of the most common mistakes borrowers make is choosing tenure based only on EMI affordability — without looking at what they will pay in total interest over the loan's life. The table below shows EMI and total interest for a ₹50 lakh loan at 8.75% across three tenure options.
+      </p>
+
+      <div class="emi-visual">
+        <h4>EMI & Total Interest — ₹50 Lakh Loan at 8.75% p.a.</h4>
+        <div class="emi-grid">
+          <div class="emi-cell">
+            <div class="e-tenure">10 Years</div>
+            <span class="e-amount">₹62,599</span>
+            <div class="e-total">Total Paid: ₹75.12L</div>
+            <div class="e-interest">Interest: ₹25.12L</div>
+          </div>
+          <div class="emi-cell">
+            <div class="e-tenure">20 Years</div>
+            <span class="e-amount">₹44,327</span>
+            <div class="e-total">Total Paid: ₹1,06.38L</div>
+            <div class="e-interest">Interest: ₹56.38L</div>
+          </div>
+          <div class="emi-cell">
+            <div class="e-tenure">30 Years</div>
+            <span class="e-amount">₹39,364</span>
+            <div class="e-total">Total Paid: ₹1,41.71L</div>
+            <div class="e-interest">Interest: ₹91.71L</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout red-bar">
+        <strong>🔍 The 30-Year Trap</strong>
+        A 30-year tenure reduces your EMI by ₹23,235 vs a 10-year tenure — but costs you an additional <strong>₹66.59 lakh in interest</strong>. If you can afford a higher EMI, always choose a shorter tenure. Alternatively, make partial prepayments annually to reduce the principal faster without increasing the monthly burden.
+      </div>
+    </section>
+
+    <!-- ELIGIBILITY -->
+    <section>
+      <h2><span class="icon">✅</span> Home Loan Eligibility — What Lenders Look At</h2>
+      <p>
+        Your eligibility determines not just whether you get the loan, but how much you get and at what rate. Lenders evaluate multiple parameters simultaneously — improving even one or two of these can significantly improve your loan offer.
+      </p>
+
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Ideal Profile</th>
+            <th>Impact on Loan</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>CIBIL Score</strong></td>
+            <td>750 and above</td>
+            <td>Lower rate, faster approval, higher amount</td>
+            <td><span class="badge good">Critical</span></td>
+          </tr>
+          <tr>
+            <td><strong>Income</strong></td>
+            <td>Stable salary or 3+ years ITR (self-employed)</td>
+            <td>Determines maximum loan amount (typically 5–6x annual income)</td>
+            <td><span class="badge good">Critical</span></td>
+          </tr>
+          <tr>
+            <td><strong>Age</strong></td>
+            <td>Below 45 for 20-year tenure</td>
+            <td>Older applicants get shorter tenures, higher EMI</td>
+            <td><span class="badge caution">Important</span></td>
+          </tr>
+          <tr>
+            <td><strong>Existing EMIs / FOIR</strong></td>
+            <td>Total EMIs below 40–50% of income</td>
+            <td>High FOIR reduces eligible amount</td>
+            <td><span class="badge caution">Important</span></td>
+          </tr>
+          <tr>
+            <td><strong>Employment Type</strong></td>
+            <td>Salaried in private/govt sector</td>
+            <td>Self-employed needs higher documentation</td>
+            <td><span class="badge caution">Moderate</span></td>
+          </tr>
+          <tr>
+            <td><strong>Property Type</strong></td>
+            <td>Approved residential project</td>
+            <td>Unapproved plots or rural land face restrictions</td>
+            <td><span class="badge risk">Check</span></td>
+          </tr>
+          <tr>
+            <td><strong>Co-applicant</strong></td>
+            <td>Working spouse or parent</td>
+            <td>Boosts eligibility, also unlocks additional tax benefit</td>
+            <td><span class="badge good">Recommended</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- HIDDEN CHARGES -->
+    <section>
+      <h2><span class="icon">⚠️</span> Hidden Charges Nobody Tells You About</h2>
+      <p>
+        The advertised interest rate is rarely the true cost of your home loan. Lenders layer multiple fees and charges that can add ₹50,000 to ₹2 lakh or more to your total outgo. Always ask for a complete fee schedule before signing.
+      </p>
+
+      <div class="checklist">
+        <h4>🔍 Hidden & Overlooked Charges — Full List</h4>
+
+        <div class="check-item">
+          <div class="check-icon alert">!</div>
+          <div><strong>Processing Fee</strong> — 0.25% to 1% of the loan amount. On a ₹50L loan, that's ₹12,500 to ₹50,000. Some lenders waive this during festive offers — always negotiate.</div>
+        </div>
+        <div class="check-item">
+          <div class="check-icon alert">!</div>
+          <div><strong>Legal & Technical Charges</strong> — For property document verification and valuation. ₹5,000 to ₹15,000. Usually non-refundable even if loan is rejected.</div>
+        </div>
+        <div class="check-item">
+          <div class="check-icon warn">▲</div>
+          <div><strong>Prepayment / Foreclosure Charges</strong> — Floating rate loans: NIL (RBI mandate). Fixed rate loans: up to 2–3% of outstanding principal. Huge impact if you plan to repay early.</div>
+        </div>
+        <div class="check-item">
+          <div class="check-icon warn">▲</div>
+          <div><strong>Conversion / Switching Fee</strong> — When you shift from fixed to floating or vice versa, or when you switch lenders (balance transfer). Can be 0.5% to 1% of outstanding loan.</div>
+        </div>
+        <div class="check-item">
+          <div class="check-icon warn">▲</div>
+          <div><strong>MODT Charges (Memorandum of Deposit of Title Deed)</strong> — Stamp duty charged by state government to register the mortgage. Ranges from 0.1% to 0.5% of loan amount depending on state.</div>
+        </div>
+        <div class="check-item">
+          <div class="check-icon ok">✔</div>
+          <div><strong>Insurance Premium</strong> — Some lenders bundle home loan insurance (PMI or credit life). This is optional — do not accept it as mandatory. Evaluate independently.</div>
+        </div>
+        <div class="check-item">
+          <div class="check-icon ok">✔</div>
+          <div><strong>CERSAI Registration Fee</strong> — ₹50 to ₹500. Mandatory central registry for mortgage security. Small but should appear transparently in your cost sheet.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW TO APPLY -->
+    <section>
+      <h2><span class="icon">📋</span> Step-by-Step: How to Apply for a Home Loan</h2>
+
+      <div class="steps">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h4>Check & Improve Your CIBIL Score</h4>
+            <p>Get your free credit report from CIBIL, Experian, or CRIF. Resolve any errors, clear outstanding debts, and avoid new credit enquiries for at least 3–6 months before applying.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h4>Calculate Your Eligibility & Budget</h4>
+            <p>Use online EMI calculators to understand how much you can borrow based on your income and existing obligations. Keep your total EMI outgo below 40% of take-home salary.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h4>Compare At Least 3–5 Lenders</h4>
+            <p>Don't just compare interest rates — compare processing fees, prepayment terms, customer service, and disbursal timelines. Use aggregator platforms like BankBazaar or PaisaBazaar for side-by-side comparison.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <h4>Get Pre-Approval / In-Principle Sanction</h4>
+            <p>Apply for a pre-approval letter before finalising the property. This tells the builder or seller you are a serious buyer and gives you negotiating power on the property price.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <h4>Submit Documents & Await Sanction</h4>
+            <p>Typical documents: KYC (Aadhaar, PAN), income proof (salary slips, ITR), bank statements (6 months), property documents. Keep originals and attested copies ready.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">6</div>
+          <div class="step-content">
+            <h4>Read the Sanction Letter Carefully</h4>
+            <p>The sanction letter has the final rate, tenure, EMI, and all charges. Read every clause. Check the spread above EBLR, reset frequency, and prepayment conditions before signing.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">7</div>
+          <div class="step-content">
+            <h4>Register Mortgage & Collect Documents</h4>
+            <p>After disbursal, the lender registers the mortgage and holds the original property documents. Get a certified copy of all documents and keep the acknowledgement of original document custody safely.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAX BENEFITS -->
+    <section>
+      <h2><span class="icon">🧾</span> Tax Benefits on Home Loans</h2>
+      <p>
+        A home loan is one of the most tax-efficient financial products available to Indian taxpayers under the old tax regime. These deductions can reduce your annual tax outgo by ₹1 lakh to ₹2.5 lakh depending on your income slab.
+      </p>
+
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Section</th>
+            <th>Benefit</th>
+            <th>Maximum Deduction</th>
+            <th>Condition</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Section 24(b)</strong></td>
+            <td>Interest paid on home loan</td>
+            <td><strong style="color:var(--gold);">₹2,00,000 p.a.</strong></td>
+            <td>Self-occupied property. No limit for let-out.</td>
+          </tr>
+          <tr>
+            <td><strong>Section 80C</strong></td>
+            <td>Principal repayment</td>
+            <td><strong style="color:var(--gold);">₹1,50,000 p.a.</strong></td>
+            <td>Combined limit with other 80C investments</td>
+          </tr>
+          <tr>
+            <td><strong>Section 80EE</strong></td>
+            <td>Additional interest deduction</td>
+            <td><strong style="color:var(--gold);">₹50,000 p.a.</strong></td>
+            <td>First-time buyer, loan ≤ ₹35L, property ≤ ₹50L</td>
+          </tr>
+          <tr>
+            <td><strong>Section 80EEA</strong></td>
+            <td>Affordable housing interest</td>
+            <td><strong style="color:var(--gold);">₹1,50,000 p.a.</strong></td>
+            <td>Stamp duty value ≤ ₹45L, first-time buyer</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout green-bar">
+        <strong>💰 Maximum Annual Tax Saving Possible</strong>
+        If you qualify for Section 24(b) + 80C + 80EEA, the combined deduction can be up to <strong>₹5,00,000 per year</strong>. For someone in the 30% tax bracket, that translates to a tax saving of approximately <strong>₹1,50,000 per year</strong>. These benefits are available only under the old tax regime — if you have opted for the new regime, these deductions are not applicable.
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section>
+      <h2><span class="icon">❓</span> Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <p class="faq-q">What CIBIL score do I need for a home loan?</p>
+        <p class="faq-a">Most lenders require a minimum CIBIL score of 650–675 to sanction a home loan. However, to get the best available interest rates, you should target a score of 750 or above. Below 700, you may face higher rates, lower loan amounts, or outright rejection from top-tier banks. PSU banks like SBI tend to be slightly more flexible on credit score than private banks.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Fixed rate or floating rate — which is better in 2026?</p>
+        <p class="faq-a">In 2026, with the RBI in or approaching a rate-cutting cycle, a floating rate loan is generally the better choice. Floating rates — now linked to the External Benchmark Lending Rate (EBLR) — pass on RBI rate cuts directly to borrowers, which reduces your EMI or tenure automatically. Fixed rates make sense only if you expect rates to rise sharply or you want absolute EMI certainty for personal budgeting reasons.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Can I take a joint home loan and what are the benefits?</p>
+        <p class="faq-a">Yes — a joint home loan with a working spouse, parent, or sibling significantly boosts your eligibility amount. It also unlocks individual tax deductions for each co-applicant under Section 24(b) and 80C, effectively doubling the household tax benefit. If your spouse is a woman, many lenders also offer a 0.05% to 0.10% interest rate concession on joint loans where the woman is the primary applicant.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Should I make prepayments on my home loan?</p>
+        <p class="faq-a">For floating rate loans — absolutely yes, whenever you have surplus funds. Prepayments reduce the outstanding principal, which dramatically cuts the total interest payable over the loan life. Even a single annual prepayment of ₹50,000–₹1 lakh can reduce a 20-year loan by 2–4 years. There are no prepayment charges on floating rate home loans from banks (RBI mandated since 2012). For fixed rate loans, check the prepayment clause before committing.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">What is a balance transfer and when should I consider it?</p>
+        <p class="faq-a">A home loan balance transfer means shifting your outstanding loan from your current lender to another lender offering a lower interest rate. It makes sense when the new rate is at least 0.50% lower than your current rate and you have a significant outstanding tenure remaining (at least 7–10 years). Factor in the processing fee, MODT charges, and switching costs before deciding — these can offset the savings if you're in the final years of repayment.</p>
+      </div>
+    </section>
+
+    <!-- CONCLUSION -->
+    <section>
+      <h2><span class="icon">📌</span> Final Checklist Before You Sign</h2>
+      <p>
+        Before you put your signature on a home loan agreement, run through this final checklist. These are the questions that can save you lakhs over the life of your loan.
+      </p>
+
+      <div class="checklist">
+        <h4>✅ Pre-Signing Checklist</h4>
+        <div class="check-item"><div class="check-icon ok">✔</div><div>Have I compared at least 3 lenders on both rate AND total charges?</div></div>
+        <div class="check-item"><div class="check-icon ok">✔</div><div>Is the rate EBLR-linked (floating) or truly fixed — and do I know the spread above EBLR?</div></div>
+        <div class="check-item"><div class="check-icon ok">✔</div><div>Have I checked the prepayment and foreclosure clause specifically?</div></div>
+        <div class="check-item"><div class="check-icon ok">✔</div><div>Is the insurance bundled into the loan — and have I evaluated it independently?</div></div>
+        <div class="check-item"><div class="check-icon warn">▲</div><div>Is the total EMI outgo (all loans combined) below 40–45% of my take-home salary?</div></div>
+        <div class="check-item"><div class="check-icon warn">▲</div><div>Have I calculated the total interest outgo over the full tenure — not just the monthly EMI?</div></div>
+        <div class="check-item"><div class="check-icon warn">▲</div><div>Is the property legally clear — approved by local authority, RERA registered (if applicable)?</div></div>
+        <div class="check-item"><div class="check-icon alert">!</div><div>Am I aware of all the fees in the sanction letter — processing, legal, technical, MODT, CERSAI?</div></div>
+        <div class="check-item"><div class="check-icon alert">!</div><div>Have I read the rate reset clause — how frequently will my floating rate be reviewed and adjusted?</div></div>
+      </div>
+
+      <p>
+        A home loan is a 20–30 year commitment. Take the time to choose it with the same care you took to choose the house itself. The right loan, chosen wisely, can save you more than the cost of a car. The wrong one, accepted in haste, can cost you decades of financial stress.
+      </p>
+      <p>
+        FinWorld is committed to helping you make every major financial decision with data, clarity, and confidence.
+      </p>
+    </section>
+
+    <div class="disclaimer">
+      <strong style="color:#8896b0;">Disclaimer:</strong> This article is for informational and educational purposes only. Interest rates, eligibility criteria, and product features mentioned are indicative and subject to change. This article does not constitute financial advice or a recommendation to apply with any specific lender. Please verify all details directly with the respective lender before making any financial decision. Consult a SEBI-registered financial advisor or certified financial planner for personalised guidance.
+    </div>
+
+    <footer>
+      <p>Published by <strong style="color:var(--text);">FinWorld</strong> &nbsp;|&nbsp; S Kamal Kumar, Research Analyst &nbsp;|&nbsp; May 2026</p>
+    </footer>
+
+  </article>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Choose the Right Home Loan for Your Dream House",
+    "description": "A complete guide to choosing the right home loan in India 2026 — types, interest rates, eligibility, hidden charges, tax benefits, and expert tips.",
+    "author": { "@type": "Person", "name": "S Kamal Kumar" },
+    "publisher": { "@type": "Organization", "name": "FinWorld" },
+    "datePublished": "2026-05-01",
+    "dateModified": "2026-05-01"
+  }
+  </script>
+
+</div>
 </body>
 </html>
