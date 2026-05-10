@@ -232,8 +232,8 @@
 <div class="container">
     <div class="article-card">
         <div class="article-content">
-            <div class="breadcrumb">Personal Finance · Investing 2025</div>
-            <h1>How to Build a Strong<br>Investment Portfolio in 2025</h1>
+            <div class="breadcrumb">Personal Finance · Investing 2026</div>
+            <h1>How to Build a Strong<br>Investment Portfolio in 2026</h1>
 
             <!-- QUICK FACTS (matching home loan style) -->
             <div class="quick-facts">
@@ -243,18 +243,18 @@
                 <div class="fact-item"><div class="fact-label">Emergency Fund</div><div class="fact-value">6 Months of Expenses</div></div>
             </div>
 
-            <p>In 2025, the financial landscape continues to shift rapidly — with changing interest rates, evolving tax norms, and new investment products entering the market. Building a strong investment portfolio isn't about chasing the hottest stock or the latest crypto trend. It's about designing a resilient, diversified, and goal‑aligned structure that weathers volatility and delivers consistent long‑term wealth.</p>
-            <p>Whether you are a first‑time investor or have been managing your own money for years, this guide walks you through the core principles of portfolio construction — asset allocation, risk management, instrument selection, rebalancing, and behavioural discipline — so you can stay ahead in 2025.</p>
+            <p>In 2026, the financial landscape continues to shift rapidly — with changing interest rates, evolving tax norms, and new investment products entering the market. Building a strong investment portfolio isn't about chasing the hottest stock or the latest crypto trend. It's about designing a resilient, diversified, and goal‑aligned structure that weathers volatility and delivers consistent long‑term wealth.</p>
+            <p>Whether you are a first‑time investor or have been managing your own money for years, this guide walks you through the core principles of portfolio construction — asset allocation, risk management, instrument selection, rebalancing, and behavioural discipline — so you can stay ahead in 2026.</p>
 
             <!-- Glance section with icon -->
-            <div class="icon-heading">📊 Portfolio at a Glance — India 2025</div>
+            <div class="icon-heading">📊 Portfolio at a Glance — India 2026</div>
             <div class="highlight">
                 📈 Equity (Large/Mid/Small) · 🏦 Fixed Income (EPF, PPF, Bonds) · 🥇 Gold (ETF/SGB) · 🏠 Real Assets (REITs/InvITs)<br>
                 <strong>Key Mantra:</strong> Diversify across uncorrelated assets & review annually.
             </div>
 
             <!-- Types of asset classes (styled like home loan types) -->
-            <h2>📌 Core Asset Classes for 2025</h2>
+            <h2>📌 Core Asset Classes for 2026</h2>
             <p>Every strong portfolio starts with the right building blocks. Below are the primary asset classes you should consider, along with their role and trade‑offs.</p>
 
             <div class="loan-type">
@@ -306,8 +306,8 @@
             </div>
 
             <!-- Comparison table: investment instruments (similar to interest rate table) -->
-            <h2>📈 Top Investment Instruments — Returns & Risk (2025 Outlook)</h2>
-            <p>Returns vary based on market conditions. The table below shows expected pre‑tax annualised returns and risk level for popular options (as of early 2025).</p>
+            <h2>📈 Top Investment Instruments — Returns & Risk (2026 Outlook)</h2>
+            <p>Returns vary based on market conditions. The table below shows expected pre‑tax annualised returns and risk level for popular options (as of early 2026).</p>
             <table>
                 <thead><tr><th>Instrument</th><th>Expected Returns (p.a.)</th><th>Risk Level</th><th>Liquidity</th></tr></thead>
                 <tbody>
@@ -334,7 +334,7 @@
                 </tbody>
             </table>
 
-            <h2>📋 Step-by-Step: How to Build Your Portfolio in 2025</h2>
+            <h2>📋 Step-by-Step: How to Build Your Portfolio in 2026</h2>
             <div class="steps">
                 <div class="step"><div class="step-number">1</div><div><strong>Set clear financial goals & horizon</strong><br>Retirement (15+ years), child education (10 years), or house down payment (5 years). Each goal needs a separate asset mix.</div></div>
                 <div class="step"><div class="step-number">2</div><div><strong>Assess your risk profile</strong><br>Use a risk assessment questionnaire. Be honest: would you panic if your portfolio drops 20%? Adjust equity exposure accordingly.</div></div>
@@ -347,7 +347,7 @@
 
             <!-- tax / efficiency block -->
             <h2>💰 Tax Efficiency — Keep More of What You Earn</h2>
-            <p>Investment returns are only half the battle; post‑tax returns determine your real wealth. Here are 2025 rules for typical investors (old vs new regime).</p>
+            <p>Investment returns are only half the battle; post‑tax returns determine your real wealth. Here are 2026 rules for typical investors (old vs new regime).</p>
             <table>
                 <thead><tr><th>Asset / Gain Type</th><th>Holding Period</th><th>Tax Rate (Old Regime)</th><th>Tax Rate (New Regime)</th></tr></thead>
                 <tbody>
@@ -364,9 +364,9 @@
             <h2>❓ Frequently Asked Questions</h2>
             <div class="faq-item"><div class="faq-question">What is the ideal number of mutual funds in a portfolio?</div><div>For most retail investors, 4–6 funds are sufficient: one large cap index fund, one mid cap fund, one flexicap, one aggressive hybrid or debt fund, and one gold ETF. More funds lead to overlap and complexity without added diversification.</div></div>
             <div class="faq-item"><div class="faq-question">How often should I rebalance my portfolio?</div><div>Rebalance every 6–12 months or whenever an asset class moves more than 5–10% away from its target allocation. Avoid frequent tinkering – it increases transaction costs and taxes. Use inflows (new SIPs) to rebalance gradually.</div></div>
-            <div class="faq-item"><div class="faq-question">Are index ETFs better than active mutual funds in 2025?</div><div>For most investors, low‑cost index ETFs or index direct plans have been outperforming a majority of active funds over 10+ years. Unless you have a strong view on a specific manager, index funds offer simplicity and lower expense ratios (0.1–0.3% vs 0.8–1.2% for active).</div></div>
+            <div class="faq-item"><div class="faq-question">Are index ETFs better than active mutual funds in 2026?</div><div>For most investors, low‑cost index ETFs or index direct plans have been outperforming a majority of active funds over 10+ years. Unless you have a strong view on a specific manager, index funds offer simplicity and lower expense ratios (0.1–0.3% vs 0.8–1.2% for active).</div></div>
             <div class="faq-item"><div class="faq-question">How much gold should I hold in my portfolio?</div><div>Typically 5–10% of total portfolio as a hedge against equity downturns and currency depreciation. Sovereign Gold Bonds (SGBs) are the most tax‑efficient way. Avoid physical gold unless for personal use (high making charges and storage risk).</div></div>
-            <div class="faq-item"><div class="faq-question">What is the biggest mistake investors make in 2025?</div><div>Chasing past performance – buying the fund that gave 40% last year, then selling after a 10% dip. Another common mistake: keeping too much idle cash (savings account) or having no emergency fund, forcing panic selling during market corrections.</div></div>
+            <div class="faq-item"><div class="faq-question">What is the biggest mistake investors make in 2026?</div><div>Chasing past performance – buying the fund that gave 40% last year, then selling after a 10% dip. Another common mistake: keeping too much idle cash (savings account) or having no emergency fund, forcing panic selling during market corrections.</div></div>
 
             <!-- final checklist (like pre-signing checklist) -->
             <div class="final-checklist">
