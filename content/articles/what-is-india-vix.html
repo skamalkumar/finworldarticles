@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="What is India VIX? A complete guide to India's Volatility Index — how it works, how to read it, VIX zones, its relationship with Nifty 50, and how traders use it.">
+  <meta name="keywords" content="what is India VIX, India VIX explained, India VIX meaning, NSE volatility index, India VIX and Nifty, fear index India, India VIX zones, how to use India VIX, VIX trading India 2026">
+  <title>What is India VIX? The Complete Guide to India's Fear Index | FinWorld</title>
+  <link rel="canonical" href="https://www.finworldltd.online/blog/what-is-india-vix" />
+  <meta property="og:title" content="What is India VIX? The Complete Guide to India's Fear Index | FinWorld">
+  <meta property="og:description" content="India VIX explained — how it works, how to read it, VIX zones, the Nifty relationship, and how traders use it to make better decisions.">
+  <meta property="og:type" content="article">
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0e1117;
+      --surface: #161b27;
+      --surface2: #1e2535;
+      --border: #2a3347;
+      --text: #e2e8f0;
+      --muted: #8896b0;
+      --red: #ef4444;
+      --green: #22c55e;
+      --gold: #f59e0b;
+      --blue: #3b82f6;
+      --orange: #f97316;
+      --white: #ffffff;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { background: #0e1117 !important; }
+    body { font-family: 'DM Sans', sans-serif; background: #0e1117 !important; color: var(--text); line-height: 1.7; }
+    .page-wrapper { background: #0e1117 !important; min-height: 100vh; width: 100%; }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #0e1117 0%, #1a1f35 60%, #0e1117 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 56px 24px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -60px; left: 50%; transform: translateX(-50%);
+      width: 600px; height: 300px;
+      background: radial-gradient(ellipse, rgba(245,158,11,0.10) 0%, transparent 70%);
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(245,158,11,0.15);
+      border: 1px solid rgba(245,158,11,0.35);
+      color: #fde68a;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .hero-badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      animation: pulse 1.8s ease infinite;
+    }
+    @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.3); } }
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.8rem, 4.5vw, 3rem);
+      color: var(--white);
+      line-height: 1.2;
+      max-width: 760px;
+      margin: 0 auto 12px;
+      position: relative;
+    }
+    .hero h1 em { font-style: normal; color: var(--gold); }
+    .hero-meta { color: var(--muted); font-size: 0.85rem; position: relative; margin-top: 16px; }
+
+    /* ── TICKER ── */
+    .live-bar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center;
+      font-size: 0.82rem; overflow: hidden;
+    }
+    .live-label {
+      background: var(--gold); color: #000;
+      font-weight: 700; font-size: 0.7rem;
+      letter-spacing: 0.1em; padding: 8px 14px;
+      white-space: nowrap; flex-shrink: 0;
+    }
+    .live-scroll { overflow: hidden; flex: 1; padding: 8px 16px; }
+    .live-scroll-inner { display: inline-block; white-space: nowrap; animation: scroll 32s linear infinite; }
+    .live-scroll-inner span { margin-right: 48px; color: var(--muted); }
+    .live-scroll-inner span strong { color: var(--text); }
+    .live-scroll-inner span .up { color: var(--green); }
+    .live-scroll-inner span .dn { color: var(--red); }
+    @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+    /* ── LAYOUT ── */
+    article { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.6rem; color: var(--white);
+      margin: 52px 0 16px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    h2 .icon { font-size: 1.2rem; }
+    h3 { font-size: 1.05rem; font-weight: 700; color: var(--white); margin: 24px 0 10px; }
+    p { font-size: 0.97rem; color: #c8d4e8; margin-bottom: 14px; line-height: 1.8; }
+
+    /* ── TOC ── */
+    .toc-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 12px 12px 0;
+      padding: 24px 28px;
+      margin: 32px 0 40px;
+    }
+    .toc-box h3 { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--gold); margin: 0 0 16px; }
+    .toc-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 32px; }
+    .toc-list li a { color: #9aadc4; text-decoration: none; font-size: 0.88rem; display: flex; align-items: center; gap: 8px; transition: color 0.2s; }
+    .toc-list li a:hover { color: var(--gold); }
+    .toc-list li a::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); opacity: 0.5; flex-shrink: 0; }
+    .toc-list li a:hover::before { opacity: 1; }
+
+    /* ── SNAPSHOT ── */
+    .snapshot { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 28px 0; }
+    .snap-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 18px 16px; text-align: center; }
+    .snap-card .s-val { font-family: 'DM Serif Display', serif; font-size: 1.5rem; font-weight: 700; display: block; margin-bottom: 4px; }
+    .snap-card .s-lbl { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+    .snap-card .s-sub { font-size: 0.75rem; margin-top: 3px; color: var(--muted); }
+    .gold { color: var(--gold); } .red { color: var(--red); } .green { color: var(--green); } .blue { color: var(--blue); }
+
+    /* ── CALLOUT ── */
+    .callout {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 18px; margin: 20px 0;
+      font-size: 0.92rem; color: #c8d4e8;
+    }
+    .callout.red-bar   { border-left-color: var(--red); }
+    .callout.blue-bar  { border-left-color: var(--blue); }
+    .callout.green-bar { border-left-color: var(--green); }
+    .callout.orange-bar { border-left-color: var(--orange); }
+    .callout strong { display: block; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 6px; }
+
+    /* ── VIX METER FULL ── */
+    .vix-meter-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      margin: 24px 0;
+    }
+    .vix-meter-card h4 { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 20px; }
+    .vix-big-row { display: flex; align-items: baseline; gap: 12px; margin-bottom: 20px; }
+    .vix-big-num { font-family: 'DM Serif Display', serif; font-size: 3rem; color: var(--gold); }
+    .vix-big-sub { font-size: 0.85rem; color: var(--muted); }
+    .vix-track {
+      width: 100%; height: 16px;
+      background: linear-gradient(90deg, #22c55e 0%, #84cc16 20%, #f59e0b 45%, #f97316 65%, #ef4444 85%, #7f1d1d 100%);
+      border-radius: 8px; position: relative; margin-bottom: 8px;
+    }
+    .vix-needle {
+      position: absolute; top: -6px;
+      width: 4px; height: 28px;
+      background: var(--white); border-radius: 2px;
+      transform: translateX(-50%);
+      left: 28.5%; /* 18.54 on 10-40 scale */
+      box-shadow: 0 0 8px rgba(255,255,255,0.6);
+    }
+    .vix-scale { display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--muted); margin-bottom: 16px; }
+    .vix-zones-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 16px; }
+    .vz {
+      text-align: center; padding: 12px 8px;
+      border-radius: 8px; font-size: 0.75rem;
+      font-weight: 600; line-height: 1.5;
+    }
+    .vz.calm   { background: rgba(34,197,94,0.15);  color: #4ade80; border: 1px solid rgba(34,197,94,0.2); }
+    .vz.mod    { background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.3); }
+    .vz.high   { background: rgba(249,115,22,0.15); color: #fb923c; border: 1px solid rgba(249,115,22,0.3); }
+    .vz.panic  { background: rgba(239,68,68,0.15);  color: #f87171; border: 1px solid rgba(239,68,68,0.25); }
+    .vz .vz-range { font-size: 0.82rem; font-weight: 700; display: block; margin-bottom: 3px; }
+    .vz .vz-label { display: block; margin-bottom: 6px; }
+    .vz .vz-desc  { font-size: 0.68rem; color: var(--muted); font-weight: 400; line-height: 1.4; }
+    .vz.active-zone { box-shadow: 0 0 0 2px var(--gold); }
+
+    /* ── COMPARISON TABLE ── */
+    .comp-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+    .comp-table th { background: var(--surface2); color: var(--muted); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.09em; padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+    .comp-table td { padding: 12px 14px; border-bottom: 1px solid rgba(255,255,255,0.04); color: var(--text); vertical-align: top; }
+    .comp-table tr:last-child td { border-bottom: none; }
+    .comp-table tr:hover td { background: rgba(255,255,255,0.02); }
+    .badge { display: inline-block; padding: 2px 10px; border-radius: 20px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; }
+    .badge.buy    { background: rgba(34,197,94,0.15);  color: #4ade80; border: 1px solid rgba(34,197,94,0.25); }
+    .badge.sell   { background: rgba(239,68,68,0.15);  color: #f87171; border: 1px solid rgba(239,68,68,0.25); }
+    .badge.wait   { background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.3); }
+    .badge.caution{ background: rgba(249,115,22,0.15); color: #fb923c; border: 1px solid rgba(249,115,22,0.3); }
+
+    /* ── HISTORICAL EVENTS ── */
+    .event-list { margin: 20px 0; }
+    .event-item {
+      display: flex; gap: 16px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 8px; padding: 16px 18px; margin-bottom: 10px;
+      align-items: flex-start;
+    }
+    .event-vix {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.4rem; font-weight: 700;
+      min-width: 70px; text-align: center;
+      flex-shrink: 0;
+    }
+    .event-body .e-title { font-size: 0.9rem; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+    .event-body .e-desc  { font-size: 0.80rem; color: var(--muted); line-height: 1.5; }
+    .event-body .e-date  { font-size: 0.68rem; color: var(--muted); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.08em; }
+
+    /* ── DAILY MOVE VISUAL ── */
+    .move-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 24px 0; }
+    .move-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px; text-align: center; }
+    .move-card .m-vix { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 8px; }
+    .move-card .m-val { font-family: 'DM Serif Display', serif; font-size: 1.8rem; display: block; margin-bottom: 4px; }
+    .move-card .m-30d { font-size: 0.78rem; color: var(--muted); }
+    .move-card .m-daily { font-size: 0.75rem; margin-top: 4px; }
+
+    /* ── CROSS-PAGE LINK CARD ── */
+    .link-card {
+      display: flex; align-items: center; gap: 16px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 10px; padding: 16px 20px; margin: 16px 0;
+      text-decoration: none; transition: border-color 0.2s, background 0.2s;
+    }
+    .link-card:hover { border-color: rgba(245,158,11,0.4); background: rgba(245,158,11,0.04); }
+    .link-card-icon { font-size: 1.6rem; flex-shrink: 0; }
+    .link-card-body .lc-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); font-weight: 600; margin-bottom: 3px; }
+    .link-card-body .lc-title { font-size: 0.9rem; font-weight: 600; color: var(--white); line-height: 1.3; }
+    .link-card-body .lc-desc  { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+    .link-card-arrow { margin-left: auto; color: var(--muted); font-size: 1rem; flex-shrink: 0; }
+
+    /* ── FAQ ── */
+    .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-weight: 600; color: var(--white); display: flex; gap: 12px; }
+    .faq-q::before { content: "Q"; background: rgba(245,158,11,0.2); color: var(--gold); font-size: 0.68rem; font-weight: 700; padding: 2px 7px; border-radius: 3px; flex-shrink: 0; margin-top: 2px; border: 1px solid rgba(245,158,11,0.3); }
+    .faq-a { font-size: 0.92rem; color: #9aadc4; margin-top: 10px; padding-left: 34px; line-height: 1.75; }
+
+    /* ── RELATED ARTICLES ── */
+    .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
+    .related-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 18px; text-decoration: none; display: block; transition: border-color 0.2s, background 0.2s; }
+    .related-card:hover { border-color: rgba(245,158,11,0.35); background: rgba(245,158,11,0.04); }
+    .related-card .rc-tag { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); font-weight: 600; margin-bottom: 8px; display: block; }
+    .related-card .rc-title { font-size: 0.88rem; font-weight: 600; color: var(--white); line-height: 1.4; margin-bottom: 6px; }
+    .related-card .rc-desc  { font-size: 0.75rem; color: var(--muted); line-height: 1.5; }
+
+    /* ── DISCLAIMER / FOOTER ── */
+    .disclaimer { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 18px 22px; font-size: 0.82rem; color: var(--muted); margin-top: 48px; line-height: 1.7; }
+    footer { margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 0.82rem; color: var(--muted); }
+    .back-to-top { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); font-size: 0.78rem; text-decoration: none; margin-top: 12px; transition: color 0.2s; }
+    .back-to-top:hover { color: var(--gold); }
+
+    @media (max-width: 640px) {
+      .snapshot     { grid-template-columns: 1fr 1fr; }
+      .move-grid    { grid-template-columns: 1fr; }
+      .vix-zones-row { grid-template-columns: 1fr 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+      .toc-list     { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper" id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-badge">Market Education · Volatility Index</div>
+    <h1>What is <em>India VIX?</em><br>The Complete Guide to India's Fear Index</h1>
+    <p class="hero-meta">
+      By S Kamal Kumar, Research Analyst &nbsp;|&nbsp; FinWorld &nbsp;|&nbsp; May 2026
+    </p>
+  </div>
+
+  <!-- TICKER -->
+  <div class="live-bar">
+    <div class="live-label">LIVE DATA</div>
+    <div class="live-scroll">
+      <div class="live-scroll-inner">
+        <span><strong>India VIX</strong> <span class="up">16.84 · May 9, 2026</span></span>
+        <span><strong>52-Week Range</strong> 8.72 – 28.91</span>
+        <span><strong>Nifty 50</strong> 24,032.80</span>
+        <span><strong>VIX Zone</strong> <span style="color:var(--gold);">Moderate (15–20)</span></span>
+        <span><strong>30-Day Move Implied</strong> ±4.86%</span>
+        <span><strong>Daily Move Implied</strong> ±1.06%</span>
+        <span><strong>India VIX</strong> <span class="up">16.84 · May 9, 2026</span></span>
+        <span><strong>52-Week Range</strong> 8.72 – 28.91</span>
+        <span><strong>Nifty 50</strong> 24,032.80</span>
+        <span><strong>VIX Zone</strong> <span style="color:var(--gold);">Moderate (15–20)</span></span>
+        <span><strong>30-Day Move Implied</strong> ±4.86%</span>
+        <span><strong>Daily Move Implied</strong> ±1.06%</span>
+      </div>
+    </div>
+  </div>
+
+  <article>
+
+    <!-- INTRO -->
+    <section id="intro">
+      <p>
+        Every week in our SENSEX and Nifty 50 reports, we reference India VIX — and every week, thousands of investors read that number without fully understanding what it means, where it comes from, or how to use it. This guide changes that.
+      </p>
+      <p>
+        India VIX is arguably the most important single number in the Indian options market. It doesn't tell you which direction the market will move. It tells you <em>how much</em> it is expected to move — and that distinction is worth understanding deeply before you make any options trade, manage any portfolio, or read any weekly market report.
+      </p>
+    </section>
+
+    <!-- TOC -->
+    <div class="toc-box">
+      <h3>📑 In This Article</h3>
+      <ul class="toc-list">
+        <li><a href="#what">What is India VIX?</a></li>
+        <li><a href="#how">How is it Calculated?</a></li>
+        <li><a href="#reading">How to Read the Number</a></li>
+        <li><a href="#zones">VIX Zones Explained</a></li>
+        <li><a href="#nifty">VIX vs Nifty Relationship</a></li>
+        <li><a href="#history">Historical VIX Events</a></li>
+        <li><a href="#traders">How Traders Use VIX</a></li>
+        <li><a href="#now">VIX This Week</a></li>
+        <li><a href="#faq">Frequently Asked Questions</a></li>
+        <li><a href="#summary">Key Takeaways</a></li>
+      </ul>
+    </div>
+
+    <!-- QUICK SNAPSHOT -->
+    <div class="snapshot">
+      <div class="snap-card">
+        <span class="s-val gold">16.84</span>
+        <span class="s-lbl">India VIX Now</span>
+        <span class="s-sub">May 9, 2026</span>
+      </div>
+      <div class="snap-card">
+        <span class="s-val gold">±4.86%</span>
+        <span class="s-lbl">30-Day Move</span>
+        <span class="s-sub">Implied by VIX</span>
+      </div>
+      <div class="snap-card">
+        <span class="s-val blue">2008</span>
+        <span class="s-lbl">NSE Launch Year</span>
+        <span class="s-sub">In partnership with CBOE</span>
+      </div>
+      <div class="snap-card">
+        <span class="s-val green">8.72</span>
+        <span class="s-lbl">52-Wk Low</span>
+        <span class="s-sub">High: 28.91</span>
+      </div>
+    </div>
+
+    <!-- WHAT IS VIX -->
+    <section id="what">
+      <h2><span class="icon">📖</span> What is India VIX?</h2>
+      <p>
+        <strong>India VIX</strong> stands for <strong>India Volatility Index</strong>. It is a real-time index published by the National Stock Exchange (NSE) that measures the market's expectation of volatility in the Nifty 50 over the <strong>next 30 calendar days</strong>.
+      </p>
+      <p>
+        Think of it this way — Nifty 50 tells you <em>where</em> the market is. India VIX tells you <em>how nervous</em> the market is about where it might go next. This is why it is often called the <strong>Fear Index</strong> or <strong>Fear Gauge</strong> of the Indian market.
+      </p>
+      <p>
+        India VIX does not predict market direction. It does not tell you whether Nifty will go up or down. It only measures the <em>expected magnitude of movement</em> — the size of the swing the market is bracing for.
+      </p>
+
+      <div class="callout">
+        <strong>🔑 One-Line Definition</strong>
+        India VIX is the market's best estimate of how much Nifty 50 will move — up or down — over the next 30 days. A high VIX means big moves expected. A low VIX means calm expected.
+      </div>
+
+      <h3>Origin — Where Did India VIX Come From?</h3>
+      <p>
+        The VIX concept was originally created by the Chicago Board Options Exchange (CBOE) in the United States in 1993 as the CBOE Volatility Index (VIX) — measuring expected volatility of the S&P 500. It became so widely used globally that NSE partnered with CBOE to launch an Indian version.
+      </p>
+      <p>
+        <strong>India VIX was launched by NSE in April 2008</strong>, using the same CBOE methodology adapted for the Indian Nifty 50 options market. Today it is one of the most watched indices by Indian traders, portfolio managers, and institutional investors.
+      </p>
+    </section>
+
+    <!-- HOW IS IT CALCULATED -->
+    <section id="how">
+      <h2><span class="icon">⚙️</span> How is India VIX Calculated?</h2>
+      <p>
+        India VIX is derived from the <strong>live order book of Nifty 50 options contracts</strong> — specifically the best bid and ask prices of out-of-the-money (OTM) Nifty options for the near-month and next-month expiries.
+      </p>
+      <p>
+        In simple terms: when traders are willing to pay more for Nifty options — both calls and puts — it signals that they expect larger price movements. This higher option premium demand gets translated into a higher VIX reading.
+      </p>
+
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Step</th>
+            <th>What Happens</th>
+            <th>Plain English</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. Options Selection</strong></td>
+            <td>NSE picks OTM Call and Put options for near and next-month Nifty expiries</td>
+            <td>All the options being traded around the current Nifty level are collected</td>
+          </tr>
+          <tr>
+            <td><strong>2. Bid-Ask Collection</strong></td>
+            <td>Best bid and ask quotes are captured in real time from the order book</td>
+            <td>The live prices traders are offering and demanding for these options</td>
+          </tr>
+          <tr>
+            <td><strong>3. Variance Calculation</strong></td>
+            <td>Implied volatility is extracted separately for near-month and next-month</td>
+            <td>How much movement is priced into each expiry cycle</td>
+          </tr>
+          <tr>
+            <td><strong>4. Interpolation</strong></td>
+            <td>Near and next-month variance values are interpolated to arrive at a 30-day figure</td>
+            <td>Blended to get a consistent 30-day forward-looking number</td>
+          </tr>
+          <tr>
+            <td><strong>5. Annualisation</strong></td>
+            <td>The 30-day variance is annualised and expressed as a percentage × 100</td>
+            <td>Expressed as a single number like 17.44 or 18.54</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout blue-bar">
+        <strong>💡 Key Insight — VIX is Forward-Looking, Not Historical</strong>
+        India VIX is not calculated from past price movements of Nifty. It is calculated from what traders are <em>currently paying</em> for future options protection. This makes it a real-time forward-looking indicator — one of the very few in the market that directly reflects what participants collectively expect to happen next.
+      </div>
+    </section>
+
+    <!-- HOW TO READ THE NUMBER -->
+    <section id="reading">
+      <h2><span class="icon">🔢</span> How to Read the India VIX Number</h2>
+      <p>
+        India VIX is expressed as an <strong>annualised percentage</strong>. A reading of 18 means the market expects Nifty 50 to move approximately ±18% on an annualised basis over the next 30 days.
+      </p>
+      <p>
+        But most traders care about shorter timeframes. Here's how to convert VIX into practical daily and 30-day move expectations:
+      </p>
+
+      <div class="move-grid">
+        <div class="move-card">
+          <div class="m-vix">VIX at 12 — Calm</div>
+          <span class="m-val" style="color:var(--green);">12</span>
+          <div class="m-30d">30-Day implied move: <strong style="color:var(--green);">±3.46%</strong></div>
+          <div class="m-daily" style="color:var(--muted);">Daily implied: ~±0.76%</div>
+        </div>
+        <div class="move-card">
+          <div class="m-vix">VIX at 17 — Moderate</div>
+          <span class="m-val" style="color:var(--gold);">17</span>
+          <div class="m-30d">30-Day implied move: <strong style="color:var(--gold);">±4.91%</strong></div>
+          <div class="m-daily" style="color:var(--muted);">Daily implied: ~±1.07%</div>
+        </div>
+        <div class="move-card">
+          <div class="m-vix">VIX at 25 — High</div>
+          <span class="m-val" style="color:var(--red);">25</span>
+          <div class="m-30d">30-Day implied move: <strong style="color:var(--red);">±7.22%</strong></div>
+          <div class="m-daily" style="color:var(--muted);">Daily implied: ~±1.57%</div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>📐 The Conversion Formula</strong>
+        To convert India VIX to a 30-day expected move: <strong>VIX ÷ √12</strong><br>
+        To convert India VIX to a daily expected move: <strong>VIX ÷ √252</strong><br>
+        At VIX 18.54: 30-day = 18.54 ÷ 3.46 = <strong>±5.36%</strong> · Daily = 18.54 ÷ 15.87 = <strong>±1.17%</strong>
+      </div>
+
+      <p>
+        These are <strong>one standard deviation</strong> moves — meaning there is approximately a 68% probability that Nifty stays within this range over the period. The remaining 32% probability covers moves larger than this estimate.
+      </p>
+    </section>
+
+    <!-- VIX ZONES -->
+    <section id="zones">
+      <h2><span class="icon">🗺️</span> India VIX Zones — What Each Level Means</h2>
+      <p>
+        While every VIX reading is unique to its moment, four broad zones have emerged from years of historical observation that provide practical guidance for traders and investors.
+      </p>
+
+      <!-- FULL VIX METER -->
+      <div class="vix-meter-card">
+        <h4>India VIX — Live Zone Meter (Current: 16.84, May 9, 2026)</h4>
+        <div class="vix-big-row">
+          <span class="vix-big-num">16.84</span>
+          <span class="vix-big-sub">Currently in Moderate Zone</span>
+        </div>
+        <div class="vix-track">
+          <div class="vix-needle"></div>
+        </div>
+        <div class="vix-scale">
+          <span>10</span>
+          <span>15</span>
+          <span>20</span>
+          <span>28</span>
+          <span>40+</span>
+        </div>
+        <div class="vix-zones-row">
+          <div class="vz calm">
+            <span class="vz-range">Below 15</span>
+            <span class="vz-label">🟢 Calm</span>
+            <span class="vz-desc">Market is relaxed. Option premiums are cheap. Directional trades work well.</span>
+          </div>
+          <div class="vz mod active-zone">
+            <span class="vz-range">15 – 20</span>
+            <span class="vz-label">🟡 Moderate ←</span>
+            <span class="vz-desc">Balanced market. Option premiums at normal levels. Current zone.</span>
+          </div>
+          <div class="vz high">
+            <span class="vz-range">20 – 28</span>
+            <span class="vz-label">🟠 High</span>
+            <span class="vz-desc">Elevated fear. Intraday swings wider. Premium selling becomes attractive.</span>
+          </div>
+          <div class="vz panic">
+            <span class="vz-range">Above 28</span>
+            <span class="vz-label">🔴 Panic</span>
+            <span class="vz-desc">Extreme fear. Historical entry point for long-term investors. Rare zone.</span>
+          </div>
+        </div>
+      </div>
+
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>VIX Zone</th>
+            <th>Range</th>
+            <th>Market Mood</th>
+            <th>For Option Buyers</th>
+            <th>For Option Sellers</th>
+            <th>For Long-Term Investors</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong style="color:var(--green);">Calm</strong></td>
+            <td>Below 15</td>
+            <td>Confident, stable</td>
+            <td><span class="badge buy">Cheap premiums</span></td>
+            <td><span class="badge sell">Low income</span></td>
+            <td><span class="badge wait">Valuations may be stretched</span></td>
+          </tr>
+          <tr>
+            <td><strong style="color:var(--gold);">Moderate</strong></td>
+            <td>15 – 20</td>
+            <td>Measured, cautious</td>
+            <td><span class="badge wait">Fair premiums</span></td>
+            <td><span class="badge wait">Moderate income</span></td>
+            <td><span class="badge buy">Normal entry conditions</span></td>
+          </tr>
+          <tr>
+            <td><strong style="color:var(--orange);">High</strong></td>
+            <td>20 – 28</td>
+            <td>Fearful, uncertain</td>
+            <td><span class="badge sell">Expensive premiums</span></td>
+            <td><span class="badge buy">Rich premium income</span></td>
+            <td><span class="badge buy">Good SIP/lump sum entry</span></td>
+          </tr>
+          <tr>
+            <td><strong style="color:var(--red);">Panic</strong></td>
+            <td>Above 28</td>
+            <td>Extreme fear, crisis</td>
+            <td><span class="badge caution">Very expensive</span></td>
+            <td><span class="badge buy">Peak premium income</span></td>
+            <td><span class="badge buy">Historically best entry</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- VIX vs NIFTY -->
+    <section id="nifty">
+      <h2><span class="icon">📉</span> India VIX vs Nifty 50 — The Inverse Relationship</h2>
+      <p>
+        The most important behavioural pattern of India VIX is its tendency to move <strong>inversely to the Nifty 50</strong>. When Nifty falls sharply, VIX typically rises. When Nifty rallies steadily, VIX typically falls. This inverse correlation is not a coincidence — it is structural.
+      </p>
+
+      <div class="callout red-bar">
+        <strong>❓ Why Does VIX Rise When Nifty Falls?</strong>
+        When markets decline sharply, traders rush to buy put options to protect their portfolios. This sudden surge in demand for protective puts drives option premiums higher. Higher option premiums translate directly into a higher VIX reading. It's the market's collective fear being priced in real time.
+      </div>
+
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Scenario</th>
+            <th>Nifty Direction</th>
+            <th>India VIX</th>
+            <th>What's Happening</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Bull market rally</td>
+            <td>📈 Rising steadily</td>
+            <td>📉 Falling / Low</td>
+            <td>Confidence high, little demand for protection</td>
+          </tr>
+          <tr>
+            <td>Sharp correction</td>
+            <td>📉 Falling fast</td>
+            <td>📈 Rising fast</td>
+            <td>Fear rising, heavy put buying, premiums spike</td>
+          </tr>
+          <tr>
+            <td>Pre-event uncertainty</td>
+            <td>Sideways / choppy</td>
+            <td>📈 Rising slowly</td>
+            <td>Hedging ahead of known event (Budget, election, RBI)</td>
+          </tr>
+          <tr>
+            <td>Post-event relief rally</td>
+            <td>📈 Sharp upward move</td>
+            <td>📉 Falling sharply</td>
+            <td>Fear resolves, put holders sell, premiums collapse</td>
+          </tr>
+          <tr>
+            <td>VIX/Nifty both rise</td>
+            <td>📈 Rising</td>
+            <td>📈 Also rising</td>
+            <td>Rare — uncertainty around a future event even as market rallies</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout blue-bar">
+        <strong>⚠️ The Exception — When Both Move Together</strong>
+        While the inverse relationship is a strong general tendency, it is not a fixed rule. There are periods — particularly ahead of major events like Union Budget, General Elections, or global macro announcements — where Nifty can rally while VIX also rises. The market goes up on optimism while simultaneously hedging against the event outcome. Always read VIX alongside context, not in isolation.
+      </div>
+    </section>
+
+    <!-- HISTORICAL EVENTS -->
+    <section id="history">
+      <h2><span class="icon">📅</span> India VIX — Key Historical Spikes</h2>
+      <p>
+        Understanding where India VIX has been during past crises gives you a powerful frame of reference for reading today's number. Here are the most significant historical VIX events in the Indian market.
+      </p>
+
+      <div class="event-list">
+        <div class="event-item">
+          <div class="event-vix" style="color:var(--red);">90+</div>
+          <div class="event-body">
+            <div class="e-date">March 2020</div>
+            <div class="e-title">COVID-19 Market Crash — All-Time High</div>
+            <div class="e-desc">India VIX crossed 90 in March 2020 as global markets collapsed during the COVID-19 pandemic. Nifty fell nearly 40% from its highs. This extreme VIX spike turned out to be one of the best buying opportunities in Indian market history — those who bought into that fear saw exceptional returns over the next 18 months.</div>
+          </div>
+        </div>
+        <div class="event-item">
+          <div class="event-vix" style="color:var(--red);">35+</div>
+          <div class="event-body">
+            <div class="e-date">April 2025</div>
+            <div class="e-title">US Tariff Shock — VIX Spike +50% in One Day</div>
+            <div class="e-desc">On April 7, 2025, Nifty fell nearly 1,000 points and India VIX spiked over 50% from its prior close in a single session — one of the largest single-day VIX moves in recent history — driven by sudden US tariff policy announcements creating global market uncertainty.</div>
+          </div>
+        </div>
+        <div class="event-item">
+          <div class="event-vix" style="color:var(--orange);">28–35</div>
+          <div class="event-body">
+            <div class="e-date">May 2024</div>
+            <div class="e-title">Indian General Election Results</div>
+            <div class="e-desc">India VIX peaked ahead of the 2024 General Election results as markets priced in uncertainty around seat projections. VIX collapsed sharply once results were declared — a textbook example of pre-event VIX expansion followed by post-event VIX crush.</div>
+          </div>
+        </div>
+        <div class="event-item">
+          <div class="event-vix" style="color:var(--gold);">8.72</div>
+          <div class="event-body">
+            <div class="e-date">2025 Bull Market</div>
+            <div class="e-title">52-Week Low — Maximum Complacency</div>
+            <div class="e-desc">India VIX touched its 52-week low of 8.72 during the sustained 2025 bull market — indicating extreme market complacency and very low demand for options protection. Historically, such low VIX readings have preceded periods of sharp correction as participants get caught under-hedged.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout green-bar">
+        <strong>📌 The Historical Pattern That Matters Most</strong>
+        Every time India VIX has spiked above 25–30 in the last 15 years, it has subsequently proven to be an excellent long-term entry point for equity investors. Fear creates opportunity — but only for those who understand that VIX spikes are temporary and mean-revert. The average VIX over time in India has been approximately 15–18. Readings significantly above this are historically temporary. Readings significantly below are equally temporary.
+      </div>
+    </section>
+
+    <!-- HOW TRADERS USE VIX -->
+    <section id="traders">
+      <h2><span class="icon">🎯</span> How Traders & Investors Use India VIX</h2>
+
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Participant Type</th>
+            <th>How They Use VIX</th>
+            <th>VIX Signal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Options Buyers</strong></td>
+            <td>Buy options when VIX is low — cheaper premiums mean better risk-reward. Avoid buying options when VIX is high — expensive premiums erode potential profit.</td>
+            <td><span class="badge buy">Buy when VIX &lt; 15</span></td>
+          </tr>
+          <tr>
+            <td><strong>Options Sellers</strong></td>
+            <td>Sell options when VIX is elevated — higher premiums mean richer income. Wide strangles and iron condors are most profitable when VIX is high and then falls (VIX crush).</td>
+            <td><span class="badge buy">Sell when VIX &gt; 20</span></td>
+          </tr>
+          <tr>
+            <td><strong>Equity Investors (SIP)</strong></td>
+            <td>Use VIX spikes above 25 as signals to increase SIP amounts or deploy lump sums. High VIX = market fear = better entry prices for patient long-term investors.</td>
+            <td><span class="badge buy">Increase allocation above VIX 25</span></td>
+          </tr>
+          <tr>
+            <td><strong>Portfolio Managers</strong></td>
+            <td>Raise cash or buy put options to hedge when VIX rises rapidly. Reduce hedges when VIX falls back to normal — hedging is cheap at low VIX, expensive at high VIX.</td>
+            <td><span class="badge wait">Hedge when VIX rising fast</span></td>
+          </tr>
+          <tr>
+            <td><strong>Intraday Traders</strong></td>
+            <td>Expect wider intraday ranges when VIX is high (more opportunity but also more risk). Expect tighter ranges and potentially false breakouts when VIX is very low.</td>
+            <td><span class="badge caution">Adjust position size to VIX level</span></td>
+          </tr>
+          <tr>
+            <td><strong>Weekly Expiry Traders</strong></td>
+            <td>VIX determines whether option premiums are worth buying or selling for the weekly expiry cycle. A rising VIX ahead of expiry inflates premiums — a falling VIX crushes them.</td>
+            <td><span class="badge wait">Watch VIX direction, not just level</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Internal link 1 -->
+      <a href="https://www.finworldltd.online/blog/nifty-weekly-analysis-may-5-to-may-12-2026" class="link-card">
+        <span class="link-card-icon">📊</span>
+        <div class="link-card-body">
+          <div class="lc-label">FinWorld · This Week's Report</div>
+          <div class="lc-title">Nifty 50 Weekly Analysis: May 5–12, 2026</div>
+          <div class="lc-desc">VIX at 18.54 this week — see how it shapes the key price zones and options positioning for the May 12 expiry</div>
+        </div>
+        <span class="link-card-arrow">→</span>
+      </a>
+    </section>
+
+    <!-- VIX THIS WEEK -->
+    <section id="now">
+      <h2><span class="icon">📡</span> India VIX This Week — What It's Telling Us</h2>
+      <p>
+        India VIX opened this week at 18.54 on May 5 — up sharply from 17.44 at the close of April 30. As of May 9, it has eased slightly to 16.84, but remains in the moderate zone with a clear upward bias earlier in the week.
+      </p>
+
+      <div class="callout orange-bar">
+        <strong>🔍 Reading This Week's VIX in Context</strong>
+        The jump from 17.44 to 18.54 in a single session at the start of this week signalled that option markets were pricing in increased uncertainty heading into the Tuesday May 12 expiry — a compressed time frame with fewer sessions to resolve direction. The subsequent cooling to 16.84 by May 9 suggests some of that early-week anxiety has unwound. This VIX behaviour — spike early in the week, fade as expiry approaches — is a common pattern in weekly expiry cycles when there is no major macro event to sustain elevated fear through the week.
+      </div>
+
+      <!-- Internal link 2 -->
+      <a href="https://www.finworldltd.online/blog/how-to-build-a-strong-investment-portfolio-in-2026" class="link-card">
+        <span class="link-card-icon">📈</span>
+        <div class="link-card-body">
+          <div class="lc-label">FinWorld Articles · Investment Strategy</div>
+          <div class="lc-title">How to Build a Strong Investment Portfolio in 2026</div>
+          <div class="lc-desc">Learn how to use VIX signals in a long-term portfolio strategy — when to increase equity allocation and when to hedge</div>
+        </div>
+        <span class="link-card-arrow">→</span>
+      </a>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <h2><span class="icon">❓</span> Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <p class="faq-q">What is a good India VIX level?</p>
+        <p class="faq-a">There is no universally "good" or "bad" VIX level — it depends on your trading strategy and goals. For long-term equity investors, a VIX above 25 has historically been a good buying opportunity. For options buyers, VIX below 15 means cheaper premiums and better risk-reward. For options sellers, VIX above 20 means richer premium income. The historical average India VIX is approximately 15–18 — readings significantly above or below this tend to be temporary.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Can I invest directly in India VIX?</p>
+        <p class="faq-a">No — India VIX itself is not a directly tradable security. It is an index, not an instrument. However, NSE does offer India VIX futures contracts that allow experienced traders to take positions on expected volatility. These futures are highly complex and risky instruments suited only for experienced derivatives traders who fully understand volatility dynamics. Retail investors should not trade VIX futures without proper knowledge.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Why did India VIX jump 50% in a single day in April 2025?</p>
+        <p class="faq-a">The April 7, 2025 spike was driven by sudden US tariff policy announcements that created extreme uncertainty across global markets. Nifty fell nearly 1,000 points in a single session and traders rushed to buy protective put options simultaneously — driving option premiums sharply higher and causing the VIX calculation to spike dramatically. Such single-day spikes are rare and usually reflect an unexpected external shock rather than a gradual buildup of domestic fear.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Does India VIX predict the direction of Nifty?</p>
+        <p class="faq-a">No. India VIX explicitly does not predict market direction. It only measures the expected magnitude of price movement — how much Nifty might move, not which way it will move. A VIX of 20 tells you the market expects significant movement over the next 30 days — but it could be 20% up or 20% down. Direction comes from other analysis — price action, OI data, PCR, global cues, and fundamentals.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">What is the difference between India VIX and Implied Volatility (IV)?</p>
+        <p class="faq-a">Implied Volatility (IV) is calculated for individual option contracts using models like Black-Scholes — it tells you the volatility implied by the price of that specific option. India VIX aggregates implied volatility across a wide range of out-of-the-money Nifty options and blends near-month and next-month expiries into a single 30-day index. Think of IV as a property of one specific option contract, and India VIX as the aggregate volatility sentiment of the entire Nifty options market.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Where can I check India VIX in real time?</p>
+        <p class="faq-a">India VIX is available in real time on the NSE website (nseindia.com) under the Indices section. It is also displayed on all major Indian brokerage platforms including Zerodha Kite, Upstox, Angel One, and ICICI Direct. Financial data sites like Investing.com, Kotak Neo, and Moneycontrol also publish live VIX readings with historical charts.</p>
+      </div>
+    </section>
+
+    <!-- KEY TAKEAWAYS -->
+    <section id="summary">
+      <h2><span class="icon">📌</span> Key Takeaways</h2>
+      <p>If you remember nothing else from this guide, remember these six points:</p>
+
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;margin:20px 0;">
+        <div style="display:flex;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          <span style="color:var(--gold);font-weight:700;min-width:24px;">01</span>
+          <span style="color:var(--text);">India VIX measures <strong>expected volatility</strong> of Nifty 50 over the next 30 days — not direction.</span>
+        </div>
+        <div style="display:flex;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          <span style="color:var(--gold);font-weight:700;min-width:24px;">02</span>
+          <span style="color:var(--text);">Higher VIX = bigger moves expected. Lower VIX = calmer market expected.</span>
+        </div>
+        <div style="display:flex;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          <span style="color:var(--gold);font-weight:700;min-width:24px;">03</span>
+          <span style="color:var(--text);">VIX and Nifty typically move <strong>in opposite directions</strong> — when Nifty falls, VIX usually rises.</span>
+        </div>
+        <div style="display:flex;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          <span style="color:var(--gold);font-weight:700;min-width:24px;">04</span>
+          <span style="color:var(--text);">Historical VIX spikes above 25–30 have been <strong>excellent long-term equity entry points</strong>.</span>
+        </div>
+        <div style="display:flex;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          <span style="color:var(--gold);font-weight:700;min-width:24px;">05</span>
+          <span style="color:var(--text);">Options buyers prefer <strong>low VIX</strong> (cheap premiums). Options sellers prefer <strong>high VIX</strong> (rich premiums).</span>
+        </div>
+        <div style="display:flex;gap:14px;padding:12px 0;">
+          <span style="color:var(--gold);font-weight:700;min-width:24px;">06</span>
+          <span style="color:var(--text);">Watch the <strong>direction of VIX</strong> — rising or falling — as much as the absolute level. A VIX moving from 15 to 20 is more meaningful than a VIX sitting still at 18.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- RELATED ARTICLES -->
+    <section style="margin-top:52px;">
+      <h2><span class="icon">🔗</span> More From FinWorld</h2>
+
+      <div class="related-grid">
+        <a href="https://www.finworldltd.online/blog/nifty-weekly-analysis-may-5-to-may-12-2026" class="related-card">
+          <span class="rc-tag">📊 Market Analysis · Weekly</span>
+          <div class="rc-title">Nifty 50 Weekly Analysis: May 5–12, 2026</div>
+          <div class="rc-desc">VIX at 18.54 this week — see how it shapes key price zones for the May 12 expiry.</div>
+        </a>
+
+        <a href="https://www.finworldltd.online/blog/sensex-weekly-analysis-april-30-to-may-7-2026" class="related-card">
+          <span class="rc-tag">📊 Market Analysis · Weekly</span>
+          <div class="rc-title">SENSEX Weekly Analysis: April 30 – May 7, 2026</div>
+          <div class="rc-desc">VIX at 17.44 last week — compare how the same VIX reading shaped SENSEX structure.</div>
+        </a>
+
+        <a href="https://www.finworldltd.online/blog/how-to-build-a-strong-investment-portfolio-in-2026" class="related-card">
+          <span class="rc-tag">📈 Investment Strategy · 2026</span>
+          <div class="rc-title">How to Build a Strong Investment Portfolio in 2026</div>
+          <div class="rc-desc">How to use VIX signals within a long-term asset allocation strategy.</div>
+        </a>
+
+        <a href="https://youtu.be/wrKyzvwj0O8" class="related-card" target="_blank" rel="noopener">
+          <span class="rc-tag">🎬 Video · Market Education</span>
+          <div class="rc-title">Sell in May and Go Away — Fact or Fiction?</div>
+          <div class="rc-desc">Seasonal myths vs data-driven tools like VIX — 6-minute explainer video.</div>
+        </a>
+      </div>
+
+      <a href="#top" class="back-to-top">↑ Back to top</a>
+    </section>
+
+    <div class="disclaimer">
+      <strong style="color:#8896b0;">Disclaimer:</strong> This article is for educational and informational purposes only. It does not constitute financial advice or a recommendation to buy, sell, or trade any security or derivative instrument. India VIX data referenced is as of May 2026. All investments and derivatives trading carry risk. Please consult a SEBI-registered investment advisor before making any financial decisions.
+    </div>
+
+    <footer>
+      <p>Published by <strong style="color:var(--text);">FinWorld</strong> &nbsp;|&nbsp; S Kamal Kumar, Research Analyst &nbsp;|&nbsp; May 2026</p>
+    </footer>
+
+  </article>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What is India VIX? The Complete Guide to India's Fear Index",
+    "description": "A complete guide to India VIX — how it works, how to read it, VIX zones, its relationship with Nifty 50, historical events, and how traders use it.",
+    "author": { "@type": "Person", "name": "S Kamal Kumar" },
+    "publisher": { "@type": "Organization", "name": "FinWorld" },
+    "datePublished": "2026-05-09",
+    "dateModified": "2026-05-09"
+  }
+  </script>
+
+</div>
+</body>
+</html>
