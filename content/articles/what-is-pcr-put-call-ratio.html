@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="What is PCR (Put-Call Ratio)? A complete guide to India's most powerful options sentiment indicator — how it's calculated, how to read it, PCR zones, and how traders use it.">
+  <meta name="keywords" content="what is PCR, put call ratio India, PCR ratio explained, Nifty PCR, SENSEX PCR, how to read PCR, PCR trading strategy India, PCR vs India VIX, options sentiment indicator NSE BSE 2026">
+  <title>What is PCR (Put-Call Ratio)? Complete Guide for Indian Options Traders | FinWorld</title>
+  <link rel="canonical" href="https://www.finworldltd.online/blog/what-is-pcr-put-call-ratio" />
+  <meta property="og:title" content="What is PCR (Put-Call Ratio)? Complete Guide | FinWorld">
+  <meta property="og:description" content="PCR explained — formula, how to read it, PCR zones, real examples from Nifty & SENSEX, and how traders use it to make better decisions.">
+  <meta property="og:type" content="article">
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0e1117;
+      --surface: #161b27;
+      --surface2: #1e2535;
+      --border: #2a3347;
+      --text: #e2e8f0;
+      --muted: #8896b0;
+      --red: #ef4444;
+      --green: #22c55e;
+      --gold: #f59e0b;
+      --blue: #3b82f6;
+      --orange: #f97316;
+      --purple: #a855f7;
+      --white: #ffffff;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { background: #0e1117 !important; }
+    body { font-family: 'DM Sans', sans-serif; background: #0e1117 !important; color: var(--text); line-height: 1.7; }
+    .page-wrapper { background: #0e1117 !important; min-height: 100vh; width: 100%; }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #0e1117 0%, #1a1f35 60%, #0e1117 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 56px 24px 48px; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute;
+      top: -60px; left: 50%; transform: translateX(-50%);
+      width: 600px; height: 300px;
+      background: radial-gradient(ellipse, rgba(245,158,11,0.10) 0%, transparent 70%);
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(245,158,11,0.15); border: 1px solid rgba(245,158,11,0.35);
+      color: #fde68a; font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 5px 14px; border-radius: 20px; margin-bottom: 20px; position: relative;
+    }
+    .hero-badge::before { content: ''; width: 6px; height: 6px; background: var(--gold); border-radius: 50%; animation: pulse 1.8s ease infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.3); } }
+    .hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(1.8rem, 4.5vw, 3rem); color: var(--white); line-height: 1.2; max-width: 760px; margin: 0 auto 12px; position: relative; }
+    .hero h1 em { font-style: normal; color: var(--gold); }
+    .hero-meta { color: var(--muted); font-size: 0.85rem; position: relative; margin-top: 16px; }
+
+    /* ── TICKER ── */
+    .live-bar { background: var(--surface); border-bottom: 1px solid var(--border); display: flex; align-items: center; font-size: 0.82rem; overflow: hidden; }
+    .live-label { background: var(--gold); color: #000; font-weight: 700; font-size: 0.7rem; letter-spacing: 0.1em; padding: 8px 14px; white-space: nowrap; flex-shrink: 0; }
+    .live-scroll { overflow: hidden; flex: 1; padding: 8px 16px; }
+    .live-scroll-inner { display: inline-block; white-space: nowrap; animation: scroll 32s linear infinite; }
+    .live-scroll-inner span { margin-right: 48px; color: var(--muted); }
+    .live-scroll-inner span strong { color: var(--text); }
+    .live-scroll-inner span .up { color: var(--green); }
+    .live-scroll-inner span .dn { color: var(--red); }
+    @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+    /* ── LAYOUT ── */
+    article { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: 1.6rem; color: var(--white); margin: 52px 0 16px; display: flex; align-items: center; gap: 10px; }
+    h2 .icon { font-size: 1.2rem; }
+    h3 { font-size: 1.05rem; font-weight: 700; color: var(--white); margin: 24px 0 10px; }
+    p { font-size: 0.97rem; color: #c8d4e8; margin-bottom: 14px; line-height: 1.8; }
+
+    /* ── TOC ── */
+    .toc-box { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 0 12px 12px 0; padding: 24px 28px; margin: 32px 0 40px; }
+    .toc-box h3 { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--gold); margin: 0 0 16px; }
+    .toc-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 32px; }
+    .toc-list li a { color: #9aadc4; text-decoration: none; font-size: 0.88rem; display: flex; align-items: center; gap: 8px; transition: color 0.2s; }
+    .toc-list li a:hover { color: var(--gold); }
+    .toc-list li a::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); opacity: 0.5; flex-shrink: 0; }
+    .toc-list li a:hover::before { opacity: 1; }
+
+    /* ── SNAPSHOT ── */
+    .snapshot { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 28px 0; }
+    .snap-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 18px 16px; text-align: center; }
+    .snap-card .s-val { font-family: 'DM Serif Display', serif; font-size: 1.5rem; font-weight: 700; display: block; margin-bottom: 4px; }
+    .snap-card .s-lbl { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+    .snap-card .s-sub { font-size: 0.75rem; margin-top: 3px; color: var(--muted); }
+    .gold { color: var(--gold); } .red { color: var(--red); } .green { color: var(--green); } .blue { color: var(--blue); }
+
+    /* ── CALLOUT ── */
+    .callout { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 0 8px 8px 0; padding: 16px 18px; margin: 20px 0; font-size: 0.92rem; color: #c8d4e8; }
+    .callout.red-bar   { border-left-color: var(--red); }
+    .callout.blue-bar  { border-left-color: var(--blue); }
+    .callout.green-bar { border-left-color: var(--green); }
+    .callout.orange-bar { border-left-color: var(--orange); }
+    .callout.purple-bar { border-left-color: var(--purple); }
+    .callout strong { display: block; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 6px; }
+
+    /* ── PCR FORMULA BOX ── */
+    .formula-box {
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 12px; padding: 28px; margin: 24px 0; text-align: center;
+    }
+    .formula-box .f-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 16px; display: block; }
+    .formula-box .f-equation { font-family: 'DM Serif Display', serif; font-size: 1.8rem; color: var(--white); margin-bottom: 12px; }
+    .formula-box .f-equation span { color: var(--gold); }
+    .formula-box .f-note { font-size: 0.82rem; color: var(--muted); }
+
+    /* ── PCR READING CARDS ── */
+    .pcr-reading-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 24px 0; }
+    .pcr-reading-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 22px 18px; text-align: center; position: relative; overflow: hidden; }
+    .pcr-reading-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; }
+    .pcr-reading-card.bearish::before { background: var(--red); }
+    .pcr-reading-card.neutral::before { background: var(--gold); }
+    .pcr-reading-card.bullish::before { background: var(--green); }
+    .pcr-reading-card .pr-value { font-family: 'DM Serif Display', serif; font-size: 2.2rem; font-weight: 700; display: block; margin-bottom: 6px; }
+    .pcr-reading-card .pr-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; display: block; }
+    .pcr-reading-card .pr-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+
+    /* ── PCR GAUGE FULL ── */
+    .pcr-gauge-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 28px; margin: 24px 0; }
+    .pcr-gauge-card h4 { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 20px; }
+    .pcr-gauge-wrap { text-align: center; }
+    .pcr-svg { width: 100%; max-width: 280px; }
+    .pcr-zones-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 20px; }
+    .pz { text-align: center; padding: 10px 6px; border-radius: 6px; font-size: 0.72rem; font-weight: 600; }
+    .pz .pz-range { font-size: 0.78rem; font-weight: 700; display: block; margin-bottom: 3px; }
+    .pz .pz-label { display: block; margin-bottom: 4px; }
+    .pz .pz-desc  { font-size: 0.64rem; color: var(--muted); font-weight: 400; line-height: 1.3; }
+    .pz.sb  { background: rgba(239,68,68,0.15);  color: #f87171; border: 1px solid rgba(239,68,68,0.2); }
+    .pz.mb  { background: rgba(249,115,22,0.15); color: #fb923c; border: 1px solid rgba(249,115,22,0.2); }
+    .pz.nt  { background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.3); }
+    .pz.ml  { background: rgba(132,204,22,0.15); color: #a3e635; border: 1px solid rgba(132,204,22,0.2); }
+    .pz.sl  { background: rgba(34,197,94,0.15);  color: #4ade80; border: 1px solid rgba(34,197,94,0.25); }
+
+    /* ── COMP TABLE ── */
+    .comp-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+    .comp-table th { background: var(--surface2); color: var(--muted); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.09em; padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+    .comp-table td { padding: 12px 14px; border-bottom: 1px solid rgba(255,255,255,0.04); color: var(--text); vertical-align: top; }
+    .comp-table tr:last-child td { border-bottom: none; }
+    .comp-table tr:hover td { background: rgba(255,255,255,0.02); }
+    .badge { display: inline-block; padding: 2px 10px; border-radius: 20px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; }
+    .badge.bearish { background: rgba(239,68,68,0.15); color: #f87171; border: 1px solid rgba(239,68,68,0.25); }
+    .badge.neutral { background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.3); }
+    .badge.bullish  { background: rgba(34,197,94,0.15);  color: #4ade80; border: 1px solid rgba(34,197,94,0.25); }
+    .badge.caution  { background: rgba(249,115,22,0.15); color: #fb923c; border: 1px solid rgba(249,115,22,0.3); }
+
+    /* ── REAL EXAMPLES ── */
+    .example-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 24px 0; }
+    .example-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 18px; }
+    .example-card .ex-source { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 6px; display: block; }
+    .example-card .ex-pcr { font-family: 'DM Serif Display', serif; font-size: 2rem; display: block; margin-bottom: 4px; }
+    .example-card .ex-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; display: block; }
+    .example-card .ex-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+
+    /* ── VIX VS PCR COMPARISON ── */
+    .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+    .compare-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 22px; }
+    .compare-card h4 { font-size: 0.9rem; font-weight: 700; color: var(--white); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+    .compare-card ul { list-style: none; }
+    .compare-card ul li { font-size: 0.84rem; color: var(--muted); padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.04); display: flex; gap: 10px; }
+    .compare-card ul li:last-child { border-bottom: none; }
+    .compare-card ul li::before { content: '→'; color: var(--gold); flex-shrink: 0; }
+
+    /* ── CROSS-PAGE LINK CARD ── */
+    .link-card { display: flex; align-items: center; gap: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; margin: 16px 0; text-decoration: none; transition: border-color 0.2s, background 0.2s; }
+    .link-card:hover { border-color: rgba(245,158,11,0.4); background: rgba(245,158,11,0.04); }
+    .link-card-icon { font-size: 1.6rem; flex-shrink: 0; }
+    .link-card-body .lc-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); font-weight: 600; margin-bottom: 3px; }
+    .link-card-body .lc-title { font-size: 0.9rem; font-weight: 600; color: var(--white); line-height: 1.3; }
+    .link-card-body .lc-desc  { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+    .link-card-arrow { margin-left: auto; color: var(--muted); font-size: 1rem; flex-shrink: 0; }
+
+    /* ── FAQ ── */
+    .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-weight: 600; color: var(--white); display: flex; gap: 12px; }
+    .faq-q::before { content: "Q"; background: rgba(245,158,11,0.2); color: var(--gold); font-size: 0.68rem; font-weight: 700; padding: 2px 7px; border-radius: 3px; flex-shrink: 0; margin-top: 2px; border: 1px solid rgba(245,158,11,0.3); }
+    .faq-a { font-size: 0.92rem; color: #9aadc4; margin-top: 10px; padding-left: 34px; line-height: 1.75; }
+
+    /* ── RELATED ── */
+    .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
+    .related-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 18px; text-decoration: none; display: block; transition: border-color 0.2s, background 0.2s; }
+    .related-card:hover { border-color: rgba(245,158,11,0.35); background: rgba(245,158,11,0.04); }
+    .related-card .rc-tag { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); font-weight: 600; margin-bottom: 8px; display: block; }
+    .related-card .rc-title { font-size: 0.88rem; font-weight: 600; color: var(--white); line-height: 1.4; margin-bottom: 6px; }
+    .related-card .rc-desc  { font-size: 0.75rem; color: var(--muted); line-height: 1.5; }
+
+    /* ── DISCLAIMER / FOOTER ── */
+    .disclaimer { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 18px 22px; font-size: 0.82rem; color: var(--muted); margin-top: 48px; line-height: 1.7; }
+    footer { margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 0.82rem; color: var(--muted); }
+    .back-to-top { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); font-size: 0.78rem; text-decoration: none; margin-top: 12px; transition: color 0.2s; }
+    .back-to-top:hover { color: var(--gold); }
+
+    @media (max-width: 640px) {
+      .snapshot { grid-template-columns: 1fr 1fr; }
+      .pcr-reading-grid { grid-template-columns: 1fr; }
+      .pcr-zones-row { grid-template-columns: 1fr 1fr; }
+      .example-grid { grid-template-columns: 1fr; }
+      .compare-grid { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+      .toc-list { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper" id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-badge">Market Education · Options Sentiment</div>
+    <h1>What is <em>PCR</em> (Put-Call Ratio)?<br>Complete Guide for Indian Options Traders</h1>
+    <p class="hero-meta">
+      By S Kamal Kumar, Research Analyst &nbsp;|&nbsp; FinWorld &nbsp;|&nbsp; May 2026
+    </p>
+  </div>
+
+  <!-- TICKER -->
+  <div class="live-bar">
+    <div class="live-label">LIVE DATA</div>
+    <div class="live-scroll">
+      <div class="live-scroll-inner">
+        <span><strong>Nifty PCR</strong> <span class="dn">0.71 · May 12, 2026</span></span>
+        <span><strong>SENSEX PCR</strong> <span style="color:var(--gold);">0.84 · May 14, 2026</span></span>
+        <span><strong>India VIX</strong> 18.84</span>
+        <span><strong>Neutral Zone</strong> PCR 0.8 – 1.2</span>
+        <span><strong>Bearish Signal</strong> <span class="dn">PCR below 0.7</span></span>
+        <span><strong>Bullish Signal</strong> <span class="up">PCR above 1.3</span></span>
+        <span><strong>Nifty PCR</strong> <span class="dn">0.71 · May 12, 2026</span></span>
+        <span><strong>SENSEX PCR</strong> <span style="color:var(--gold);">0.84 · May 14, 2026</span></span>
+        <span><strong>India VIX</strong> 18.84</span>
+        <span><strong>Neutral Zone</strong> PCR 0.8 – 1.2</span>
+        <span><strong>Bearish Signal</strong> <span class="dn">PCR below 0.7</span></span>
+        <span><strong>Bullish Signal</strong> <span class="up">PCR above 1.3</span></span>
+      </div>
+    </div>
+  </div>
+
+  <article>
+
+    <!-- INTRO -->
+    <section id="intro">
+      <p>
+        Every week in our Nifty and SENSEX reports, we publish the Put-Call Ratio alongside India VIX. Last week Nifty PCR was 0.61 — bearish lean. This week SENSEX PCR is 0.84 — neutral. These two numbers tell completely different stories about market sentiment. But what exactly does PCR measure, where does it come from, and how do you actually use it to make better trading and investment decisions?
+      </p>
+      <p>
+        This guide answers all of that. PCR is one of the simplest yet most misread indicators in Indian options markets. Most traders know the formula — fewer understand what the number actually means in practice, how it behaves as a contrarian signal, and how to combine it with India VIX for a complete market picture.
+      </p>
+    </section>
+
+    <!-- TOC -->
+    <div class="toc-box">
+      <h3>📑 In This Article</h3>
+      <ul class="toc-list">
+        <li><a href="#what">What is PCR?</a></li>
+        <li><a href="#formula">The Formula</a></li>
+        <li><a href="#types">Volume vs OI-Based PCR</a></li>
+        <li><a href="#reading">How to Read the Number</a></li>
+        <li><a href="#zones">PCR Zones Explained</a></li>
+        <li><a href="#contrarian">PCR as a Contrarian Signal</a></li>
+        <li><a href="#vix">PCR vs India VIX</a></li>
+        <li><a href="#examples">Real Examples From Our Reports</a></li>
+        <li><a href="#traders">How Traders Use PCR</a></li>
+        <li><a href="#faq">Frequently Asked Questions</a></li>
+        <li><a href="#summary">Key Takeaways</a></li>
+      </ul>
+    </div>
+
+    <!-- QUICK SNAPSHOT -->
+    <div class="snapshot">
+      <div class="snap-card">
+        <span class="s-val gold">0.71</span>
+        <span class="s-lbl">Nifty PCR</span>
+        <span class="s-sub">May 12, 2026</span>
+      </div>
+      <div class="snap-card">
+        <span class="s-val gold">0.84</span>
+        <span class="s-lbl">SENSEX PCR</span>
+        <span class="s-sub">May 14, 2026</span>
+      </div>
+      <div class="snap-card">
+        <span class="s-val blue">0.8–1.2</span>
+        <span class="s-lbl">Neutral Zone</span>
+        <span class="s-sub">Standard range</span>
+      </div>
+      <div class="snap-card">
+        <span class="s-val green">OI-Based</span>
+        <span class="s-lbl">Preferred Type</span>
+        <span class="s-sub">More reliable signal</span>
+      </div>
+    </div>
+
+    <!-- WHAT IS PCR -->
+    <section id="what">
+      <h2><span class="icon">📖</span> What is PCR (Put-Call Ratio)?</h2>
+      <p>
+        <strong>PCR — Put-Call Ratio</strong> — is a sentiment indicator that measures the relationship between the number of put options and call options in the market at any given time. It tells you, in a single number, whether market participants are collectively positioned more defensively (puts) or more aggressively (calls).
+      </p>
+      <p>
+        Think of it this way — every options contract represents a bet on market direction. <strong>Call options</strong> profit when the market rises. <strong>Put options</strong> profit when the market falls. When traders buy significantly more puts than calls, it signals fear and defensive positioning. When calls dominate heavily over puts, it signals aggressive bullish positioning — or complacency.
+      </p>
+      <p>
+        PCR captures this balance in real time and gives traders a window into the collective psychology of the options market — something that raw price action alone cannot reveal.
+      </p>
+
+      <div class="callout">
+        <strong>🔑 One-Line Definition</strong>
+        PCR is the ratio of Put Open Interest (or volume) to Call Open Interest (or volume). A reading above 1 means more puts than calls — defensive/bearish lean. A reading below 1 means more calls than puts — aggressive/bullish lean.
+      </div>
+    </section>
+
+    <!-- FORMULA -->
+    <section id="formula">
+      <h2><span class="icon">⚙️</span> The PCR Formula</h2>
+      <p>
+        PCR is calculated using one of two methods — Open Interest or Volume. Both use the same basic formula but with different input data.
+      </p>
+
+      <div class="formula-box">
+        <span class="f-label">PCR Formula (Open Interest Based)</span>
+        <div class="f-equation">
+          PCR = <span>Total Put OI</span> ÷ <span>Total Call OI</span>
+        </div>
+        <div class="f-note">
+          Example: Put OI = 5,00,000 contracts · Call OI = 6,00,000 contracts<br>
+          PCR = 5,00,000 ÷ 6,00,000 = <strong style="color:var(--gold);">0.83</strong> → Neutral borderline
+        </div>
+      </div>
+
+      <div class="formula-box" style="margin-top:12px;">
+        <span class="f-label">PCR Formula (Volume Based)</span>
+        <div class="f-equation">
+          PCR = <span>Total Put Volume</span> ÷ <span>Total Call Volume</span>
+        </div>
+        <div class="f-note">
+          Uses the number of contracts traded during a session, not outstanding positions.<br>
+          More volatile than OI-based PCR — changes intraday with each trade.
+        </div>
+      </div>
+    </section>
+
+    <!-- TYPES -->
+    <section id="types">
+      <h2><span class="icon">🔀</span> Volume-Based vs OI-Based PCR — Which to Use?</h2>
+      <p>
+        This is one of the most overlooked distinctions in PCR analysis. The two methods produce different numbers and carry different signals.
+      </p>
+
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>What It Measures</th>
+            <th>Stability</th>
+            <th>Best Used For</th>
+            <th>Preferred?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>OI-Based PCR</strong></td>
+            <td>Total outstanding put and call contracts at end of day</td>
+            <td>Stable — changes gradually as positions build</td>
+            <td>Identifying structural sentiment, weekly/positional bias</td>
+            <td><span class="badge bullish">✓ Preferred</span></td>
+          </tr>
+          <tr>
+            <td><strong>Volume-Based PCR</strong></td>
+            <td>Total put and call contracts traded during the session</td>
+            <td>Volatile — fluctuates significantly intraday</td>
+            <td>Intraday momentum, spotting sudden sentiment shifts</td>
+            <td><span class="badge neutral">Supplementary</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout blue-bar">
+        <strong>💡 Why OI-Based PCR is More Reliable</strong>
+        Open Interest represents committed money — positions that traders have taken and are holding. Volume represents activity, which can be noisy and include hedging, rolling, and arbitrage trades that don't reflect directional views. For weekly market analysis, OI-based PCR gives a cleaner picture of where institutional money is actually positioned. All PCR readings in FinWorld's weekly reports are OI-based.
+      </div>
+    </section>
+
+    <!-- HOW TO READ -->
+    <section id="reading">
+      <h2><span class="icon">🔢</span> How to Read the PCR Number</h2>
+      <p>
+        The PCR number itself is simple. The interpretation requires context. Here are the three primary reading zones with real market examples:
+      </p>
+
+      <div class="pcr-reading-grid">
+        <div class="pcr-reading-card bearish">
+          <span class="pr-value" style="color:var(--red);">0.61</span>
+          <span class="pr-label" style="color:var(--red);">⚠ Bearish Lean</span>
+          <span class="pr-desc">Calls significantly outnumber puts. Call writers are aggressively building resistance. Upside is structurally capped. Market needs strong catalysts to break higher. Seen in Nifty during May 5, 2026 week.</span>
+        </div>
+        <div class="pcr-reading-card neutral">
+          <span class="pr-value" style="color:var(--gold);">0.84</span>
+          <span class="pr-label" style="color:var(--gold);">⚖ Neutral</span>
+          <span class="pr-desc">Puts and calls approaching balance. Neither bulls nor bears have decisive grip. Range-bound, two-sided price action is the most likely outcome. Seen in SENSEX during May 14, 2026 week.</span>
+        </div>
+        <div class="pcr-reading-card bullish">
+          <span class="pr-value" style="color:var(--green);">1.30+</span>
+          <span class="pr-label" style="color:var(--green);">📈 Bullish Support</span>
+          <span class="pr-desc">Puts significantly outnumber calls. Put writers are actively building support floors below current price. Structural downside is cushioned. Market has strong support base to work from.</span>
+        </div>
+      </div>
+
+      <div class="callout orange-bar">
+        <strong>⚠️ The Most Common Mistake — Reading PCR in Isolation</strong>
+        A PCR of 0.61 does not automatically mean "sell everything." A PCR of 1.4 does not automatically mean "buy everything." PCR tells you the OI structure — it describes the battlefield, not the winner. Always combine PCR with price action, India VIX, and the week's key levels before forming a directional view.
+      </div>
+    </section>
+
+    <!-- PCR ZONES -->
+    <section id="zones">
+      <h2><span class="icon">🗺️</span> PCR Zones — What Each Level Means</h2>
+
+      <div class="pcr-gauge-card">
+        <h4>PCR Sentiment Dial — All Five Zones</h4>
+        <div class="pcr-gauge-wrap">
+          <svg class="pcr-svg" viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 25 140 A 115 115 0 0 1 255 140" fill="none" stroke="#1e2535" stroke-width="22" stroke-linecap="round"/>
+            <path d="M 25 140 A 115 115 0 0 1 255 140" fill="none" stroke="url(#arcGradPCR)" stroke-width="22" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="arcGradPCR" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%"   stop-color="#dc2626"/>
+                <stop offset="25%"  stop-color="#f97316"/>
+                <stop offset="45%"  stop-color="#f59e0b"/>
+                <stop offset="65%"  stop-color="#84cc16"/>
+                <stop offset="100%" stop-color="#16a34a"/>
+              </linearGradient>
+            </defs>
+            <!-- Zone markers -->
+            <text x="18"  y="158" fill="#f87171" font-size="9" font-family="DM Sans">0.5</text>
+            <text x="58"  y="158" fill="#fb923c" font-size="9" font-family="DM Sans">0.7</text>
+            <text x="126" y="30"  fill="#fbbf24" font-size="9" font-family="DM Sans">1.0</text>
+            <text x="193" y="158" fill="#a3e635" font-size="9" font-family="DM Sans">1.3</text>
+            <text x="246" y="158" fill="#4ade80" font-size="9" font-family="DM Sans">1.5</text>
+            <!-- Zone labels -->
+            <text x="22"  y="120" fill="#f87171" font-size="8" font-family="DM Sans" font-weight="bold">STRONGLY</text>
+            <text x="22"  y="130" fill="#f87171" font-size="8" font-family="DM Sans" font-weight="bold">BEARISH</text>
+            <text x="222" y="120" fill="#4ade80" font-size="8" font-family="DM Sans" font-weight="bold">STRONGLY</text>
+            <text x="222" y="130" fill="#4ade80" font-size="8" font-family="DM Sans" font-weight="bold">BULLISH</text>
+          </svg>
+        </div>
+        <div class="pcr-zones-row">
+          <div class="pz sb">
+            <span class="pz-range">Below 0.7</span>
+            <span class="pz-label">🔴 Strongly Bearish</span>
+            <span class="pz-desc">Calls dominate heavily. Strong resistance above. Upside needs big catalyst.</span>
+          </div>
+          <div class="pz mb">
+            <span class="pz-range">0.7 – 0.8</span>
+            <span class="pz-label">🟠 Mildly Bearish</span>
+            <span class="pz-desc">Calls still leading. Cautious market. Upward moves face friction.</span>
+          </div>
+          <div class="pz nt">
+            <span class="pz-range">0.8 – 1.2</span>
+            <span class="pz-label">🟡 Neutral</span>
+            <span class="pz-desc">Balanced OI. Two-sided action. No clear structural bias.</span>
+          </div>
+          <div class="pz ml">
+            <span class="pz-range">1.2 – 1.4</span>
+            <span class="pz-label">🟢 Mildly Bullish</span>
+            <span class="pz-desc">Puts leading. Strong support building. Downside cushioned.</span>
+          </div>
+          <div class="pz sl">
+            <span class="pz-range">Above 1.4</span>
+            <span class="pz-label">💚 Strongly Bullish</span>
+            <span class="pz-desc">Puts dominate. Structural floor strong. OR extreme fear signal.</span>
+          </div>
+        </div>
+      </div>
+
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>PCR Zone</th>
+            <th>Range</th>
+            <th>OI Structure</th>
+            <th>For Option Buyers</th>
+            <th>For Option Sellers</th>
+            <th>Market Implication</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong style="color:var(--red);">Strongly Bearish</strong></td>
+            <td>Below 0.7</td>
+            <td>Calls >> Puts</td>
+            <td><span class="badge bearish">Buy puts</span></td>
+            <td><span class="badge neutral">Sell calls</span></td>
+            <td>Heavy resistance above — or contrarian bounce signal</td>
+          </tr>
+          <tr>
+            <td><strong style="color:var(--orange);">Mildly Bearish</strong></td>
+            <td>0.7 – 0.8</td>
+            <td>Calls > Puts</td>
+            <td><span class="badge bearish">Cautious</span></td>
+            <td><span class="badge neutral">Moderate income</span></td>
+            <td>Upside faces friction — range-bound with ceiling</td>
+          </tr>
+          <tr>
+            <td><strong style="color:var(--gold);">Neutral</strong></td>
+            <td>0.8 – 1.2</td>
+            <td>Balanced</td>
+            <td><span class="badge neutral">Fair premiums</span></td>
+            <td><span class="badge neutral">Balanced risk</span></td>
+            <td>Two-sided action — no structural bias</td>
+          </tr>
+          <tr>
+            <td><strong style="color:#a3e635;">Mildly Bullish</strong></td>
+            <td>1.2 – 1.4</td>
+            <td>Puts > Calls</td>
+            <td><span class="badge bullish">Buy calls</span></td>
+            <td><span class="badge neutral">Sell puts</span></td>
+            <td>Strong structural support — downside cushioned</td>
+          </tr>
+          <tr>
+            <td><strong style="color:var(--green);">Strongly Bullish/Extreme</strong></td>
+            <td>Above 1.4</td>
+            <td>Puts >> Calls</td>
+            <td><span class="badge bullish">Strong support</span></td>
+            <td><span class="badge caution">Check for extreme fear</span></td>
+            <td>Very strong support — OR extreme fear, contrarian bearish</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- CONTRARIAN -->
+    <section id="contrarian">
+      <h2><span class="icon">🔄</span> PCR as a Contrarian Signal — The Most Powerful Use</h2>
+      <p>
+        Here is what most traders miss about PCR — at extreme readings, it becomes a <strong>contrarian indicator</strong>. When everyone is positioned in one direction, the market often does the opposite. This is where PCR moves beyond simple sentiment reading into actionable trading intelligence.
+      </p>
+
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Extreme PCR Reading</th>
+            <th>What It Signals Directly</th>
+            <th>Contrarian Interpretation</th>
+            <th>Why It Works</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong style="color:var(--red);">Very Low PCR (below 0.6)</strong></td>
+            <td>Extreme bullish positioning — calls dominate</td>
+            <td><span class="badge bearish">Contrarian Bearish — watch for reversal</span></td>
+            <td>When everyone has already bought calls, there are fewer new buyers left to push the market higher — and trapped call buyers become sellers</td>
+          </tr>
+          <tr>
+            <td><strong style="color:var(--green);">Very High PCR (above 1.5)</strong></td>
+            <td>Extreme bearish positioning — puts dominate</td>
+            <td><span class="badge bullish">Contrarian Bullish — watch for bounce</span></td>
+            <td>When everyone has already bought puts to protect, selling pressure is exhausted — and a short-covering rally can happen as put holders close positions</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout purple-bar">
+        <strong>📌 The Short-Covering Mechanism — Why Low PCR Can Trigger Rallies</strong>
+        When PCR is very low (like 0.61 in Nifty on May 5), it means call writers are heavily positioned. If Nifty then makes a strong move above a key resistance level — like the Upper Watch Zone — those call writers face losses and are forced to buy back (cover) their positions. This buying pressure from trapped call writers adds fuel to the upside move, creating sharp, fast short-covering rallies that can surprise traders positioned for a bearish outcome.
+      </div>
+
+      <!-- Internal Link 1 -->
+      <a href="https://www.finworldltd.online/blog/what-is-india-vix" class="link-card">
+        <span class="link-card-icon">📉</span>
+        <div class="link-card-body">
+          <div class="lc-label">FinWorld · Market Education</div>
+          <div class="lc-title">What is India VIX? The Complete Guide to India's Fear Index</div>
+          <div class="lc-desc">PCR and VIX work best together — understand VIX to complete your options sentiment toolkit</div>
+        </div>
+        <span class="link-card-arrow">→</span>
+      </a>
+    </section>
+
+    <!-- PCR vs VIX -->
+    <section id="vix">
+      <h2><span class="icon">⚖️</span> PCR vs India VIX — How They Work Together</h2>
+      <p>
+        PCR and India VIX are the two most important options market sentiment indicators in India — but they measure different things. Used together, they give you a more complete and reliable picture than either one alone.
+      </p>
+
+      <div class="compare-grid">
+        <div class="compare-card">
+          <h4>📊 PCR tells you...</h4>
+          <ul>
+            <li>Where market participants are <strong>positioned</strong> (puts vs calls)</li>
+            <li>The <strong>structural bias</strong> of OI — resistance vs support</li>
+            <li>Whether call writers or put writers are more active</li>
+            <li>Potential <strong>reversal signals</strong> at extremes</li>
+            <li>The OI-based support and resistance framework</li>
+          </ul>
+        </div>
+        <div class="compare-card">
+          <h4>🌡️ India VIX tells you...</h4>
+          <ul>
+            <li>How much <strong>movement</strong> the market expects (magnitude)</li>
+            <li>The <strong>price of fear</strong> — are options expensive or cheap?</li>
+            <li>Whether option premiums are elevated or compressed</li>
+            <li>The <strong>velocity of sentiment change</strong> (rising or falling VIX)</li>
+            <li>The implied daily and monthly trading range</li>
+          </ul>
+        </div>
+      </div>
+
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>PCR Signal</th>
+            <th>VIX Signal</th>
+            <th>Combined Reading</th>
+            <th>Market Implication</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Low PCR (bearish)</td>
+            <td>Rising VIX</td>
+            <td><span class="badge bearish">Double Bearish Confirmation</span></td>
+            <td>Strong downside pressure. Calls dominate AND fear rising. High-risk environment.</td>
+          </tr>
+          <tr>
+            <td>Low PCR (bearish)</td>
+            <td>Falling VIX</td>
+            <td><span class="badge caution">Mixed — Watch for Recovery</span></td>
+            <td>Fear unwinding even as OI shows call dominance. Possible bottoming or stabilisation.</td>
+          </tr>
+          <tr>
+            <td>Neutral PCR</td>
+            <td>Moderate/Falling VIX</td>
+            <td><span class="badge neutral">Balanced — Range-Bound</span></td>
+            <td>Classic consolidation setup. No strong directional conviction from either indicator.</td>
+          </tr>
+          <tr>
+            <td>High PCR (bullish)</td>
+            <td>Falling VIX</td>
+            <td><span class="badge bullish">Double Bullish Confirmation</span></td>
+            <td>Strong support structure AND fear unwinding. Positive setup for upside.</td>
+          </tr>
+          <tr>
+            <td>High PCR (bullish)</td>
+            <td>Spiking VIX</td>
+            <td><span class="badge caution">Mixed — Possible Panic Bottom</span></td>
+            <td>Extreme fear (high VIX) + heavy put buying (high PCR) = classic panic bottom signal. Contrarian bullish.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- REAL EXAMPLES -->
+    <section id="examples">
+      <h2><span class="icon">📡</span> Real Examples From FinWorld Weekly Reports</h2>
+      <p>
+        Rather than using generic textbook examples, here is how PCR has appeared in FinWorld's own weekly Nifty and SENSEX reports over the past two weeks — and what each reading told us in real time.
+      </p>
+
+      <div class="example-grid">
+        <div class="example-card">
+          <span class="ex-source">Nifty 50 · May 5, 2026</span>
+          <span class="ex-pcr" style="color:var(--red);">0.61</span>
+          <span class="ex-label" style="color:var(--red);">Bearish Lean</span>
+          <span class="ex-desc">Calls significantly outnumbered puts. Heavy call writing at 24,200 directly aligned with the Upper Watch Zone — creating a structural ceiling. VIX was simultaneously rising to 18.54, confirming the bearish lean. The market spent most of the week below the Upper Watch Zone.</span>
+        </div>
+        <div class="example-card">
+          <span class="ex-source">SENSEX · April 30, 2026</span>
+          <span class="ex-pcr" style="color:var(--gold);">0.80</span>
+          <span class="ex-label" style="color:var(--gold);">Neutral Borderline</span>
+          <span class="ex-desc">At the lower edge of neutral — call writers slightly more active but not dominant. VIX was 17.44 and falling. The combination of borderline PCR and cooling VIX was consistent with a market seeking direction — which materialised as range-bound consolidation around the base level.</span>
+        </div>
+        <div class="example-card">
+          <span class="ex-source">SENSEX · May 14, 2026</span>
+          <span class="ex-pcr" style="color:var(--gold);">0.84</span>
+          <span class="ex-label" style="color:var(--gold);">Neutral</span>
+          <span class="ex-desc">Just inside the neutral zone as SENSEX recovered 400 points from a four-session losing streak. VIX was cooling from 19.42 to 18.84 simultaneously. The PCR and VIX together confirmed that the morning recovery was genuine — fear was unwinding as the market recovered, not building despite it.</span>
+        </div>
+      </div>
+
+      <div class="callout green-bar">
+        <strong>🎯 What These Examples Show</strong>
+        In all three cases, PCR was most useful not in isolation, but in combination with VIX and the week's price structure. PCR 0.61 with rising VIX = confirmed caution. PCR 0.84 with falling VIX = confirmed recovery signal. The directional call came from both indicators agreeing — not from either one alone.
+      </div>
+
+      <!-- Internal Link 2 -->
+      <a href="https://www.finworldltd.online/blog/nifty-weekly-analysis-may-5-to-may-12-2026" class="link-card">
+        <span class="link-card-icon">📊</span>
+        <div class="link-card-body">
+          <div class="lc-label">FinWorld · Live Weekly Report</div>
+          <div class="lc-title">Nifty 50 Weekly Analysis: May 5–12, 2026</div>
+          <div class="lc-desc">See PCR 0.61 in context — how it shaped the key price zones and OI positioning for the May 12 expiry week</div>
+        </div>
+        <span class="link-card-arrow">→</span>
+      </a>
+    </section>
+
+    <!-- HOW TRADERS USE PCR -->
+    <section id="traders">
+      <h2><span class="icon">🎯</span> How Traders & Investors Use PCR</h2>
+
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Participant</th>
+            <th>How They Use PCR</th>
+            <th>Key Signal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Weekly Expiry Traders</strong></td>
+            <td>Use PCR at the start of the week to understand the OI structure. High call OI at specific strikes = resistance. High put OI at specific strikes = support. Plan entry and exit around these structural levels.</td>
+            <td><span class="badge neutral">Structure map</span></td>
+          </tr>
+          <tr>
+            <td><strong>Option Sellers (Writers)</strong></td>
+            <td>Sell calls at strikes where call OI is highest — those strikes represent where the market is structurally capped. Sell puts at strikes where put OI is highest — those represent where support is built. PCR tells you which side has more premium income available.</td>
+            <td><span class="badge bullish">High OI strikes</span></td>
+          </tr>
+          <tr>
+            <td><strong>Option Buyers</strong></td>
+            <td>Use PCR to avoid buying options against the dominant OI position. Buying calls when PCR is very low (call heavy) means fighting against structured resistance. Buying puts when PCR is very high means fighting against structured support.</td>
+            <td><span class="badge bearish">Avoid fighting OI</span></td>
+          </tr>
+          <tr>
+            <td><strong>Positional / Swing Traders</strong></td>
+            <td>Watch for extreme PCR readings as potential reversal signals. Very low PCR after a sustained rally = caution on further upside. Very high PCR after a sharp decline = watch for bounce. Combine with price action confirmation before acting.</td>
+            <td><span class="badge caution">Extremes = reversals</span></td>
+          </tr>
+          <tr>
+            <td><strong>Long-Term Equity Investors</strong></td>
+            <td>Use PCR alongside VIX to identify panic conditions. Very high PCR (above 1.5) combined with elevated VIX (above 25) = potential long-term buying opportunity as the market is excessively fearful and structurally oversold.</td>
+            <td><span class="badge bullish">High PCR + High VIX = Entry</span></td>
+          </tr>
+          <tr>
+            <td><strong>Portfolio Managers / Hedgers</strong></td>
+            <td>Monitor PCR trends over multiple sessions. A falling PCR (from 1.0 to 0.7) over 3–4 sessions while market rallies = protective puts being stripped out = portfolio becoming more vulnerable to pullback. Signal to add hedges.</td>
+            <td><span class="badge neutral">Trend in PCR, not just level</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout">
+        <strong>📌 Where to Find PCR Data in India</strong>
+        NSE website (nseindia.com) → F&O Market → Options Chain (filter by Nifty or Bank Nifty).<br>
+        Also available live on: Upstox, Zerodha Sensibull, NiftyTrader, MoneyControl, and most Indian broker platforms. For SENSEX PCR: BSE India website (bseindia.com) → Derivatives → Options Chain.
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <h2><span class="icon">❓</span> Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <p class="faq-q">What is a good PCR for Nifty or SENSEX?</p>
+        <p class="faq-a">There is no universally "good" PCR — it depends on your trading style and time horizon. For directional traders, PCR between 0.8 and 1.2 (neutral zone) is the easiest environment — neither side has a structural advantage and momentum can develop in either direction. For options sellers, elevated PCR above 1.2 provides richer put premium income. For contrarian investors, PCR extremes — below 0.6 or above 1.5 — are the most interesting because they historically precede reversals.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Why did Nifty PCR fall from 0.80 to 0.61 between April 30 and May 5?</p>
+        <p class="faq-a">A falling PCR means call OI increased relative to put OI. Between April 30 and May 5, traders were actively writing calls at resistance levels — particularly at the 24,200 strike aligned with the Upper Watch Zone. This call writing was defensive positioning: market participants believed Nifty would struggle to break above that resistance zone. The simultaneous rise in VIX from 17.44 to 18.54 confirmed the increased anxiety that drove this call-heavy positioning.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Is PCR above 1 always bullish?</p>
+        <p class="faq-a">Not always. PCR above 1 means puts outnumber calls — which typically signals defensive positioning and structural support below current price. However, at extreme readings above 1.5, the contrarian interpretation applies: when every participant has already bought puts for protection, the selling pressure may be exhausted. At such extremes, a PCR above 1.5 combined with a VIX spike above 25–30 has historically been a strong contrarian bullish signal — the classic panic bottom. Context and the direction of the PCR trend matter as much as the absolute level.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">How is PCR different for different expiry weeks?</p>
+        <p class="faq-a">PCR can be calculated for the overall market (all expiries combined) or for a specific expiry date. The overall PCR gives the broadest sentiment picture. The expiry-specific PCR is more relevant for weekly traders — it shows exactly where OI is concentrated for the upcoming Thursday or Tuesday expiry. In FinWorld's weekly reports, we reference the expiry-specific OI distribution when discussing call and put concentration at key strikes for that week's expiry.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Can PCR predict market direction?</p>
+        <p class="faq-a">PCR does not predict direction directly — it describes positioning. Think of it as a map, not a compass. A low PCR tells you there is structural resistance above. A high PCR tells you there is structural support below. Whether the market actually breaks through that resistance or support depends on catalysts, global cues, and price action that PCR alone cannot anticipate. Use PCR to understand the battlefield, then use price action and news flow to anticipate who wins the battle.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">What is the difference between PCR and Max Pain?</p>
+        <p class="faq-a">PCR measures the ratio of total puts to total calls — a broad market sentiment reading. Max Pain is a specific price level calculated by finding the point where the maximum number of option buyers (both put and call buyers) would lose the most money on expiry day. Max Pain uses the same OI data as PCR but answers a different question: not "what is the sentiment?" but "where might the market gravitate on expiry day?" Both are useful, and both are published in FinWorld's weekly reports.</p>
+      </div>
+    </section>
+
+    <!-- KEY TAKEAWAYS -->
+    <section id="summary">
+      <h2><span class="icon">📌</span> Key Takeaways</h2>
+      <p>Six things to remember about PCR every time you read a weekly market report:</p>
+
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;margin:20px 0;">
+        <div style="display:flex;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          <span style="color:var(--gold);font-weight:700;min-width:24px;">01</span>
+          <span style="color:var(--text);">PCR = Put OI ÷ Call OI. Below 1 = calls dominate. Above 1 = puts dominate.</span>
+        </div>
+        <div style="display:flex;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          <span style="color:var(--gold);font-weight:700;min-width:24px;">02</span>
+          <span style="color:var(--text);">Neutral zone is <strong>0.8 to 1.2</strong>. Below 0.8 = bearish lean. Above 1.2 = bullish lean.</span>
+        </div>
+        <div style="display:flex;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          <span style="color:var(--gold);font-weight:700;min-width:24px;">03</span>
+          <span style="color:var(--text);">At <strong>extreme readings</strong> — below 0.6 or above 1.5 — PCR becomes a contrarian reversal signal.</span>
+        </div>
+        <div style="display:flex;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          <span style="color:var(--gold);font-weight:700;min-width:24px;">04</span>
+          <span style="color:var(--text);"><strong>OI-based PCR</strong> is more reliable than volume-based PCR for weekly position analysis.</span>
+        </div>
+        <div style="display:flex;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+          <span style="color:var(--gold);font-weight:700;min-width:24px;">05</span>
+          <span style="color:var(--text);">Always combine PCR with <strong>India VIX</strong>. When both agree — high conviction. When they diverge — exercise caution.</span>
+        </div>
+        <div style="display:flex;gap:14px;padding:12px 0;">
+          <span style="color:var(--gold);font-weight:700;min-width:24px;">06</span>
+          <span style="color:var(--text);">Watch the <strong>trend in PCR</strong> across multiple sessions — a falling PCR over 3–4 days is more meaningful than a single day's reading.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- RELATED ARTICLES -->
+    <section style="margin-top:52px;">
+      <h2><span class="icon">🔗</span> More From FinWorld</h2>
+
+      <div class="related-grid">
+        <a href="https://www.finworldltd.online/blog/what-is-india-vix" class="related-card">
+          <span class="rc-tag">📚 Market Education · Guide</span>
+          <div class="rc-title">What is India VIX? The Complete Guide</div>
+          <div class="rc-desc">The perfect companion to this article — understand VIX to complete your options sentiment toolkit.</div>
+        </a>
+
+        <a href="https://www.finworldltd.online/blog/nifty-weekly-analysis-may-5-to-may-12-2026" class="related-card">
+          <span class="rc-tag">📊 Market Analysis · Weekly</span>
+          <div class="rc-title">Nifty 50 Weekly Analysis: May 5–12, 2026</div>
+          <div class="rc-desc">PCR 0.61 in action — see how a low PCR shaped the weekly price structure and OI positioning.</div>
+        </a>
+
+        <a href="https://www.finworldltd.online/blog/sensex-weekly-analysis-may-14-to-may-21-2026" class="related-card">
+          <span class="rc-tag">📊 Market Analysis · Weekly</span>
+          <div class="rc-title">SENSEX Weekly Analysis: May 14–21, 2026</div>
+          <div class="rc-desc">PCR 0.84 this week alongside VIX 18.84 — a real-time neutral PCR reading with market context.</div>
+        </a>
+
+        <a href="https://www.finworldltd.online/blog/how-to-build-a-strong-investment-portfolio-in-2026" class="related-card">
+          <span class="rc-tag">📈 Investment Strategy · 2026</span>
+          <div class="rc-title">How to Build a Strong Investment Portfolio in 2026</div>
+          <div class="rc-desc">Use PCR and VIX signals within a long-term portfolio strategy for smarter allocation decisions.</div>
+        </a>
+      </div>
+
+      <a href="#top" class="back-to-top">↑ Back to top</a>
+    </section>
+
+    <div class="disclaimer">
+      <strong style="color:#8896b0;">Disclaimer:</strong> This article is for educational and informational purposes only. It does not constitute financial advice or a recommendation to buy, sell, or trade any security or derivative instrument. PCR data referenced is as of May 2026. All investments and derivatives trading carry risk. Please consult a SEBI-registered investment advisor before making any financial decisions.
+    </div>
+
+    <footer>
+      <p>Published by <strong style="color:var(--text);">FinWorld</strong> &nbsp;|&nbsp; S Kamal Kumar, Research Analyst &nbsp;|&nbsp; May 2026</p>
+    </footer>
+
+  </article>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What is PCR (Put-Call Ratio)? Complete Guide for Indian Options Traders",
+    "description": "PCR explained — formula, OI vs volume PCR, zones, contrarian signals, real examples from Nifty and SENSEX reports, and how traders use it.",
+    "author": { "@type": "Person", "name": "S Kamal Kumar" },
+    "publisher": { "@type": "Organization", "name": "FinWorld" },
+    "datePublished": "2026-05-17",
+    "dateModified": "2026-05-17"
+  }
+  </script>
+
+</div>
+</body>
+</html>
