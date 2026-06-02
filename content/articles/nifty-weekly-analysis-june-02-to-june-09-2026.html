@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NIFTY 50 Weekly Analysis: June 2 – June 9, 2026 | PCR, VIX & Key Levels | FinWorld</title>
+<meta name="description" content="NIFTY 50 Weekly Market Analysis for June 2 – June 9, 2026. Key price zones, India VIX, options straddle levels, and volatility assessment for the June 9 expiry week.">
+<meta name="keywords" content="NIFTY weekly analysis June 2026, NIFTY options straddle, India VIX 15.36, NSE Nifty weekly report, NIFTY support resistance June 9 expiry">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0a1628;
+    --navy-light: #0f2040;
+    --navy-mid: #162844;
+    --accent-gold: #c9a84c;
+    --accent-gold-light: #e8c87a;
+    --accent-blue: #3b82f6;
+    --accent-green: #22c55e;
+    --accent-red: #ef4444;
+    --accent-orange: #f97316;
+    --text-primary: #f0f4ff;
+    --text-secondary: #9ab0cc;
+    --text-muted: #5a7a99;
+    --border: #1e3a5a;
+    --card-bg: #0d2035;
+    --card-bg2: #0f2540;
+    --highlight: rgba(59,130,246,0.08);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--navy);
+    color: var(--text-primary);
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  /* TOP TICKER BAR */
+  .ticker-bar {
+    background: var(--navy-light);
+    border-bottom: 1px solid var(--border);
+    padding: 8px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 12.5px;
+    color: var(--text-secondary);
+  }
+  .ticker-inner {
+    display: inline-block;
+    animation: ticker 30s linear infinite;
+  }
+  .ticker-inner span { margin: 0 32px; }
+  .ticker-inner .up { color: var(--accent-green); }
+  .ticker-inner .down { color: var(--accent-red); }
+  @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+  /* HEADER */
+  header {
+    background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy-mid) 100%);
+    border-bottom: 2px solid var(--accent-gold);
+    padding: 18px 0 0;
+  }
+  .header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .logo-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .logo-icon {
+    width: 38px; height: 38px;
+    background: var(--accent-gold);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 16px; color: var(--navy);
+  }
+  .logo-text { font-size: 20px; font-weight: 700; color: var(--text-primary); letter-spacing: -0.3px; }
+  nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  nav a:hover { color: var(--accent-gold); }
+  .header-badge {
+    display: flex; gap: 8px; align-items: center;
+    font-size: 11px; color: var(--text-muted);
+    margin-bottom: 20px;
+  }
+  .badge {
+    background: rgba(59,130,246,0.15);
+    border: 1px solid rgba(59,130,246,0.3);
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 11px;
+    color: var(--accent-blue);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .badge.gold {
+    background: rgba(201,168,76,0.12);
+    border-color: rgba(201,168,76,0.3);
+    color: var(--accent-gold);
+  }
+  .header-title { padding-bottom: 24px; }
+  .header-title h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(22px, 4vw, 34px);
+    line-height: 1.2;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+  .header-title h1 em { color: var(--accent-gold); font-style: italic; }
+  .byline {
+    font-size: 13px; color: var(--text-muted); margin-bottom: 18px;
+  }
+  .byline strong { color: var(--text-secondary); }
+
+  /* LIVE STATS BAR */
+  .stats-bar {
+    background: var(--navy);
+    border-top: 1px solid var(--border);
+    padding: 10px 0;
+    overflow-x: auto;
+  }
+  .stats-bar-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    gap: 0;
+    align-items: stretch;
+    white-space: nowrap;
+  }
+  .stat-item {
+    padding: 4px 20px;
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+  .stat-item:first-child { padding-left: 0; }
+  .stat-item:last-child { border-right: none; }
+  .stat-label { font-size: 10.5px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.6px; }
+  .stat-value { font-size: 15px; font-weight: 700; color: var(--text-primary); }
+  .stat-sub { font-size: 11px; }
+  .up { color: var(--accent-green); }
+  .down { color: var(--accent-red); }
+  .gold { color: var(--accent-gold); }
+  .blue { color: var(--accent-blue); }
+
+  /* MAIN CONTENT */
+  .main { max-width: 1100px; margin: 0 auto; padding: 32px 24px 60px; }
+
+  /* INTRO */
+  .intro-block {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent-blue);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 36px;
+    font-size: 14.5px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+  }
+  .intro-block strong { color: var(--text-primary); }
+
+  /* SECTION TITLES */
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section-title .icon { font-size: 20px; }
+  .section-anchor { margin-bottom: 36px; }
+
+  /* MARKET DATA GRID */
+  .data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 14px;
+    margin-bottom: 36px;
+  }
+  .data-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 16px;
+    text-align: center;
+    transition: border-color 0.2s;
+  }
+  .data-card:hover { border-color: var(--accent-gold); }
+  .data-card .dc-value {
+    font-size: 24px; font-weight: 700; color: var(--text-primary);
+    line-height: 1.1; margin-bottom: 6px;
+  }
+  .data-card .dc-label {
+    font-size: 12px; font-weight: 600; color: var(--text-secondary);
+    text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3px;
+  }
+  .data-card .dc-sub { font-size: 11.5px; color: var(--text-muted); }
+  .data-card.highlight-gold { border-color: rgba(201,168,76,0.4); background: rgba(201,168,76,0.06); }
+  .data-card.highlight-green { border-color: rgba(34,197,94,0.3); background: rgba(34,197,94,0.05); }
+  .data-card.highlight-blue { border-color: rgba(59,130,246,0.3); background: rgba(59,130,246,0.05); }
+
+  /* PRICE ZONES */
+  .zones-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 36px;
+  }
+  @media (max-width: 700px) { .zones-container { grid-template-columns: 1fr; } }
+  .zones-visual {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+  }
+  .zone-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(30,58,90,0.5);
+  }
+  .zone-row:last-child { border-bottom: none; }
+  .zone-dot { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; }
+  .zone-dot.green { background: var(--accent-green); }
+  .zone-dot.blue-up { background: var(--accent-blue); }
+  .zone-dot.base { background: var(--accent-gold); width: 18px; height: 18px; }
+  .zone-dot.blue-dn { background: #60a5fa; }
+  .zone-dot.red { background: var(--accent-red); }
+  .zone-info { flex: 1; }
+  .zone-name { font-size: 12px; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px; }
+  .zone-price { font-size: 18px; font-weight: 700; }
+  .zone-tag { font-size: 11px; color: var(--text-muted); }
+  .zones-table { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+  table { width: 100%; border-collapse: collapse; }
+  th {
+    background: var(--navy-mid);
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  td {
+    padding: 10px 14px;
+    font-size: 13.5px;
+    border-top: 1px solid var(--border);
+    color: var(--text-secondary);
+  }
+  td:first-child { color: var(--text-primary); font-weight: 600; }
+  td .price { font-weight: 700; color: var(--text-primary); }
+  tr:hover td { background: var(--highlight); }
+
+  /* RANGE BAR */
+  .range-block {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 36px;
+  }
+  .range-bar-wrap { position: relative; margin: 20px 0; }
+  .range-bg {
+    height: 12px; border-radius: 6px;
+    background: linear-gradient(to right, var(--accent-red), #f97316, var(--accent-gold), #22c55e, #16a34a);
+  }
+  .range-labels {
+    display: flex; justify-content: space-between;
+    font-size: 11px; color: var(--text-muted); margin-top: 6px;
+  }
+  .range-labels span { font-weight: 600; }
+  .range-marker {
+    position: absolute; top: -5px;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--accent-gold);
+    border: 3px solid var(--navy);
+    transform: translateX(-50%);
+  }
+
+  /* STRADDLE BOX */
+  .straddle-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 36px;
+  }
+  @media (max-width: 600px) { .straddle-grid { grid-template-columns: 1fr 1fr; } }
+  .st-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+  }
+  .st-card .st-val { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+  .st-card .st-lbl { font-size: 11.5px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .st-card.accent { border-color: rgba(201,168,76,0.4); background: rgba(201,168,76,0.06); }
+
+  /* VIX GAUGE */
+  .vix-pcr-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 36px;
+  }
+  @media (max-width: 640px) { .vix-pcr-grid { grid-template-columns: 1fr; } }
+  .gauge-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+  }
+  .gauge-title { font-size: 13px; font-weight: 600; color: var(--text-secondary); margin-bottom: 6px; }
+  .gauge-value { font-size: 32px; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
+  .gauge-sub { font-size: 12px; color: var(--text-muted); margin-bottom: 14px; }
+  .gauge-bar-wrap { position: relative; }
+  .gauge-bar { height: 8px; border-radius: 4px; background: linear-gradient(to right, #22c55e, #f97316, #ef4444); margin-bottom: 6px; }
+  .gauge-bar-marker {
+    position: absolute; top: -4px;
+    width: 16px; height: 16px;
+    border-radius: 50%; border: 3px solid var(--navy);
+    transform: translateX(-50%);
+  }
+  .gauge-scale { display: flex; justify-content: space-between; font-size: 10.5px; color: var(--text-muted); }
+  .gauge-legend { margin-top: 14px; display: flex; flex-direction: column; gap: 5px; }
+  .gauge-legend-row { display: flex; align-items: center; gap: 8px; font-size: 12px; }
+  .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+  .active-legend { color: var(--text-primary); font-weight: 600; }
+  .interp-text { font-size: 13px; color: var(--text-secondary); line-height: 1.7; margin-top: 12px; }
+
+  /* KEY TAKEAWAYS */
+  .takeaways-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+  .takeaways-list li {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 14px;
+    color: var(--text-secondary);
+    display: flex; gap: 12px; align-items: flex-start;
+  }
+  .takeaways-list li .tk-num {
+    background: var(--accent-blue);
+    color: white;
+    border-radius: 50%;
+    width: 22px; height: 22px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 700; flex-shrink: 0;
+  }
+  .takeaways-list li strong { color: var(--text-primary); }
+
+  /* OUTLOOK SUMMARY */
+  .outlook-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 10px;
+    margin-top: 18px;
+  }
+  .outlook-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+  }
+  .outlook-card .oc-icon { font-size: 18px; margin-bottom: 4px; }
+  .outlook-card .oc-label { font-size: 10.5px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 3px; }
+  .outlook-card .oc-val { font-size: 13px; font-weight: 700; color: var(--text-primary); }
+
+  /* DISCLAIMER */
+  .disclaimer {
+    background: rgba(15,36,64,0.6);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-top: 36px;
+  }
+  .disclaimer strong { color: var(--text-secondary); }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy-light);
+    border-top: 1px solid var(--border);
+    padding: 28px 0;
+    margin-top: 40px;
+  }
+  .footer-inner {
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 14px;
+  }
+  .footer-left { font-size: 13px; color: var(--text-muted); }
+  .footer-left strong { color: var(--text-secondary); }
+  .social-links { display: flex; gap: 12px; }
+  .social-links a {
+    color: var(--text-muted); text-decoration: none; font-size: 12px;
+    transition: color 0.2s;
+  }
+  .social-links a:hover { color: var(--accent-gold); }
+
+  /* DIVIDER */
+  .divider { border: none; border-top: 1px solid var(--border); margin: 36px 0; }
+
+  /* ATM TABLE */
+  .atm-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 36px;
+  }
+  @media (max-width: 640px) { .atm-grid { grid-template-columns: 1fr; } }
+
+</style>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker-bar">
+  <div class="ticker-inner">
+    <span>NIFTY 50 <span class="down">▼ 23,483.55</span></span>
+    <span>ATM Strike: <strong>₹23,500</strong></span>
+    <span>India VIX <span class="down">▼ 15.36</span> — Moderate</span>
+    <span>ATM Call (CE): <span class="gold">₹229.20</span></span>
+    <span>ATM Put (PE): <span class="gold">₹141.00</span></span>
+    <span>Straddle Value: <span class="gold">₹370.20</span></span>
+    <span>Expiry: <strong>Jun 9, 2026 (Tue)</strong></span>
+    <span>Max Upside: <span class="up">₹23,853.75</span></span>
+    <span>Max Downside: <span class="down">₹23,113.35</span></span>
+    <!-- repeat for seamless loop -->
+    <span>NIFTY 50 <span class="down">▼ 23,483.55</span></span>
+    <span>ATM Strike: <strong>₹23,500</strong></span>
+    <span>India VIX <span class="down">▼ 15.36</span> — Moderate</span>
+    <span>ATM Call (CE): <span class="gold">₹229.20</span></span>
+    <span>ATM Put (PE): <span class="gold">₹141.00</span></span>
+    <span>Straddle Value: <span class="gold">₹370.20</span></span>
+    <span>Expiry: <strong>Jun 9, 2026 (Tue)</strong></span>
+    <span>Max Upside: <span class="up">₹23,853.75</span></span>
+    <span>Max Downside: <span class="down">₹23,113.35</span></span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <div class="logo-nav">
+      <div class="logo">
+        <div class="logo-icon">FW</div>
+        <span class="logo-text">FinWorld</span>
+      </div>
+      <nav>
+        <a href="https://www.finworldltd.online/">Home</a>
+        <a href="https://www.finworldltd.online/blog">Blog</a>
+        <a href="https://www.finworldltd.online/aboutus">About Us</a>
+        <a href="https://www.finworldltd.online/contactus">Contact Us</a>
+      </nav>
+    </div>
+    <div class="header-badge">
+      <span class="badge gold">FinWorld</span>
+      <span class="badge">Market Research</span>
+      <span style="color:var(--text-muted)">Weekly Report · June 9, 2026 Expiry</span>
+      <span style="color:var(--text-muted)">NSE · NIFTY 50 · Weekly</span>
+    </div>
+    <div class="header-title">
+      <h1>NSE NIFTY 50 Weekly Market Analysis <em>June 2 – June 9, 2026</em></h1>
+      <div class="byline">By <strong>S. Kamal Kumar, Research Analyst</strong> | FinWorld | June 2, 2026</div>
+    </div>
+  </div>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stats-bar-inner">
+      <div class="stat-item">
+        <div class="stat-label">NIFTY 50</div>
+        <div class="stat-value down">₹23,483.55</div>
+        <div class="stat-sub" style="color:var(--text-muted)">Jun 2, 2026</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">India VIX</div>
+        <div class="stat-value" style="color:#f97316">15.36</div>
+        <div class="stat-sub down">▼ Moderate Zone</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">ATM Strike</div>
+        <div class="stat-value gold">₹23,500</div>
+        <div class="stat-sub" style="color:var(--text-muted)">June 9 Expiry</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Straddle Value</div>
+        <div class="stat-value gold">₹370.20</div>
+        <div class="stat-sub" style="color:var(--text-muted)">CE ₹229.20 + PE ₹141.00</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Upper Entry (38.2%)</div>
+        <div class="stat-value up">₹23,624.97</div>
+        <div class="stat-sub" style="color:var(--text-muted)">Fib Upside</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Lower Entry (38.2%)</div>
+        <div class="stat-value down">₹23,342.13</div>
+        <div class="stat-sub" style="color:var(--text-muted)">Fib Downside</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Expiry</div>
+        <div class="stat-value" style="color:var(--accent-blue)">Jun 9</div>
+        <div class="stat-sub" style="color:var(--text-muted)">Tuesday, 2026</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main class="main">
+
+  <!-- INTRO -->
+  <div class="intro-block">
+    The week of <strong>June 2 – June 9, 2026</strong> begins with NIFTY 50 at <strong>₹23,483.55</strong> — a level that marks moderate caution following the prior week's close near the June 2 expiry. India VIX holds at <strong>15.36</strong>, sitting at the border of the calm and moderate zones — indicating moderate-to-elevated implied volatility relative to the prior week's easing trend. The ATM straddle at <strong>₹370.20</strong> (CE ₹229.20 + PE ₹141.00) reflects balanced premium pricing with a slight call-side bias, consistent with lingering uncertainty around directional momentum. The Fibonacci 38.2% entry levels at <strong>₹23,624.97</strong> (upside) and <strong>₹23,342.13</strong> (downside) define the critical decision zones this week, with outer boundaries at <strong>₹23,853.75</strong> and <strong>₹23,113.35</strong>. This report outlines the key price levels, straddle structure, and volatility readings for the June 9 expiry week.
+  </div>
+
+  <!-- MARKET DATA SNAPSHOT -->
+  <div class="section-anchor">
+    <div class="section-title"><span class="icon">📊</span> Market Data — June 2, 2026</div>
+    <div class="data-grid">
+      <div class="data-card highlight-gold">
+        <div class="dc-value" style="color:var(--accent-gold)">₹23,483.55</div>
+        <div class="dc-label">NIFTY 50 Level</div>
+        <div class="dc-sub">June 2, 2026</div>
+      </div>
+      <div class="data-card">
+        <div class="dc-value" style="color:#f97316">15.36</div>
+        <div class="dc-label">India VIX</div>
+        <div class="dc-sub">▼ Moderate Zone · Elevated</div>
+      </div>
+      <div class="data-card highlight-blue">
+        <div class="dc-value" style="color:var(--accent-blue)">₹23,500</div>
+        <div class="dc-label">ATM Strike</div>
+        <div class="dc-sub">Jun 9 Expiry</div>
+      </div>
+      <div class="data-card">
+        <div class="dc-value" style="color:var(--accent-gold)">₹370.20</div>
+        <div class="dc-label">Straddle Value</div>
+        <div class="dc-sub">CE + PE Combined</div>
+      </div>
+      <div class="data-card highlight-green">
+        <div class="dc-value up">₹23,624.97</div>
+        <div class="dc-label">Upper Entry Level</div>
+        <div class="dc-sub">Fib 38.2% — Upside</div>
+      </div>
+      <div class="data-card">
+        <div class="dc-value down">₹23,342.13</div>
+        <div class="dc-label">Lower Entry Level</div>
+        <div class="dc-sub">Fib 38.2% — Downside</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ATM OPTIONS -->
+  <div class="section-anchor">
+    <div class="section-title"><span class="icon">📋</span> ATM Options Summary — June 9 Expiry</div>
+    <div class="straddle-grid">
+      <div class="st-card">
+        <div class="st-val gold">₹23,500</div>
+        <div class="st-lbl">ATM Strike</div>
+      </div>
+      <div class="st-card">
+        <div class="st-val up">₹229.20</div>
+        <div class="st-lbl">ATM Call (CE)</div>
+      </div>
+      <div class="st-card">
+        <div class="st-val down">₹141.00</div>
+        <div class="st-lbl">ATM Put (PE)</div>
+      </div>
+      <div class="st-card accent">
+        <div class="st-val gold">₹370.20</div>
+        <div class="st-lbl">Straddle Value</div>
+      </div>
+      <div class="st-card">
+        <div class="st-val up">₹23,870.20</div>
+        <div class="st-lbl">Straddle Upper Break</div>
+      </div>
+      <div class="st-card">
+        <div class="st-val down">₹23,129.80</div>
+        <div class="st-lbl">Straddle Lower Break</div>
+      </div>
+    </div>
+    <div style="background:var(--card-bg);border:1px solid var(--border);border-radius:10px;padding:16px 20px;font-size:13.5px;color:var(--text-secondary);line-height:1.8;">
+      The ATM straddle at <strong style="color:var(--text-primary)">₹370.20</strong> defines the market's expected move for the week. The call premium at ₹229.20 exceeds the put premium at ₹141.00 — a skew ratio of <strong style="color:var(--accent-gold)">~1.63:1</strong> — suggesting the options market is pricing greater risk of an upside move than a downside move. The full straddle break-even levels of <strong style="color:var(--accent-green)">₹23,870.20</strong> (upper) and <strong style="color:var(--accent-red)">₹23,129.80</strong> (lower) represent the boundaries beyond which directional positions begin to generate value.
+    </div>
+  </div>
+
+  <!-- KEY PRICE ZONES -->
+  <div class="section-anchor">
+    <div class="section-title"><span class="icon">🎯</span> Key Price Zones This Week</div>
+    <div style="font-size:14px;color:var(--text-secondary);margin-bottom:18px;line-height:1.7;">
+      Technical analysis identifies five critical price levels for the June 9 expiry week. The two Fibonacci 38.2% entry levels define the probable normal-volatility directional trigger zones; the full straddle outer extremes mark the maximum boundaries under aggressive price movement. With NIFTY at ₹23,483.55 — approximately 17 points below ATM and 141 points below the upside entry level — the index opens the week in a slightly bearish-to-neutral position.
+    </div>
+    <div class="zones-container">
+      <div class="zones-visual">
+        <div class="zone-row">
+          <div class="zone-dot green"></div>
+          <div class="zone-info">
+            <div class="zone-name">🟢 Maximum Upside Boundary</div>
+            <div class="zone-price up">₹23,853.75</div>
+            <div class="zone-tag">Outer Resistance — Full Straddle</div>
+          </div>
+        </div>
+        <div style="text-align:center;color:var(--text-muted);font-size:18px;padding:4px 0;">↕</div>
+        <div class="zone-row">
+          <div class="zone-dot blue-up"></div>
+          <div class="zone-info">
+            <div class="zone-name">🔵 Upside Entry Level</div>
+            <div class="zone-price" style="color:var(--accent-blue)">₹23,624.97</div>
+            <div class="zone-tag">Fib 38.2% — Upper Reference</div>
+          </div>
+        </div>
+        <div style="text-align:center;color:var(--text-muted);font-size:18px;padding:4px 0;">↕</div>
+        <div class="zone-row">
+          <div class="zone-dot base"></div>
+          <div class="zone-info">
+            <div class="zone-name">◆ Current Level · June 2</div>
+            <div class="zone-price gold">₹23,483.55</div>
+            <div class="zone-tag">BASE — Report Generation Level</div>
+          </div>
+        </div>
+        <div style="text-align:center;color:var(--text-muted);font-size:18px;padding:4px 0;">↕</div>
+        <div class="zone-row">
+          <div class="zone-dot blue-dn"></div>
+          <div class="zone-info">
+            <div class="zone-name">🔵 Downside Entry Level</div>
+            <div class="zone-price down">₹23,342.13</div>
+            <div class="zone-tag">Fib 38.2% — Lower Reference</div>
+          </div>
+        </div>
+        <div style="text-align:center;color:var(--text-muted);font-size:18px;padding:4px 0;">↕</div>
+        <div class="zone-row">
+          <div class="zone-dot red"></div>
+          <div class="zone-info">
+            <div class="zone-name">🔴 Maximum Downside Boundary</div>
+            <div class="zone-price down">₹23,113.35</div>
+            <div class="zone-tag">Outer Support — Full Straddle</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="zones-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Level</th>
+              <th>Price</th>
+              <th>Type</th>
+              <th>Significance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Maximum Upside</td>
+              <td><span class="price up">₹23,853.75</span></td>
+              <td style="color:var(--accent-green)">Outer Resistance</td>
+              <td>Full straddle upper boundary — week's ceiling</td>
+            </tr>
+            <tr>
+              <td>Upside Entry</td>
+              <td><span class="price" style="color:var(--accent-blue)">₹23,624.97</span></td>
+              <td style="color:var(--accent-blue)">Fib 38.2% Up</td>
+              <td>Key upside entry trigger this week</td>
+            </tr>
+            <tr>
+              <td>Current Level</td>
+              <td><span class="price gold">₹23,483.55</span></td>
+              <td style="color:var(--accent-gold)">Reference Base</td>
+              <td>Report generation level · June 2, 2026</td>
+            </tr>
+            <tr>
+              <td>Downside Entry</td>
+              <td><span class="price down">₹23,342.13</span></td>
+              <td style="color:#f97316">Fib 38.2% Down</td>
+              <td>Key downside entry trigger this week</td>
+            </tr>
+            <tr>
+              <td>Maximum Downside</td>
+              <td><span class="price down">₹23,113.35</span></td>
+              <td style="color:var(--accent-red)">Outer Support</td>
+              <td>Full straddle lower boundary — week's floor</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- RANGE WIDTH -->
+    <div class="range-block">
+      <div class="section-title" style="border:none;margin-bottom:8px;font-size:15px;">📐 Weekly Range Width</div>
+      <div style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px;">
+        Total spread between Maximum Upside (₹23,853.75) and Maximum Downside (₹23,113.35): <strong style="color:var(--text-primary)">₹740.40 points</strong>. The inner entry band between ₹23,624.97 and ₹23,342.13 spans <strong style="color:var(--text-primary)">₹282.84 points</strong> — consistent with a moderate-volatility environment at VIX 15.36. The current level at ₹23,483.55 sits 141 points below the upside entry and 141 points above the downside entry — precisely centred within the inner band.
+      </div>
+      <div class="range-bar-wrap">
+        <div class="range-bg"></div>
+        <!-- marker at ~50% (current is midpoint of range) -->
+        <div class="range-marker" style="left: 50%;"></div>
+      </div>
+      <div class="range-labels">
+        <span class="down">₹23,113 (Max DN)</span>
+        <span style="color:#f97316">₹23,342 (Entry DN)</span>
+        <span class="gold">₹23,484 (Base)</span>
+        <span style="color:var(--accent-blue)">₹23,625 (Entry UP)</span>
+        <span class="up">₹23,854 (Max UP)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIX & SENTIMENT -->
+  <div class="section-anchor">
+    <div class="section-title"><span class="icon">📈</span> India VIX Analysis</div>
+    <div class="vix-pcr-grid">
+      <div class="gauge-card">
+        <div class="gauge-title">India VIX — Fear Index · June 2, 2026</div>
+        <div class="gauge-value" style="color:#f97316">15.36</div>
+        <div class="gauge-sub">▼ Moderate zone · Slightly elevated vs prior week (~14.50)</div>
+        <div class="gauge-bar-wrap">
+          <div class="gauge-bar"></div>
+          <!-- 15.36 on 10-40 scale = (15.36-10)/(40-10) = 17.9% -->
+          <div class="gauge-bar-marker" style="left:17.9%;background:#f97316;"></div>
+        </div>
+        <div class="gauge-scale">
+          <span>10 (Calm)</span>
+          <span>20</span>
+          <span>28</span>
+          <span>40 (Panic)</span>
+        </div>
+        <div class="gauge-legend">
+          <div class="gauge-legend-row"><div class="legend-dot" style="background:#22c55e"></div><span>10–15 — Calm</span></div>
+          <div class="gauge-legend-row active-legend"><div class="legend-dot" style="background:#f97316"></div><span>◆ 15–20 — Moderate ← Current</span></div>
+          <div class="gauge-legend-row"><div class="legend-dot" style="background:#ef4444"></div><span>20–28 — High</span></div>
+          <div class="gauge-legend-row"><div class="legend-dot" style="background:#7f1d1d"></div><span>28+ — Panic</span></div>
+        </div>
+      </div>
+
+      <div class="gauge-card">
+        <div class="gauge-title">🌡️ VIX Interpretation</div>
+        <div class="interp-text">
+          India VIX at <strong style="color:#f97316">15.36</strong> represents a mild uptick from last week's ~14.50 close and places the market in the <strong style="color:var(--text-primary)">moderate volatility zone</strong>. At this level, the market is pricing daily NIFTY moves of approximately <strong style="color:var(--text-primary)">±₹180–220</strong> (±0.75–0.95%). This is consistent with the straddle value of ₹370.20 and the inner entry band of ₹282.84.
+          <br><br>
+          The VIX at 15.36 — still below 16 — does not signal elevated fear but warrants monitoring: a sustained move above 17–18 would indicate options market stress and likely a wider trading range. The moderate VIX supports the <strong style="color:var(--text-primary)">moderate-to-high volatility</strong> assessment for the week, and traders should size positions accordingly. Key macro catalysts to watch: FII/DII flow direction, global equity cues (US Fed commentary, Brent crude), and any geopolitical developments that could trigger a VIX spike.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VOLATILITY ASSESSMENT -->
+  <div class="section-anchor">
+    <div class="section-title"><span class="icon">⚡</span> Volatility Assessment</div>
+    <div style="background:var(--card-bg);border:1px solid var(--border);border-radius:10px;padding:20px 24px;margin-bottom:18px;">
+      <div style="font-size:15px;font-weight:700;color:var(--text-primary);margin-bottom:8px;">
+        Current conditions indicate <span style="color:#f97316">moderate-to-high volatility</span> for NIFTY 50 this week.
+      </div>
+      <div style="font-size:14px;color:var(--text-secondary);line-height:1.8;">
+        India VIX at 15.36 — nudging the upper edge of the calm zone — signals that options markets are pricing in somewhat greater uncertainty than last week's sub-15 reading. The full straddle range of <strong style="color:var(--text-primary)">₹740.40 points</strong> is comparable to the prior week, but the current spot price of ₹23,483.55 sits notably below the prior week's close of ₹23,913.70 — a difference of <strong style="color:var(--accent-red)">₹430 points</strong>, suggesting meaningful downward pressure has already been expressed. The Fibonacci 38.2% entry structure provides well-defined directional triggers: a sustained move above <strong style="color:var(--accent-green)">₹23,624.97</strong> would signal bullish resumption; a break below <strong style="color:var(--accent-red)">₹23,342.13</strong> would open the path to the outer downside boundary at ₹23,113.35. Investors should monitor price action around both entry levels and use the outer extremes for risk management.
+      </div>
+    </div>
+
+    <!-- VISUAL BAND -->
+    <div style="background:var(--card-bg2);border:1px solid var(--border);border-radius:10px;padding:18px 20px;">
+      <div style="font-size:13px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:14px;">Weekly Expected Price Range — Visual Band</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;">
+        <div style="text-align:center;">
+          <div style="font-size:11px;color:var(--text-muted)">MAX DN</div>
+          <div style="font-size:16px;font-weight:700;color:var(--accent-red)">23,113</div>
+        </div>
+        <div style="flex:1;height:6px;background:linear-gradient(to right,#ef4444,#f97316);border-radius:3px;min-width:30px;"></div>
+        <div style="text-align:center;">
+          <div style="font-size:11px;color:var(--text-muted)">ENTRY DN</div>
+          <div style="font-size:16px;font-weight:700;color:#f97316">23,342</div>
+        </div>
+        <div style="flex:1;height:6px;background:linear-gradient(to right,#f97316,#c9a84c);border-radius:3px;min-width:30px;"></div>
+        <div style="text-align:center;">
+          <div style="font-size:11px;color:var(--text-muted)">◆ BASE</div>
+          <div style="font-size:18px;font-weight:700;color:var(--accent-gold)">23,484</div>
+        </div>
+        <div style="flex:1;height:6px;background:linear-gradient(to right,#c9a84c,#3b82f6);border-radius:3px;min-width:30px;"></div>
+        <div style="text-align:center;">
+          <div style="font-size:11px;color:var(--text-muted)">ENTRY UP</div>
+          <div style="font-size:16px;font-weight:700;color:var(--accent-blue)">23,625</div>
+        </div>
+        <div style="flex:1;height:6px;background:linear-gradient(to right,#3b82f6,#22c55e);border-radius:3px;min-width:30px;"></div>
+        <div style="text-align:center;">
+          <div style="font-size:11px;color:var(--text-muted)">MAX UP</div>
+          <div style="font-size:16px;font-weight:700;color:var(--accent-green)">23,854</div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:12px;font-size:12px;color:var(--text-muted)">
+        ₹23,113.35 (Max Downside) ← <strong style="color:var(--text-secondary)">₹740.40 total range</strong> → ₹23,853.75 (Max Upside)
+      </div>
+    </div>
+  </div>
+
+  <!-- KEY TAKEAWAYS -->
+  <div class="section-anchor">
+    <div class="section-title"><span class="icon">📌</span> Key Takeaways This Week</div>
+    <ul class="takeaways-list">
+      <li>
+        <div class="tk-num">1</div>
+        <div>Watch for entry signals around <strong>₹23,624.97 (upside entry)</strong> or <strong>₹23,342.13 (downside entry)</strong> — these Fibonacci 38.2% levels are the primary directional triggers for the June 9 expiry week.</div>
+      </li>
+      <li>
+        <div class="tk-num">2</div>
+        <div>Use <strong>₹23,113.35</strong> and <strong>₹23,853.75</strong> as the absolute outer boundaries for risk management. Breaches of these levels would signal an extreme weekly move outside the normal straddle range.</div>
+      </li>
+      <li>
+        <div class="tk-num">3</div>
+        <div>Monitor NIFTY 50 price action around the ATM strike of <strong>₹23,500</strong> — the straddle's centre of gravity — as the week progresses toward Tuesday, June 9 expiry.</div>
+      </li>
+      <li>
+        <div class="tk-num">4</div>
+        <div>India VIX at <strong>15.36</strong> sits at the lower edge of the moderate zone. A move above 17–18 would signal rising fear and widen the effective trading range; a pullback below 14 would compress ranges and support stability.</div>
+      </li>
+      <li>
+        <div class="tk-num">5</div>
+        <div>The <strong>call-heavy skew</strong> (CE ₹229.20 vs PE ₹141.00) suggests the options market leans toward upside risk — but current spot (₹23,483) is below ATM (₹23,500), requiring a break and hold above <strong>₹23,624.97</strong> to confirm bullish resumption.</div>
+      </li>
+      <li>
+        <div class="tk-num">6</div>
+        <div>Adjust positions based on <strong>changing market conditions and news flow</strong>. Maintain discipline in following the outlined price levels and avoid chasing moves beyond the outer straddle boundaries.</div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- WEEKLY OUTLOOK SUMMARY -->
+  <div class="section-anchor">
+    <div class="section-title"><span class="icon">📌</span> Weekly Outlook Summary</div>
+    <div style="background:var(--card-bg);border:1px solid var(--border);border-radius:10px;padding:20px 24px;margin-bottom:18px;font-size:14px;color:var(--text-secondary);line-height:1.8;">
+      The week of <strong style="color:var(--text-primary)">June 2 – June 9, 2026</strong> presents NSE NIFTY 50 in a cautiously neutral-to-bearish posture, having retreated approximately 430 points from last week's close of ₹23,913.70. At ₹23,483.55, the index sits just below the ATM strike of ₹23,500 and precisely mid-range between the two entry-level triggers.
+      <br><br>
+      The five price levels — Maximum Downside ₹23,113.35, Downside Entry ₹23,342.13, Base ₹23,483.55, Upside Entry ₹23,624.97, Maximum Upside ₹23,853.75 — combined with India VIX at 15.36 — paint a picture of a <strong style="color:var(--text-primary)">moderate-volatility, directionally undecided market</strong> where the first decisive entry signal will likely set the tone for the expiry week.
+    </div>
+    <div class="outlook-grid">
+      <div class="outlook-card">
+        <div class="oc-icon">📈</div>
+        <div class="oc-label">Bias</div>
+        <div class="oc-val" style="color:#f97316">Cautiously Neutral</div>
+      </div>
+      <div class="outlook-card">
+        <div class="oc-icon">🌡️</div>
+        <div class="oc-label">Volatility</div>
+        <div class="oc-val" style="color:#f97316">Moderate-to-High</div>
+      </div>
+      <div class="outlook-card">
+        <div class="oc-icon">🛡️</div>
+        <div class="oc-label">Key Support</div>
+        <div class="oc-val down">₹23,342</div>
+      </div>
+      <div class="outlook-card">
+        <div class="oc-icon">🚧</div>
+        <div class="oc-label">Key Resistance</div>
+        <div class="oc-val up">₹23,625</div>
+      </div>
+      <div class="outlook-card">
+        <div class="oc-icon">😐</div>
+        <div class="oc-label">India VIX</div>
+        <div class="oc-val" style="color:#f97316">15.36 ▲</div>
+      </div>
+      <div class="outlook-card">
+        <div class="oc-icon">📅</div>
+        <div class="oc-label">Expiry</div>
+        <div class="oc-val blue">Tue, Jun 9</div>
+      </div>
+      <div class="outlook-card">
+        <div class="oc-icon">🎯</div>
+        <div class="oc-label">ATM Strike</div>
+        <div class="oc-val gold">₹23,500</div>
+      </div>
+      <div class="outlook-card">
+        <div class="oc-icon">🔑</div>
+        <div class="oc-label">Key Level</div>
+        <div class="oc-val">₹23,625 break</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+    <strong>Disclaimer:</strong> This report is for informational and educational purposes only. It is based on technical analysis and market data available at the time of report generation (June 2, 2026). This report does not constitute financial advice, a recommendation to buy or sell, or an endorsement of any specific trade or investment strategy. India VIX data as of June 2, 2026. Straddle levels and Fibonacci entry levels derived from NSE NIFTY 50 options data as provided. All investments carry risk. Investors should consult a SEBI-registered research analyst or qualified financial advisor before making any investment decisions.
+    <br><br>
+    Published by <strong>FinWorld</strong> | S. Kamal Kumar, Research Analyst | June 2, 2026
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-left">
+      FinWorld © 2026 FinWorld Ltd. | S. Kamal Kumar, Research Analyst<br>
+      <span style="font-size:11px;">NIFTY 50 Weekly Report · June 2 – June 9, 2026 | AMFI Registration No: ARN-102132</span>
+    </div>
+    <div class="social-links">
+      <a href="https://www.facebook.com/thefinworldltd" target="_blank">Facebook</a>
+      <a href="https://x.com/HelloFinworld" target="_blank">X (Twitter)</a>
+      <a href="https://www.linkedin.com/in/kamalsrungarapu" target="_blank">LinkedIn</a>
+      <a href="https://www.youtube.com/@FinWorldLtd" target="_blank">YouTube</a>
+      <a href="https://www.instagram.com/hellofinworld" target="_blank">Instagram</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
