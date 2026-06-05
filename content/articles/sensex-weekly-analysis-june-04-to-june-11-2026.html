@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BSE SENSEX Weekly Analysis: June 4 – June 11, 2026 | VIX & Key Levels | FinWorld</title>
+<meta name="description" content="BSE SENSEX Weekly Market Analysis for the week of June 4 – June 11, 2026. Key price zones, India VIX, options data, and volatility assessment for the June 11 expiry week.">
+<meta name="keywords" content="SENSEX weekly analysis June 2026, SENSEX weekly levels June 11, India VIX 15.88, BSE SENSEX weekly report, SENSEX support resistance June 11 expiry">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0a1628;
+    --navy-light: #0f2040;
+    --navy-mid: #112238;
+    --gold: #c9a84c;
+    --gold-light: #e8c87a;
+    --blue: #3b82f6;
+    --teal: #0d9488;
+    --green: #16a34a;
+    --green-light: #22c55e;
+    --red: #dc2626;
+    --red-light: #ef4444;
+    --orange: #ea580c;
+    --orange-light: #f97316;
+    --text-primary: #eef2ff;
+    --text-secondary: #94a3b8;
+    --text-muted: #4e6a85;
+    --border: #1e3a5a;
+    --card: #0c1e35;
+    --card2: #0e2338;
+    --row-hover: rgba(30,58,90,0.4);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; background: var(--navy); color: var(--text-primary); line-height: 1.75; font-size: 15px; }
+
+  /* ── TICKER ── */
+  .ticker-bar { background: var(--navy-light); border-bottom: 1px solid var(--border); padding: 7px 0; overflow: hidden; white-space: nowrap; font-size: 12px; color: var(--text-secondary); }
+  .ticker-inner { display: inline-block; animation: scroll 40s linear infinite; }
+  .ticker-inner span { margin: 0 28px; }
+  @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .c-up { color: var(--green-light); } .c-dn { color: var(--red-light); } .c-gold { color: var(--gold); } .c-blue { color: #60a5fa; } .c-or { color: var(--orange-light); }
+
+  /* ── HEADER ── */
+  header { background: linear-gradient(160deg, var(--navy-light), var(--navy-mid)); border-bottom: 2px solid var(--gold); padding: 20px 0 0; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  .top-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; flex-wrap: wrap; gap: 10px; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo-box { width: 36px; height: 36px; background: var(--gold); border-radius: 7px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; color: var(--navy); }
+  .logo-name { font-size: 19px; font-weight: 700; color: var(--text-primary); }
+  nav a { color: var(--text-secondary); text-decoration: none; font-size: 13px; font-weight: 500; margin-left: 20px; transition: color .2s; }
+  nav a:hover { color: var(--gold); }
+
+  .badges { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; font-size: 11.5px; color: var(--text-muted); }
+  .badge { padding: 2px 9px; border-radius: 4px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .5px; border: 1px solid; }
+  .badge-gold { background: rgba(201,168,76,.1); border-color: rgba(201,168,76,.35); color: var(--gold); }
+  .badge-blue { background: rgba(59,130,246,.1); border-color: rgba(59,130,246,.3); color: #93c5fd; }
+
+  .headline { padding-bottom: 22px; }
+  .headline h1 { font-family: 'Playfair Display', serif; font-size: clamp(21px, 3.8vw, 34px); line-height: 1.2; font-weight: 700; margin-bottom: 6px; }
+  .headline h1 em { color: var(--gold); font-style: italic; }
+  .byline { font-size: 13px; color: var(--text-muted); }
+  .byline strong { color: var(--text-secondary); }
+
+  /* ── STATS BAR ── */
+  .stats-strip { background: var(--navy); border-top: 1px solid var(--border); overflow-x: auto; }
+  .stats-inner { display: flex; max-width: 1080px; margin: 0 auto; padding: 0 24px; white-space: nowrap; }
+  .stat { padding: 9px 18px; border-right: 1px solid var(--border); flex-shrink: 0; }
+  .stat:first-child { padding-left: 0; }
+  .stat:last-child { border-right: none; }
+  .stat-l { font-size: 10px; text-transform: uppercase; letter-spacing: .6px; color: var(--text-muted); margin-bottom: 1px; }
+  .stat-v { font-size: 14.5px; font-weight: 700; }
+  .stat-s { font-size: 11px; color: var(--text-muted); }
+
+  /* ── MAIN ── */
+  main { max-width: 1080px; margin: 0 auto; padding: 32px 24px 64px; }
+
+  /* ── INTRO ── */
+  .intro { background: var(--card); border: 1px solid var(--border); border-left: 4px solid var(--gold); border-radius: 10px; padding: 20px 22px; margin-bottom: 36px; font-size: 14.5px; color: var(--text-secondary); line-height: 1.85; }
+  .intro strong { color: var(--text-primary); }
+
+  /* ── SECTION HEADINGS ── */
+  .sec-title { font-size: 18px; font-weight: 700; color: var(--text-primary); border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-bottom: 18px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 38px; }
+
+  /* ── SNAPSHOT CARDS ── */
+  .snap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(148px, 1fr)); gap: 12px; }
+  .snap-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px 14px; text-align: center; transition: border-color .2s; }
+  .snap-card:hover { border-color: var(--gold); }
+  .snap-v { font-size: 21px; font-weight: 700; line-height: 1.15; margin-bottom: 5px; }
+  .snap-l { font-size: 11.5px; font-weight: 600; text-transform: uppercase; letter-spacing: .4px; color: var(--text-secondary); margin-bottom: 2px; }
+  .snap-s { font-size: 11px; color: var(--text-muted); }
+  .sc-gold { border-color: rgba(201,168,76,.4); background: rgba(201,168,76,.05); }
+  .sc-green { border-color: rgba(34,197,94,.25); background: rgba(34,197,94,.04); }
+  .sc-blue { border-color: rgba(59,130,246,.25); background: rgba(59,130,246,.04); }
+
+  /* ── ZONE LADDER ── */
+  .zones-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+  @media (max-width: 680px) { .zones-wrap { grid-template-columns: 1fr; } }
+
+  .ladder { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 18px 18px; }
+  .ladder-row { display: flex; align-items: center; gap: 12px; padding: 9px 0; border-bottom: 1px solid rgba(30,58,90,.5); }
+  .ladder-row:last-child { border-bottom: none; }
+  .dot { width: 13px; height: 13px; border-radius: 50%; flex-shrink: 0; }
+  .dot-green { background: var(--green-light); }
+  .dot-blue { background: #60a5fa; }
+  .dot-gold { background: var(--gold); width: 17px; height: 17px; }
+  .dot-orange { background: var(--orange-light); }
+  .dot-red { background: var(--red-light); }
+  .lr-info { flex: 1; }
+  .lr-label { font-size: 11.5px; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: .4px; }
+  .lr-price { font-size: 18px; font-weight: 700; }
+  .lr-sub { font-size: 11px; color: var(--text-muted); }
+  .arrow { text-align: center; color: var(--text-muted); font-size: 16px; padding: 3px 0; }
+
+  .zone-table { background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { background: var(--navy-mid); padding: 9px 13px; text-align: left; font-size: 10.5px; font-weight: 600; text-transform: uppercase; letter-spacing: .5px; color: var(--text-muted); }
+  tbody td { padding: 9px 13px; font-size: 13px; border-top: 1px solid var(--border); color: var(--text-secondary); vertical-align: middle; }
+  tbody td:first-child { font-weight: 600; color: var(--text-primary); }
+  tbody tr:hover td { background: var(--row-hover); }
+  .fw7 { font-weight: 700; }
+
+  /* ── RANGE BAR ── */
+  .range-box { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 18px 22px; margin-top: 20px; }
+  .range-title { font-size: 14px; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; }
+  .range-desc { font-size: 13.5px; color: var(--text-secondary); line-height: 1.8; margin-bottom: 14px; }
+  .rbar-wrap { position: relative; margin-bottom: 8px; }
+  .rbar { height: 11px; border-radius: 6px; background: linear-gradient(to right, #dc2626, #ea580c, #c9a84c, #22c55e, #16a34a); }
+  .rmarker { position: absolute; top: -5px; width: 21px; height: 21px; border-radius: 50%; background: var(--gold); border: 3px solid var(--navy); transform: translateX(-50%); left: 50%; }
+  .rlabels { display: flex; justify-content: space-between; font-size: 10.5px; color: var(--text-muted); margin-top: 4px; flex-wrap: wrap; gap: 4px; }
+  .rlabels span { font-weight: 600; }
+
+  /* ── VIX ── */
+  .vix-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 640px) { .vix-grid { grid-template-columns: 1fr; } }
+  .vix-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 20px; }
+  .vc-title { font-size: 12.5px; font-weight: 600; color: var(--text-secondary); margin-bottom: 4px; }
+  .vc-val { font-size: 34px; font-weight: 800; margin-bottom: 3px; }
+  .vc-sub { font-size: 12px; color: var(--text-muted); margin-bottom: 14px; }
+  .gbar-wrap { position: relative; margin-bottom: 6px; }
+  .gbar { height: 8px; border-radius: 4px; background: linear-gradient(to right, #16a34a, #f97316, #dc2626); }
+  .gmarker { position: absolute; top: -4px; width: 16px; height: 16px; border-radius: 50%; border: 3px solid var(--navy); transform: translateX(-50%); }
+  .gscale { display: flex; justify-content: space-between; font-size: 10px; color: var(--text-muted); }
+  .legend-list { margin-top: 14px; display: flex; flex-direction: column; gap: 5px; }
+  .leg-row { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--text-secondary); }
+  .leg-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .leg-active { color: var(--text-primary); font-weight: 700; }
+  .vix-interp { font-size: 13.5px; color: var(--text-secondary); line-height: 1.8; }
+  .vix-interp strong { color: var(--text-primary); }
+
+  /* ── VOLATILITY VISUAL BAND ── */
+  .vol-assess { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 20px 22px; margin-bottom: 20px; }
+  .vol-statement { font-size: 15px; font-weight: 700; color: var(--text-primary); margin-bottom: 10px; }
+  .vol-statement span { color: var(--orange-light); }
+  .vol-text { font-size: 14px; color: var(--text-secondary); line-height: 1.85; }
+  .vol-text strong { color: var(--text-primary); }
+
+  .band-box { background: var(--card2); border: 1px solid var(--border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+  .band-title { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .5px; color: var(--text-muted); margin-bottom: 14px; }
+  .band-row { display: flex; align-items: center; justify-content: space-between; gap: 6px; flex-wrap: wrap; }
+  .band-node { text-align: center; }
+  .band-lbl { font-size: 10px; color: var(--text-muted); margin-bottom: 2px; }
+  .band-price { font-size: 14px; font-weight: 700; }
+  .band-seg { flex: 1; height: 6px; border-radius: 3px; min-width: 20px; }
+  .band-foot { text-align: center; margin-top: 10px; font-size: 12px; color: var(--text-muted); }
+  .band-foot strong { color: var(--text-secondary); }
+
+  /* ── TAKEAWAYS ── */
+  .tk-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .tk-list li { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 12px 15px; font-size: 14px; color: var(--text-secondary); display: flex; gap: 12px; align-items: flex-start; }
+  .tk-num { background: var(--gold); color: var(--navy); border-radius: 50%; width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 800; flex-shrink: 0; margin-top: 1px; }
+  .tk-list li strong { color: var(--text-primary); }
+
+  /* ── FAQ ── */
+  .faq-list { display: flex; flex-direction: column; gap: 10px; }
+  .faq-item { background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+  .faq-q { padding: 14px 18px; font-size: 14px; font-weight: 600; color: var(--text-primary); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+  .faq-q:hover { background: var(--row-hover); }
+  .faq-chevron { font-size: 12px; color: var(--text-muted); transition: transform .2s; flex-shrink: 0; }
+  .faq-a { padding: 0 18px 14px; font-size: 13.5px; color: var(--text-secondary); line-height: 1.8; display: none; }
+  .faq-a strong { color: var(--text-primary); }
+  .faq-item.open .faq-a { display: block; }
+  .faq-item.open .faq-chevron { transform: rotate(180deg); }
+
+  /* ── OUTLOOK ── */
+  .outlook-body { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 20px 22px; margin-bottom: 16px; font-size: 14px; color: var(--text-secondary); line-height: 1.85; }
+  .outlook-body strong { color: var(--text-primary); }
+  .outlook-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(125px, 1fr)); gap: 10px; }
+  .oc { background: var(--card); border: 1px solid var(--border); border-radius: 9px; padding: 13px 10px; text-align: center; }
+  .oc-icon { font-size: 18px; margin-bottom: 4px; }
+  .oc-label { font-size: 10px; text-transform: uppercase; letter-spacing: .4px; color: var(--text-muted); margin-bottom: 3px; }
+  .oc-val { font-size: 13px; font-weight: 700; color: var(--text-primary); }
+
+  /* ── DISCLAIMER ── */
+  .disclaimer { background: rgba(12,30,53,.7); border: 1px solid var(--border); border-radius: 9px; padding: 16px 20px; font-size: 12px; color: var(--text-muted); line-height: 1.75; margin-top: 36px; }
+  .disclaimer strong { color: var(--text-secondary); }
+
+  /* ── FOOTER ── */
+  footer { background: var(--navy-light); border-top: 1px solid var(--border); padding: 26px 0; margin-top: 40px; }
+  .footer-inner { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; }
+  .footer-left { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+  .footer-left strong { color: var(--text-secondary); }
+  .footer-links { display: flex; gap: 14px; flex-wrap: wrap; }
+  .footer-links a { color: var(--text-muted); font-size: 12.5px; text-decoration: none; transition: color .2s; }
+  .footer-links a:hover { color: var(--gold); }
+</style>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker-bar">
+  <div class="ticker-inner">
+    <span>SENSEX <span class="c-dn">▼ 74,360.01</span></span>
+    <span>ATM Strike <span class="c-gold">₹74,400</span></span>
+    <span>India VIX <span class="c-or">▲ 15.88</span> — Moderate</span>
+    <span>ATM Call (CE) <span class="c-gold">₹780.00</span></span>
+    <span>ATM Put (PE) <span class="c-gold">₹487.05</span></span>
+    
+    <span>Expiry <strong>Jun 11, 2026 (Thu)</strong></span>
+    <span>Resistance <span class="c-up">₹74,844.02</span></span>
+    <span>Support <span class="c-dn">₹73,876.00</span></span>
+    <span>Max Upside <span class="c-up">₹75,627.06</span></span>
+    <span>Max Downside <span class="c-dn">₹73,092.96</span></span>
+    <span>SENSEX <span class="c-dn">▼ 74,360.01</span></span>
+    <span>ATM Strike <span class="c-gold">₹74,400</span></span>
+    <span>India VIX <span class="c-or">▲ 15.88</span> — Moderate</span>
+    <span>ATM Call (CE) <span class="c-gold">₹780.00</span></span>
+    <span>ATM Put (PE) <span class="c-gold">₹487.05</span></span>
+    
+    <span>Expiry <strong>Jun 11, 2026 (Thu)</strong></span>
+    <span>Resistance <span class="c-up">₹74,844.02</span></span>
+    <span>Support <span class="c-dn">₹73,876.00</span></span>
+    <span>Max Upside <span class="c-up">₹75,627.06</span></span>
+    <span>Max Downside <span class="c-dn">₹73,092.96</span></span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="wrap">
+    <div class="top-bar">
+      <a class="logo" href="https://www.finworldltd.online/">
+        <div class="logo-box">FW</div>
+        <span class="logo-name">FinWorld</span>
+      </a>
+      <nav>
+        <a href="https://www.finworldltd.online/">Home</a>
+        <a href="https://www.finworldltd.online/blog">Blog</a>
+        <a href="https://www.finworldltd.online/aboutus">About Us</a>
+        <a href="https://www.finworldltd.online/contactus">Contact Us</a>
+      </nav>
+    </div>
+    <div class="badges">
+      <span class="badge badge-gold">FinWorld</span>
+      <span class="badge badge-blue">Market Research</span>
+      <span>BSE · SENSEX</span>
+      <span>Weekly Report · June 11, 2026 Expiry</span>
+      <span>BSE · SENSEX · Weekly Analysis</span>
+    </div>
+    <div class="headline">
+      <h1>BSE SENSEX Weekly Market Analysis <em>June 4 – June 11, 2026</em></h1>
+      <p class="byline">By <strong>S. Kamal Kumar, Research Analyst</strong> | FinWorld | June 04, 2026</p>
+    </div>
+  </div>
+  <div class="stats-strip">
+    <div class="stats-inner">
+      <div class="stat">
+        <div class="stat-l">SENSEX</div>
+        <div class="stat-v c-dn">₹74,360.01</div>
+        <div class="stat-s">Jun 4, 2026</div>
+      </div>
+      <div class="stat">
+        <div class="stat-l">India VIX</div>
+        <div class="stat-v c-or">15.88</div>
+        <div class="stat-s c-or">▲ Moderate Zone</div>
+      </div>
+      <div class="stat">
+        <div class="stat-l">ATM Strike</div>
+        <div class="stat-v c-gold">₹74,400</div>
+        <div class="stat-s">June 11 Expiry</div>
+      </div>
+
+      <div class="stat">
+        <div class="stat-l">Resistance</div>
+        <div class="stat-v c-up">₹74,844.02</div>
+        <div class="stat-s">Key Resistance</div>
+      </div>
+      <div class="stat">
+        <div class="stat-l">Support</div>
+        <div class="stat-v c-dn">₹73,876.00</div>
+        <div class="stat-s">Key Support</div>
+      </div>
+      <div class="stat">
+        <div class="stat-l">Expiry</div>
+        <div class="stat-v c-blue">Jun 11</div>
+        <div class="stat-s">Thursday, 2026</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- INTRO -->
+  <div class="intro">
+    The week of <strong>June 4 – June 11, 2026</strong> opens with BSE SENSEX at <strong>₹74,360.01</strong> on the report generation date — trading 39.99 points below the ATM strike of ₹74,400, reflecting a broadly cautious opening tone. India VIX stands at <strong>15.88</strong>, firmly in the moderate zone and slightly elevated from the prior week — indicating the options market is pricing in meaningful near-term uncertainty. The key resistance at <strong>₹74,844.02</strong> (resistance) and <strong>₹73,876.00</strong> (support) define the critical price zones for the week, with outer boundaries at <strong>₹75,627.06</strong> and <strong>₹73,092.96</strong>. This report outlines the key price levels and volatility readings for the June 11 expiry week.
+  </div>
+
+  <!-- SNAPSHOT -->
+  <div class="section">
+    <div class="sec-title">📊 Market Data — June 04, 2026</div>
+    <div class="snap-grid">
+      <div class="snap-card sc-gold">
+        <div class="snap-v c-gold">₹74,360.01</div>
+        <div class="snap-l">SENSEX Level</div>
+        <div class="snap-s">June 04, 2026 Report</div>
+      </div>
+      <div class="snap-card">
+        <div class="snap-v c-or">15.88</div>
+        <div class="snap-l">India VIX</div>
+        <div class="snap-s">▲ Moderate · Elevated</div>
+      </div>
+      <div class="snap-card sc-blue">
+        <div class="snap-v c-gold">₹74,400</div>
+        <div class="snap-l">ATM Strike</div>
+        <div class="snap-s">June 11 Expiry</div>
+      </div>
+      <div class="snap-card">
+        <div class="snap-v c-gold">₹780 / ₹487</div>
+        <div class="snap-l">CE + PE Levels</div>
+        <div class="snap-s">Call ₹780 · Put ₹487.05</div>
+      </div>
+      <div class="snap-card sc-green">
+        <div class="snap-v c-up">₹74,844.02</div>
+        <div class="snap-l">Resistance</div>
+        <div class="snap-s">Key upside resistance</div>
+      </div>
+      <div class="snap-card">
+        <div class="snap-v c-dn">₹73,876.00</div>
+        <div class="snap-l">Support</div>
+        <div class="snap-s">Key downside support</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KEY PRICE ZONES -->
+  <div class="section">
+    <div class="sec-title">🎯 Key Price Zones This Week</div>
+    <p style="font-size:14px;color:var(--text-secondary);line-height:1.85;margin-bottom:18px;">
+      Technical analysis identifies five critical price levels that define the structural framework for the June 11 expiry week. Resistance and support levels represent the probable normal-volatility trading range; the outer extremes mark the maximum boundaries under aggressive directional pressure.
+    </p>
+    <div class="zones-wrap">
+      <div class="ladder">
+        <div class="ladder-row">
+          <div class="dot dot-green"></div>
+          <div class="lr-info">
+            <div class="lr-label">🟢 Maximum Upside Boundary</div>
+            <div class="lr-price c-up">₹75,627.06</div>
+            <div class="lr-sub">Outer Resistance</div>
+          </div>
+        </div>
+        <div class="arrow">↕</div>
+        <div class="ladder-row">
+          <div class="dot dot-blue"></div>
+          <div class="lr-info">
+            <div class="lr-label">🔵 Upside Resistance Zone</div>
+            <div class="lr-price" style="color:#60a5fa">₹74,844.02</div>
+            <div class="lr-sub">Resistance Level</div>
+          </div>
+        </div>
+        <div class="arrow">↕</div>
+        <div class="ladder-row">
+          <div class="dot dot-gold"></div>
+          <div class="lr-info">
+            <div class="lr-label">◆ Current Level · June 04</div>
+            <div class="lr-price c-gold">₹74,360.01</div>
+            <div class="lr-sub">BASE</div>
+          </div>
+        </div>
+        <div class="arrow">↕</div>
+        <div class="ladder-row">
+          <div class="dot dot-orange"></div>
+          <div class="lr-info">
+            <div class="lr-label">🔵 Downside Support Zone</div>
+            <div class="lr-price c-dn">₹73,876.00</div>
+            <div class="lr-sub">Support Level</div>
+          </div>
+        </div>
+        <div class="arrow">↕</div>
+        <div class="ladder-row">
+          <div class="dot dot-red"></div>
+          <div class="lr-info">
+            <div class="lr-label">🔴 Maximum Downside Boundary</div>
+            <div class="lr-price c-dn">₹73,092.96</div>
+            <div class="lr-sub">Outer Support</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="zone-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Level</th>
+              <th>Price</th>
+              <th>Type</th>
+              <th>Significance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Maximum Upside</td>
+              <td class="fw7 c-up">₹75,627.06</td>
+              <td style="color:var(--green-light)">Outer Resistance</td>
+              <td>Aggressive upside outer boundary — week's ceiling</td>
+            </tr>
+            <tr>
+              <td>Resistance</td>
+              <td class="fw7" style="color:#60a5fa">₹74,844.02</td>
+              <td style="color:#60a5fa">Key Resistance</td>
+              <td>Key resistance — upside momentum activates above this level</td>
+            </tr>
+            <tr>
+              <td>Current Level</td>
+              <td class="fw7 c-gold">₹74,360.01</td>
+              <td style="color:var(--gold)">Reference Base</td>
+              <td>Report generation level · June 04, 2026</td>
+            </tr>
+            <tr>
+              <td>Support</td>
+              <td class="fw7 c-dn">₹73,876.00</td>
+              <td style="color:var(--orange-light)">Key Support</td>
+              <td>Key support — downside pressure activates below this level</td>
+            </tr>
+            <tr>
+              <td>Maximum Downside</td>
+              <td class="fw7 c-dn">₹73,092.96</td>
+              <td style="color:var(--red-light)">Outer Support</td>
+              <td>Aggressive downside outer boundary — week's floor</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- RANGE WIDTH -->
+    <div class="range-box">
+      <div class="range-title">📐 Weekly Range Width</div>
+      <div class="range-desc">
+        Total spread between Maximum Upside (₹75,627.06) and Maximum Downside (₹73,092.96): <strong style="color:var(--text-primary)">₹2,534.10 points</strong>. The inner band between resistance (₹74,844.02) and support (₹73,876.00) — spans <strong style="color:var(--text-primary)">₹968.02 points</strong>, representing the primary support-resistance zone for the week. SENSEX at ₹74,360.01 sits precisely mid-range within the inner band — 484 points below the resistance and 484 points above the support — placing it in a neutral pocket ahead of the first trading session.
+      </div>
+      <div class="rbar-wrap">
+        <div class="rbar"></div>
+        <div class="rmarker"></div>
+      </div>
+      <div class="rlabels">
+        <span class="c-dn">₹73,093 (Max DN)</span>
+        <span class="c-or">₹73,876 (Support)</span>
+        <span class="c-gold">₹74,360 (Base)</span>
+        <span style="color:#60a5fa">₹74,844 (Resistance)</span>
+        <span class="c-up">₹75,627 (Max UP)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIX -->
+  <div class="section">
+    <div class="sec-title">📉 India VIX Analysis</div>
+    <div class="vix-grid">
+      <div class="vix-card">
+        <div class="vc-title">India VIX — Fear Index · June 04, 2026</div>
+        <div class="vc-val c-or">15.88</div>
+        <div class="vc-sub">▲ Moderate zone · Elevated vs prior reading (15.36)</div>
+        <div class="gbar-wrap">
+          <div class="gbar"></div>
+          <!-- (15.88 - 10) / 30 = 19.6% -->
+          <div class="gmarker" style="left:19.6%;background:var(--orange-light);"></div>
+        </div>
+        <div class="gscale">
+          <span>10 (Calm)</span>
+          <span>20</span>
+          <span>28</span>
+          <span>40 (Panic)</span>
+        </div>
+        <div class="legend-list">
+          <div class="leg-row"><div class="leg-dot" style="background:#16a34a"></div><span>10–15 — Calm</span></div>
+          <div class="leg-row leg-active"><div class="leg-dot" style="background:var(--orange-light)"></div><span>◆ 15–20 — Moderate ← Current</span></div>
+          <div class="leg-row"><div class="leg-dot" style="background:var(--red-light)"></div><span>20–28 — High</span></div>
+          <div class="leg-row"><div class="leg-dot" style="background:#7f1d1d"></div><span>28+ — Panic</span></div>
+        </div>
+      </div>
+      <div class="vix-card">
+        <div class="vc-title">🌡️ VIX Interpretation</div>
+        <div class="vix-interp">
+          India VIX at <strong>15.88</strong> represents a further uptick from the prior reading of 15.36, placing the market more firmly in the <strong>moderate volatility zone</strong>. At this level, the market is pricing daily SENSEX moves of approximately <strong>±₹570–720 points</strong> (±0.75–0.95%), consistent with the ₹968.02 point support-resistance band.
+          <br><br>
+          VIX approaching 16 warrants careful position sizing. A sustained move above 17–18 would signal rising uncertainty and a widening of the weekly range; a pullback below 15 would compress options premiums and support a calmer expiry week. The current reading supports the <strong>moderate-to-high volatility</strong> assessment for this week. Key macro triggers to monitor include global equity cues, RBI policy signals, FII/DII flow direction, Brent crude trajectory, and INR/USD movement — any of which could shift the volatility regime.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VOLATILITY ASSESSMENT -->
+  <div class="section">
+    <div class="sec-title">⚡ Volatility Assessment</div>
+    <div class="vol-assess">
+      <div class="vol-statement">Market conditions indicate <span>moderate-to-high volatility</span> for BSE SENSEX this week.</div>
+      <div class="vol-text">
+        India VIX at 15.88 — nudging toward the mid-moderate zone — signals meaningfully elevated options premium relative to a calm environment. The total weekly range of <strong>₹2,534.10 points</strong> is the operative outer boundary for the week. SENSEX at ₹74,360.01 opens just 39.99 points below the ATM strike — a near-neutral starting position that can be resolved swiftly by the first significant directional catalyst.
+        <br><br>
+        Investors should monitor price action around the support and resistance levels. A sustained move above the resistance at <strong>₹74,844.02</strong> would signal bullish momentum and bring the Maximum Upside boundary of ₹75,627.06 into scope. A break below the support at <strong>₹73,876.00</strong> would open the path to the outer downside boundary of ₹73,092.96. Maximum upside and downside levels represent potential outer boundaries in case of aggressive price movements. Adjust positions based on changing market conditions and news flow.
+      </div>
+    </div>
+
+    <div class="band-box">
+      <div class="band-title">Weekly Expected Price Range — Visual Band</div>
+      <div class="band-row">
+        <div class="band-node">
+          <div class="band-lbl">MAX DN</div>
+          <div class="band-price c-dn">73,093</div>
+        </div>
+        <div class="band-seg" style="background:linear-gradient(to right,#dc2626,#ea580c)"></div>
+        <div class="band-node">
+          <div class="band-lbl">SUPPORT</div>
+          <div class="band-price c-or">73,876</div>
+        </div>
+        <div class="band-seg" style="background:linear-gradient(to right,#ea580c,#c9a84c)"></div>
+        <div class="band-node">
+          <div class="band-lbl">◆ BASE</div>
+          <div class="band-price c-gold">74,360</div>
+        </div>
+        <div class="band-seg" style="background:linear-gradient(to right,#c9a84c,#60a5fa)"></div>
+        <div class="band-node">
+          <div class="band-lbl">RESISTANCE</div>
+          <div class="band-price" style="color:#60a5fa">74,844</div>
+        </div>
+        <div class="band-seg" style="background:linear-gradient(to right,#60a5fa,#16a34a)"></div>
+        <div class="band-node">
+          <div class="band-lbl">MAX UP</div>
+          <div class="band-price c-up">75,627</div>
+        </div>
+      </div>
+      <div class="band-foot">₹73,092.96 (Max Downside) ← <strong>₹2,534.10 total range</strong> → ₹75,627.06 (Max Upside)</div>
+    </div>
+  </div>
+
+  <!-- KEY TAKEAWAYS -->
+  <div class="section">
+    <div class="sec-title">📌 Key Takeaways This Week</div>
+    <ul class="tk-list">
+      <li>
+        <div class="tk-num">1</div>
+        <div>Watch for price action around the resistance at <strong>₹74,844.02</strong> (upside) and support at <strong>₹73,876.00</strong> (downside) — these are the key support and resistance levels for the June 11 expiry week.</div>
+      </li>
+      <li>
+        <div class="tk-num">2</div>
+        <div>Use <strong>₹73,092.96</strong> and <strong>₹75,627.06</strong> as the absolute outer boundaries for risk management — breaches of these levels signal extreme weekly moves outside the normal weekly range.</div>
+      </li>
+      <li>
+        <div class="tk-num">3</div>
+        <div>Monitor BSE SENSEX support and resistance levels as the week progresses toward <strong>Thursday, June 11 expiry</strong>, and watch price action around the ATM strike of ₹74,400 and the key support/resistance levels.</div>
+      </li>
+      <li>
+        <div class="tk-num">4</div>
+        <div>India VIX at <strong>15.88</strong> is trending higher and approaching the mid-moderate range. A sustained move above 17–18 would signal rising fear and widen the effective trading range; a retreat below 15 would support tighter ranges and premium compression into expiry.</div>
+      </li>
+      <li>
+        <div class="tk-num">5</div>
+        <div>Adjust positions based on changing market conditions and news flow. Maintain discipline in following the outlined price levels and avoid chasing moves beyond the outer boundaries of <strong>₹73,092.96 – ₹75,627.06</strong>.</div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section">
+    <div class="sec-title">❓ Frequently Asked Questions</div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">What is the expected range for SENSEX this week (June 4–11, 2026)? <span class="faq-chevron">▼</span></div>
+        <div class="faq-a">Based on this week's technical analysis, the probable trading range runs between the support at <strong>₹73,876.00</strong> and the resistance at <strong>₹74,844.02</strong> under normal market conditions. The outer extremes — Maximum Downside at ₹73,092.96 and Maximum Upside at ₹75,627.06 — represent the boundaries for aggressive directional movement. Investors should monitor price action around these support and resistance levels as the week progresses.</div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-q">How does India VIX at 15.88 affect SENSEX this week? <span class="faq-chevron">▼</span></div>
+        <div class="faq-a">At <strong>15.88</strong>, India VIX sits in the moderate zone (15–20) and is trending higher from the prior reading of 15.36. The rising VIX trend suggests options premiums are expanding slightly — generally associated with increased uncertainty and wider intraday ranges. This supports the moderate-to-high volatility assessment for the week. If VIX climbs above 17–18, it would signal elevated fear and suggest a larger directional move is in play. Traders should size positions accordingly and use the outer boundary levels (₹73,092.96 / ₹75,627.06) for risk management.</div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-q">Why is SENSEX at ₹74,360 considered a neutral starting position? <span class="faq-chevron">▼</span></div>
+        <div class="faq-a">SENSEX at <strong>₹74,360.01</strong> sits 39.99 points below the ATM strike of ₹74,400 and precisely 484 points from each support and resistance level — equidistant between ₹74,844.02 (upside) and ₹73,876.00 (downside). This central positioning, combined with India VIX at 15.88, means neither bulls nor bears hold a structural advantage at the week's open. The first decisive directional move above or below the entry levels will establish the week's trend ahead of Thursday, June 11 expiry.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEEKLY OUTLOOK -->
+  <div class="section">
+    <div class="sec-title">📌 Weekly Outlook Summary</div>
+    <div class="outlook-body">
+      The data for the week of <strong>June 4 – June 11, 2026</strong> presents a BSE SENSEX market in a cautiously neutral posture, opening 39.99 points below ATM and precisely mid-range between the support and resistance levels. VIX at 15.88 paints a picture of a <strong>moderate-volatility, directionally undecided market</strong> — one where the first decisive move through support or resistance will set the tone for the expiry week.
+      <br><br>
+      The five price levels — Maximum Downside ₹73,092.96, Support ₹73,876.00, Base ₹74,360.01, Resistance ₹74,844.02, and Maximum Upside ₹75,627.06 — combined with India VIX at 15.88, define the structural boundaries for this week. The call skew of ~1.60:1 leans the options market toward the upper half of the range — but spot must clear the resistance at <strong>₹74,844.02</strong> to validate a bullish bias; a breach of the support at <strong>₹73,876.00</strong> would pivot the week toward the ₹73,092.96 floor.
+    </div>
+    <div class="outlook-grid">
+      <div class="oc">
+        <div class="oc-icon">⚖️</div>
+        <div class="oc-label">Bias</div>
+        <div class="oc-val c-or">Cautiously Neutral</div>
+      </div>
+      <div class="oc">
+        <div class="oc-icon">🌡️</div>
+        <div class="oc-label">Volatility</div>
+        <div class="oc-val c-or">Moderate-to-High</div>
+      </div>
+      <div class="oc">
+        <div class="oc-icon">🛡️</div>
+        <div class="oc-label">Key Support</div>
+        <div class="oc-val c-dn">₹73,876</div>
+      </div>
+      <div class="oc">
+        <div class="oc-icon">🚧</div>
+        <div class="oc-label">Key Resistance</div>
+        <div class="oc-val c-up">₹74,844</div>
+      </div>
+      <div class="oc">
+        <div class="oc-icon">📅</div>
+        <div class="oc-label">Expiry</div>
+        <div class="oc-val c-blue">Thu, Jun 11</div>
+      </div>
+      <div class="oc">
+        <div class="oc-icon">🎯</div>
+        <div class="oc-label">ATM Strike</div>
+        <div class="oc-val c-gold">₹74,400</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+    <strong>Disclaimer:</strong> This report is for informational and educational purposes only. It is based on technical analysis and market data available at the time of report generation (June 04, 2026). This report does not constitute financial advice, a recommendation to buy or sell, or an endorsement of any specific trade or investment strategy. India VIX data as of June 04, 2026. Price levels derived from BSE SENSEX options data as provided. All investments carry risk. Investors should consult a SEBI-registered research analyst or qualified financial advisor before making any investment decisions.
+    <br><br>
+    Published by <strong>FinWorld</strong> | S. Kamal Kumar, Research Analyst | June 04, 2026
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-left">
+      <strong>FinWorld</strong> © 2026 FinWorld Ltd. | S. Kamal Kumar, Research Analyst<br>
+      <span style="font-size:11px;">BSE SENSEX Weekly Report · June 4 – June 11, 2026 | AMFI Registration No: ARN-102132</span>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.facebook.com/thefinworldltd" target="_blank">Facebook</a>
+      <a href="https://x.com/HelloFinworld" target="_blank">X (Twitter)</a>
+      <a href="https://www.linkedin.com/in/kamalsrungarapu" target="_blank">LinkedIn</a>
+      <a href="https://www.youtube.com/@FinWorldLtd" target="_blank">YouTube</a>
+      <a href="https://www.instagram.com/hellofinworld" target="_blank">Instagram</a>
+      <a href="https://www.pinterest.com/hellofinworld" target="_blank">Pinterest</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+</script>
+
+</body>
+</html>
